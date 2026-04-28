@@ -1,0 +1,2042 @@
+<!--
+ * author 金保虎（Aisshoo Adolf Kinyong）
+ * created on 22-04-2026-08h-27m
+ * github: https://gitee.com/aisshoo
+ * copyright 2026
+-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 基础渲染与兼容 -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <!-- SEO 核心优化 -->
+    <title>学校资讯 - 立德精英素质教育基地</title>
+    <meta name="keywords" content="立德精英素质教育基地,学校资讯,行业资讯,学校新闻,青少年素质教育">
+    <meta name="description" content="立德精英素质教育基地学校资讯板块，实时更新行业动态、学校新闻，了解青少年素质教育最新政策与基地办学动态。">
+    <meta name="applicable-device" content="pc,mobile">
+
+    <!-- 移动端适配 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- 图标 -->
+    <link rel="shortcut icon" href="img/upimages/favicon.ico">
+
+    <!-- 资源加载（与index.html完全一致） -->
+    <link rel="stylesheet" href="css/comm/font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/comm/animate.min.css">
+    <link rel="stylesheet" href="css/comm/box.css">
+    <link rel="stylesheet" href="css/comm/alert.css">
+    <link rel="stylesheet" href="css/comm/comm.css">
+    <link rel="stylesheet" href="css/02541743.css">
+    <link rel="stylesheet" href="css/comm/iconfont.css">
+
+    <!-- JS 延迟加载，避免阻塞渲染 -->
+    <script src="js/comm/jquery.min.js"></script>
+    <script src="js/comm/jquery.lazyload.min.js" defer></script>
+    <script src="js/comm/jquery.nicescroll.min.js" defer></script>
+    <script src="js/comm/ubox.js" charset="utf-8" defer></script>
+    <script src="js/comm/wow.js" charset="utf-8" defer></script>
+    <script src="js/comm/alert.js" charset="utf-8" defer></script>
+    <script src="js/02541743.js" charset="utf-8" defer></script>
+    <script src="js/comm/comm.js" charset="utf-8" defer></script>
+
+        <!-- 基础渲染与兼容 -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <!-- SEO 核心优化 -->
+    <title>立德精英素质教育基地 - 专注青少年叛逆/厌学/网瘾矫正</title>
+    <meta name="keywords" content="立德精英素质教育基地,青少年素质教育,叛逆矫正,厌学辅导,网瘾戒除,全封闭军事化管理">
+    <meta name="description" content="济南立德精英青少年素质教育基地隶属于济南精英教育集团，2002年经教育局批准成立的正规全寄宿民办学校，专注8-17周岁青春期少年不良行为矫正，全封闭军事化管理，构建家校医社四方共管模式。">
+    <meta name="applicable-device" content="pc,mobile">
+    
+    <!-- 移动端适配 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <!-- 图标 -->
+    <link rel="shortcut icon" href="img/upimages/favicon.ico">
+    
+    <!-- 资源加载（优化顺序+异步） -->
+    <link rel="stylesheet" href="css/comm/font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/comm/animate.min.css">
+    <link rel="stylesheet" href="css/comm/box.css">
+    <link rel="stylesheet" href="css/comm/alert.css">
+    <link rel="stylesheet" href="css/comm/comm.css">
+    <link rel="stylesheet" href="css/02541743.css">
+    <link rel="stylesheet" href="css/comm/iconfont.css">
+    
+    <script src="js/comm/jquery.min.js" defer></script>
+    <script src="js/comm/jquery.lazyload.min.js" defer></script>
+    <script src="js/comm/jquery.nicescroll.min.js" defer></script>
+    <script src="js/comm/ubox.js" charset="utf-8" defer></script>
+    <script src="js/comm/wow.js" charset="utf-8" defer></script>
+    <script src="js/comm/alert.js" charset="utf-8" defer></script>
+    <script src="js/02541743.js" charset="utf-8" defer></script>
+    <script src="js/comm/comm.js" charset="utf-8" defer></script>
+
+    <style>
+        /* --- 基础重置 --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Microsoft YaHei", sans-serif; background-color: #f5f5f5; }
+        img { max-width: 100%; height: auto; vertical-align: middle; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- 1. 顶部通栏 (Top Bar) --- */
+        .header-top {
+            background-color: #0b1e3d; /* 深蓝色背景 */
+            color: #aebac6;
+            font-size: 12px;
+            padding: 5px 5%;
+            text-align: right;
+        }
+
+        /* --- 2. 核心表头区域 (Main Header) --- */
+        .header-main {
+            background: linear-gradient(135deg, #051836 0%, #1a3c7a 100%); /* 深蓝渐变背景 */
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Logo 区域 */
+        .header-logo img {
+            height: 80px; /* 限制Logo高度 */
+            display: block;
+        }
+
+        /* 右侧文字组 */
+        .header-text-group {
+            text-align: right;
+            color: #fff;
+            line-height: 1.4;
+        }
+
+        .header-text-main {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .header-text-en {
+            font-size: 18px;
+            color: #ff6600; /* 橙色强调 */
+            font-weight: 500;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- 3. 导航栏 (Navigation) --- */
+         .header-nav {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item > a {
+            display: block;
+            padding: 15px 25px;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-item > a:hover {
+            color: #ff6600;
+        }
+
+        /* 下拉菜单 */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            min-width: 160px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-top: 2px solid #ff6600;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: #666;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown-menu li a:hover {
+            background: #f9f9f9;
+            color: #ff6600;
+        }
+
+        /* --- 特色模块样式 (保持原有) --- */
+        .feature-section { padding: 60px 20px; background: #fff; text-align: center; }
+        .section-header { margin-bottom: 40px; }
+        .main-title { font-size: 24px; color: #333; margin-bottom: 15px; line-height: 1.5; }
+        .sub-title { display: inline-block; margin: 0 10px; color: #666; font-size: 16px; }
+        .feature-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .feature-card { flex: 1; min-width: 280px; max-width: 320px; padding: 30px 20px; border: 1px solid #eee; border-radius: 10px; transition: all 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .card-icon { width: 60px; height: 60px; margin: 0 auto 20px; color: #ff6600; }
+        .card-icon svg { width: 100%; height: 100%; }
+        .card-title { font-size: 20px; color: #333; margin-bottom: 15px; }
+        .divider { width: 40px; height: 3px; background: #ff6600; margin: 0 auto 15px; border-radius: 2px; }
+        .card-desc { color: #666; line-height: 1.6; font-size: 14px; }
+
+        /* --- 标签页样式 (保持原有) --- */
+        .feature-course-section { padding: 60px 20px; background: #f9f9f9; }
+        .section-desc { text-align: center; color: #666; margin: 20px 0; line-height: 1.8; }
+        .tab-nav { display: flex; justify-content: center; gap: 10px; margin: 30px 0; flex-wrap: wrap; }
+        .tab-item { padding: 10px 25px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; transition: all 0.3s; color: #666; }
+        .tab-item.active { background: #ff6600; color: #fff; border-color: #ff6600; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .image-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .grid-item { border-radius: 8px; overflow: hidden; aspect-ratio: 4/3; }
+        .grid-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+        .grid-item img:hover { transform: scale(1.05); }
+
+        /* --- 跑马灯容器样式 (保持原有) --- */
+        .marquee-wrapper { width: 100%; overflow: hidden; background-color: #fff; padding: 40px 0; position: relative; box-shadow: 0 -2px 10px rgba(0,0,0,0.05); }
+        .marquee-track { display: flex; width: max-content; animation: scroll-left 30s linear infinite; }
+        .marquee-item { flex: 0 0 auto; padding: 0 15px; height: 120px; display: flex; align-items: center; }
+        .marquee-item img { height: 100%; object-fit: contain; opacity: 0.8; transition: opacity 0.3s; }
+        .marquee-item img:hover { opacity: 1; }
+        @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* --- 响应式适配 --- */
+        @media (max-width: 768px) {
+            .header-main { flex-direction: column; text-align: center; padding: 30px 20px; }
+            .header-text-group { text-align: center; margin-top: 20px; }
+            .header-text-main { font-size: 22px; }
+            .header-text-en { font-size: 16px; }
+            .nav-list { flex-direction: column; }
+            .nav-item > a { text-align: center; border-bottom: 1px solid #eee; }
+            .dropdown-menu { position: static; box-shadow: none; border-top: none; background: #f9f9f9; }
+            .marquee-item { height: 80px; }
+            .marquee-wrapper { padding: 20px 0; }
+            .main-title { font-size: 20px; }
+            .feature-card { min-width: 100%; }
+        }
+    </style>
+    <style>
+        /* --- 全局重置与深色主题适配（匹配截图） --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #1a1a1a; /* 截图深色背景 */
+            color: #ffffff; /* 白色文字 */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #0066cc; /* 链接hover蓝色 */
+        }
+        /* 置顶标识样式 */
+        .top-tag {
+            display: inline-block;
+            background: #ff4444;
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-right: 8px;
+        }
+
+        /* --- 顶部横幅（匹配截图大学建筑图） --- */
+        .top-banner {
+            width: 100%;
+            height: 300px;
+            background: url('img/bankground.jpg') center center / cover no-repeat;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .top-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4); /* 半透明遮罩，提升文字可读性 */
+        }
+
+                /* 悬浮客服容器 - 移动到右侧 */
+        .floating-service {
+            position: fixed;
+            right: 20px; /* 修改为右侧定位 */
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            width: 60px;
+        }
+
+        .service-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 15px 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e6e6e6;
+        }
+
+        /* 服务按钮 */
+        .service-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, #0052CC, #0066FF);
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
+        }
+
+        .service-item {
+            position: relative;
+        }
+
+        /* 工具提示样式 - 调整到左侧显示 */
+        .service-tooltip {
+            position: absolute;
+            right: 70px; /* 显示在按钮左侧 */
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 10000;
+            min-width: 200px;
+        }
+
+        .tooltip-content {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e6e6e6;
+            position: relative;
+        }
+
+        /* 工具提示箭头 - 调整到右侧 */
+        .tooltip-arrow {
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 8px solid white; /* 箭头指向右侧 */
+        }
+
+        /* 二维码样式 */
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 1px solid #eee;
+            padding: 5px;
+            background: white;
+        }
+
+        .tooltip-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .tooltip-phone {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0052CC;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        /* 悬停显示工具提示 */
+        .service-item:hover .service-tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 65px; /* 悬停时稍微向左移动 */
+        }
+
+        /* 特定项调整 */
+        .phone-tooltip {
+            min-width: 180px;
+        }
+
+        .qr-content, .account-content {
+            text-align: center;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .floating-service {
+                right: 10px;
+                width: 50px;
+            }
+            
+            .service-button {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            .service-tooltip {
+                right: 60px;
+                min-width: 170px;
+            }
+            
+            .qr-code {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        /* --- 主体双栏布局（左侧边栏+右侧内容） --- */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            display: flex;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        /* --- 左侧二级导航边栏（匹配截图） --- */
+        .sidebar {
+            width: 200px;
+            flex-shrink: 0;
+        }
+        .sidebar-title {
+            background-color: #0066cc; /* 截图蓝色高亮 */
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sidebar-menu {
+            list-style: none;
+            background-color: #222222;
+        }
+        .sidebar-menu li {
+            padding: 12px 20px;
+            border-bottom: 1px solid #333333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .sidebar-menu li.active {
+            background-color: #0066cc; /* 选中项蓝色高亮 */
+        }
+        .sidebar-menu li:hover {
+            background-color: #2a2a2a;
+        }
+        .sidebar-menu li i {
+            font-size: 12px;
+            color: #999999;
+        }
+        .sidebar-menu li.active i {
+            color: #ffffff;
+        }
+
+        /* --- 右侧资讯内容区 --- */
+        .content-area {
+            flex: 1;
+        }
+        /* 面包屑导航（匹配截图） */
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #999999;
+            text-align: right;
+        }
+        .breadcrumb a {
+            color: #999999;
+        }
+        .breadcrumb a:hover {
+            color: #ffffff;
+        }
+        /* 资讯标题 */
+        .content-title {
+            font-size: 22px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333333;
+        }
+        /* 资讯列表（匹配截图纯文字列表） */
+        .news-list {
+            list-style: none;
+        }
+        .news-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333333;
+        }
+        .news-title {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .news-title a {
+            color: #ffffff;
+            transition: color 0.3s;
+            flex: 1;
+        }
+        .news-title a:hover {
+            color: #0066cc;
+        }
+        .news-date {
+            font-size: 14px;
+            color: #999999;
+            white-space: nowrap;
+        }
+        .news-desc {
+            font-size: 14px;
+            color: #bbbbbb;
+            line-height: 1.6;
+            margin-top: 5px;
+        }
+        /* 分页控件（匹配截图） */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        .page-btn {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #333333;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .page-btn.active {
+            background-color: #0066cc;
+            border-color: #0066cc;
+        }
+        .page-btn:hover {
+            background-color: #2a2a2a;
+        }
+        .page-btn.disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        /* --- 页脚样式（匹配截图深色布局） --- */
+        footer {
+            background-color: #111111;
+            padding: 40px 20px;
+            border-top: 1px solid #333333;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .footer-logo {
+            width: 100px;
+            height: 100px;
+        }
+        .footer-info {
+            flex: 1;
+            text-align: center;
+        }
+        .footer-info h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .footer-info p {
+            font-size: 14px;
+            color: #999999;
+            margin-bottom: 8px;
+        }
+        .footer-qr {
+            width: 120px;
+            height: 120px;
+            background-color: #ffffff;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .footer-copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333333;
+            color: #666666;
+            font-size: 12px;
+        }
+
+        /* --- 响应式适配 --- */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .news-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            .breadcrumb {
+                text-align: left;
+            }
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+        <!-- Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 重置样式 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #f5f7fa; 
+        }
+        
+        /* 主容器 */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            gap: 30px;
+            min-height: 80vh;
+        }
+        
+        /* 左侧边栏 */
+        .sidebar {
+            width: 280px;
+            flex-shrink: 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .sidebar-title {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .sidebar-title i {
+            font-size: 24px;
+        }
+        
+        .sidebar-menu {
+            list-style: none;
+        }
+        
+        .sidebar-menu li {
+            padding: 16px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+        
+        .sidebar-menu li:hover {
+            background-color: #f8fafc;
+            color: #3498db;
+            padding-left: 25px;
+        }
+        
+        .sidebar-menu li.active {
+            background-color: #e3f2fd;
+            color: #3498db;
+            border-left: 4px solid #3498db;
+            font-weight: 600;
+        }
+        
+        .sidebar-menu li span {
+            font-size: 16px;
+        }
+        
+        .sidebar-menu li i {
+            color: #95a5a6;
+            transition: transform 0.3s;
+        }
+        
+        .sidebar-menu li.active i,
+        .sidebar-menu li:hover i {
+            color: #3498db;
+            transform: translateX(3px);
+        }
+        
+        /* 右侧内容区 */
+        .content-area {
+            flex: 1;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* 面包屑导航 */
+        .breadcrumb {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .breadcrumb a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        /* 内容标题 */
+        .content-title {
+            color: #2c3e50;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            position: relative;
+        }
+        
+        .content-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100px;
+            height: 2px;
+            background: #e74c3c;
+        }
+        
+        /* 资讯列表 */
+        .news-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .news-item {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        
+        .news-item:hover {
+            background-color: #f8fafc;
+            transform: translateX(5px);
+        }
+        
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        
+        .news-item a {
+            text-decoration: none;
+            color: #2c3e50;
+            display: block;
+        }
+        
+        .news-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            transition: color 0.3s;
+        }
+        
+        .news-item:hover .news-title {
+            color: #3498db;
+        }
+        
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .news-type {
+            background-color: #e3f2fd;
+            color: #3498db;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .news-date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .news-summary {
+            color: #5d6d7e;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-top: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* 分页控件 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .page-btn {
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .page-btn:hover:not(.disabled) {
+            background-color: #f0f7ff;
+            border-color: #3498db;
+            color: #3498db;
+        }
+        
+        .page-btn.active {
+            background-color: #3498db;
+            border-color: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .page-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* 加载状态 */
+        .loading {
+            text-align: center;
+            padding: 50px 20px;
+            color: #7f8c8d;
+        }
+        
+        .loading i {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #3498db;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .no-data {
+            text-align: center;
+            padding: 60px 20px;
+            color: #95a5a6;
+        }
+        
+        .no-data i {
+            font-size: 48px;
+            color: #bdc3c7;
+            margin-bottom: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .sidebar {
+                width: 100%;
+            }
+            
+            .content-area {
+                padding: 20px;
+            }
+            
+            .news-meta {
+                flex-wrap: wrap;
+            }
+            
+            .pagination {
+                flex-wrap: wrap;
+            }
+        }
+            /* 跑马灯容器样式 */
+        .marquee-wrapper { 
+            width: 100%; 
+            overflow: hidden; 
+            background-color: #fff; 
+            padding: 40px 0; 
+            position: relative; 
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+            /* 添加悬停暂停 */
+            cursor: pointer;
+        }
+
+        /* 跑马灯轨道 */
+        .marquee-track { 
+            display: flex; 
+            width: max-content; 
+            animation: scroll-left 25s linear infinite; /* 改为25秒 */
+            /* 添加悬停暂停 */
+            animation-play-state: running;
+        }
+
+        /* 悬停时暂停 */
+        .marquee-wrapper:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        /* 跑马灯项 */
+        .marquee-item { 
+            flex: 0 0 auto; 
+            padding: 0 25px; /* 增大间距 */
+            height: 120px; 
+            display: flex; 
+            align-items: center;
+            transition: transform 0.3s ease; /* 添加悬停效果 */
+        }
+
+        .marquee-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 图片样式 */
+        .marquee-item img { 
+            height: 100%; 
+            object-fit: contain; 
+            opacity: 0.8; 
+            transition: all 0.3s ease;
+            filter: grayscale(20%); /* 添加灰度效果 */
+        }
+
+        .marquee-item img:hover { 
+            opacity: 1; 
+            filter: grayscale(0%); /* 悬停时去除灰度 */
+            transform: scale(1.05); /* 悬停放大 */
+        }
+
+        /* 动画定义 */
+        @keyframes scroll-left { 
+            0% { transform: translateX(0); } 
+            100% { transform: translateX(-50%); } 
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .marquee-item { 
+                height: 80px; 
+                padding: 0 15px; /* 手机端间距 */
+            }
+            .marquee-wrapper { 
+                padding: 20px 0; 
+            }
+            /* 手机端加快速度 */
+            .marquee-track { 
+                animation: scroll-left 20s linear infinite; 
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 头部区域（与index.html完全一致，仅修改学校简介子菜单跳转xxjj.html） -->
+    <header id="comm_layout_header" class="layout">
+        <div class="view_contents">
+                    <!-- 1. 顶部欢迎语 -->
+            <div class="header-top">
+                您好，欢迎访问立德精英素质教育基地官网！
+            </div>
+
+            <!-- 2. LOGO与标语区域 -->
+            <div class="header-main">
+                <!-- 左侧LOGO -->
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="img/logo_word.png" alt="立德精英素质教育基地LOGO">
+                    </a>
+                </div>
+                
+                <!-- 右侧文字（参照德弘结构） -->
+                <div class="header-text-group">
+                    <div class="header-text-main">针对8-17周岁青春期少年</div>
+                    <div class="header-text-en">叛逆行为矫正服务</div>
+                </div>
+            </div>
+
+            <!-- 3. 导航栏（水蓝色背景） -->
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">首页</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="xxjj.html">学校简介 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="xxjj.html">关于我们</a></li>
+                            <li><a href="xxjj.html#motto">校训理念</a></li>
+                            <li><a href="xxjj.html#campus">校区环境</a></li>
+                            <li><a href="xxjj.html#teachers">师资队伍</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="xxzx.html">学校资讯 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="xxzx.html">行业资讯</a></li>
+                            <li><a href="xxzx.html#news">学校新闻</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="jxjy.html">教学教研 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="jxjy.html#psychology">心理辅导</a></li>
+                            <li><a href="jxjy.html#behavior">行为矫正</a></li>
+                            <li><a href="jxjy.html#culture">文化素养</a></li>
+                            <li><a href="jxjy.html#physical">坚强体格</a></li>
+                            <li><a href="jxjy.html#students">学员风采</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 顶部横幅（匹配截图大学建筑图） -->
+    <div class="top-banner"></div>
+
+    <!-- 主体双栏布局（左侧边栏+右侧资讯列表） -->
+    <div class="main-container">
+        <!-- 左侧二级导航边栏 → 无跳转，本页切换 -->
+        <div class="sidebar">
+            <div class="sidebar-title">
+                <i class="fas fa-newspaper"></i> 学校资讯
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active" data-type="all">
+                    <span>全部资讯</span>
+                    <i class="fas fa-angle-right"></i>
+                </li>
+                <li data-type="hy">
+                    <span>行业资讯</span>
+                    <i class="fas fa-angle-right"></i>
+                </li>
+                <li data-type="xx">
+                    <span>学校新闻</span>
+                    <i class="fas fa-angle-right"></i>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 右侧资讯内容区 -->
+        <div class="content-area">
+            <!-- 面包屑导航 -->
+            <div class="breadcrumb">
+                <a href="index.html">首页</a> > 学校资讯
+            </div>
+
+            <!-- 资讯标题 -->
+            <h1 class="content-title">学校资讯</h1>
+
+            <!-- 动态资讯列表容器 -->
+            <ul class="news-list" id="newsList">
+                <li class="loading">
+                    <i class="fas fa-spinner"></i>
+                    <div>正在加载资讯列表...</div>
+                </li>
+            </ul>
+
+            <!-- 分页控件 -->
+            <div class="pagination" id="pagination"></div>
+        </div>
+    </div>
+        <!-- 右侧悬浮客服 -->
+    <div class="floating-service">
+        <div class="service-container">
+            <!-- 咨询电话 -->
+            <div class="service-item phone-item">
+                <a href="tel:18605316398" class="service-button">
+                    <span class="emoji">📞</span>
+                </a>
+                <div class="service-tooltip phone-tooltip">
+                    <div class="tooltip-content">
+                        <div class="tooltip-title">咨询热线</div>
+                        <div class="tooltip-phone">18605316398</div>
+                    </div>
+                    <div class="tooltip-arrow"></div>
+                </div>
+            </div>
+            
+            <!-- 招生微信 -->
+            <div class="service-item wechat-item">
+                <button class="service-button qr-toggle">
+                    <span class="emoji">💬</span>
+                </button>
+                <div class="service-tooltip qr-tooltip">
+                    <div class="tooltip-content qr-content">
+                        <div class="tooltip-title">招生微信</div>
+                        <img src="img/qrcode_personal.jpg" alt="立德精英招生微信二维码" class="qr-code">
+                    </div>
+                    <div class="tooltip-arrow"></div>
+                </div>
+            </div>
+            
+            <!-- 微信公众号 -->
+            <div class="service-item public-account-item">
+                <button class="service-button account-toggle">
+                    <span class="emoji">📱</span>
+                </button>
+                <div class="service-tooltip account-tooltip">
+                    <div class="tooltip-content account-content">
+                        <div class="tooltip-title">公众号</div>
+                        <img src="img/qrcode_wepub.jpg" alt="立德精英微信公众号二维码" class="qr-code">
+                    </div>
+                    <div class="tooltip-arrow"></div>
+                </div>
+            </div>
+            
+            <!-- 回到顶部 -->
+            <div class="service-item top-item">
+                <button class="service-button" onclick="btnTop()">
+                    <span class="emoji">🔝</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // 配置
+        const CONFIG = {
+            dataUrl: 'news/list.json',
+            pageSize: 15,
+            currentType: 'all',
+            currentPage: 1,
+            typeMap: {
+                hy: '行业资讯',
+                xx: '学校新闻',
+                all: '全部内容'
+            }
+        };
+        
+        let allArticles = [];
+        
+        // 加载文章数据
+        async function loadNewsData() {
+            try {
+                const response = await fetch(CONFIG.dataUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP错误 ${response.status}`);
+                }
+                
+                const data = await response.json();
+                allArticles = data.articles || [];
+                
+                if (allArticles.length === 0) {
+                    showNoData();
+                    return;
+                }
+                
+                // 初始化渲染
+                renderNewsList();
+                
+            } catch (error) {
+                console.error('加载资讯数据失败:', error);
+                document.getElementById('newsList').innerHTML = `
+                    <li class="no-data">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>加载失败，请检查网络连接</div>
+                        <div style="margin-top: 10px; font-size: 12px;">${error.message}</div>
+                    </li>
+                `;
+            }
+        }
+        
+        // 渲染资讯列表
+        function renderNewsList() {
+            // 筛选数据
+            let filteredData = CONFIG.currentType === 'all' 
+                ? allArticles 
+                : allArticles.filter(item => item.type === CONFIG.currentType);
+            
+            if (filteredData.length === 0) {
+                showNoData();
+                return;
+            }
+            
+            // 分页计算
+            const total = filteredData.length;
+            const totalPages = Math.ceil(total / CONFIG.pageSize);
+            const start = (CONFIG.currentPage - 1) * CONFIG.pageSize;
+            const end = start + CONFIG.pageSize;
+            const pageData = filteredData.slice(start, end);
+            
+            // 更新标题
+            document.querySelector('.content-title').textContent = 
+                `${CONFIG.typeMap[CONFIG.currentType]} (共${filteredData.length}条)`;
+            
+            // 渲染列表
+            let html = '';
+            pageData.forEach(item => {
+                html += `
+                    <li class="news-item">
+                        <a href="${item.url}" target="_blank">
+                            <div class="news-title">${item.title}</div>
+                            <div class="news-meta">
+                                <span class="news-type">${item.typeName}</span>
+                                <span class="news-date">
+                                    <i class="far fa-calendar-alt"></i>
+                                    ${item.date}
+                                </span>
+                            </div>
+                            <div class="news-summary">${item.summary || '点击查看详情...'}</div>
+                        </a>
+                    </li>
+                `;
+            });
+            
+            document.getElementById('newsList').innerHTML = html;
+            
+            // 渲染分页
+            renderPagination(totalPages);
+        }
+        
+        // 渲染分页控件
+        function renderPagination(totalPages) {
+            if (totalPages <= 1) {
+                document.getElementById('pagination').innerHTML = '';
+                return;
+            }
+            
+            let html = '';
+            const current = CONFIG.currentPage;
+            
+            // 上一页
+            html += `<div class="page-btn ${current === 1 ? 'disabled' : ''}" onclick="changePage(${current - 1})">&lt;</div>`;
+            
+            // 页码逻辑
+            let startPage = Math.max(1, current - 2);
+            let endPage = Math.min(totalPages, current + 2);
+            
+            if (current <= 3) {
+                endPage = Math.min(totalPages, 5);
+            }
+            
+            if (current >= totalPages - 2) {
+                startPage = Math.max(1, totalPages - 4);
+            }
+            
+            // 第一页
+            if (startPage > 1) {
+                html += `<div class="page-btn" onclick="changePage(1)">1</div>`;
+                if (startPage > 2) {
+                    html += `<div class="page-btn disabled">...</div>`;
+                }
+            }
+            
+            // 页码
+            for (let i = startPage; i <= endPage; i++) {
+                html += `<div class="page-btn ${current === i ? 'active' : ''}" onclick="changePage(${i})">${i}</div>`;
+            }
+            
+            // 最后一页
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                    html += `<div class="page-btn disabled">...</div>`;
+                }
+                html += `<div class="page-btn" onclick="changePage(${totalPages})">${totalPages}</div>`;
+            }
+            
+            // 下一页
+            html += `<div class="page-btn ${current === totalPages ? 'disabled' : ''}" onclick="changePage(${current + 1})">&gt;</div>`;
+            
+            document.getElementById('pagination').innerHTML = html;
+        }
+        
+        // 切换页码
+        window.changePage = function(page) {
+            if (page < 1 || page > Math.ceil(allArticles.length / CONFIG.pageSize)) return;
+            CONFIG.currentPage = page;
+            renderNewsList();
+            // 滚动到顶部
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        
+        // 显示无数据
+        function showNoData() {
+            const typeName = CONFIG.typeMap[CONFIG.currentType];
+            document.getElementById('newsList').innerHTML = `
+                <li class="no-data">
+                    <i class="far fa-newspaper"></i>
+                    <div>暂无${typeName}</div>
+                    <div style="margin-top: 10px; font-size: 14px; color: #95a5a6;">
+                        请添加新闻文件到news/目录
+                    </div>
+                </li>
+            `;
+            document.getElementById('pagination').innerHTML = '';
+        }
+        
+        // 初始化页面
+        document.addEventListener('DOMContentLoaded', function() {
+            // 绑定分类切换事件
+            const menuItems = document.querySelectorAll('.sidebar-menu li');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // 更新激活状态
+                    menuItems.forEach(li => li.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 更新当前类型
+                    CONFIG.currentType = this.dataset.type;
+                    CONFIG.currentPage = 1; // 重置页码
+                    
+                    // 重新渲染
+                    renderNewsList();
+                });
+            });
+            
+            // 加载数据
+            loadNewsData();
+        });
+    </script>
+
+        <!-- 无缝跑马灯区域 -->
+    <div class="marquee-wrapper">
+        <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+
+    <!-- 页脚（完全匹配截图布局） -->
+    <!-- 页脚 -->
+    <footer id="comm_layout_footer" class="layout">
+        <div class="footer-wrapper">
+            <!-- 页脚内容区域 -->
+            <div class="footer-content">
+                <div class="contact-section">
+                    <div class="section-title">联系我们</div>
+                    <div class="logo-container">
+                        <a href="index.html" aria-label="返回首页">
+                            <img class="footer-logo" src="img/logo_noword.png" alt="立德精英素质教育基地">
+                            <div class="logo-text">立德精英素质教育基地</div>
+                        </a>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="icon-location"></i> 山东省济南市长清区长孝路1108号</p>
+                        <p><i class="icon-post"></i> 邮编：250001</p>
+                        <p><i class="icon-phone"></i> 电话：18605316398</p>
+                    </div>
+                </div>
+                
+                <div class="qrcode-section">
+                    <div class="section-title">关注我们</div>
+                    <div class="qrcode-grid">
+                        <div class="qrcode-row">
+                            <div class="qrcode-item">
+                                <img src="img/qrcode_personal.jpg" alt="官方客服微信二维码" class="qrcode-image">
+                                <div class="qrcode-label">官方客服</div>
+                            </div>
+                            <div class="qrcode-item">
+                                <img src="img/qrcode_wepub.jpg" alt="微信公众号二维码" class="qrcode-image">
+                                <div class="qrcode-label">公众号</div>
+                            </div>
+                            <div class="qrcode-item">
+                                <img src="img/qrcode.png" alt="微信服务号二维码" class="qrcode-image">
+                                <div class="qrcode-label">服务号</div>
+                            </div>
+                        </div>
+                        <div class="qrcode-row">
+                            <div class="qrcode-item">
+                                <img src="img/qrcode_shipinhao.jpg" alt="视频号二维码" class="qrcode-image">
+                                <div class="qrcode-label">视频号</div>
+                            </div>
+                            <div class="qrcode-item">
+                                <img src="img/qrcode_douyin.png" alt="抖音二维码" class="qrcode-image">
+                                <div class="qrcode-label">抖音</div>
+                            </div>
+                            <div class="qrcode-item">
+                                <img src="img/qrcode_kuaishou.jpg" alt="快手二维码" class="qrcode-image">
+                                <div class="qrcode-label">快手</div>
+                            </div>
+                            <div class="qrcode-item">
+                                <img src="img/qrcode_xiaohongshu.jpg" alt="小红书二维码" class="qrcode-image">
+                                <div class="qrcode-label">小红书</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 版权信息 -->
+            <div class="copyright-container">
+                <div class="copyright-item">
+                    <div class="copyright-text">Copyright © 2025-2026 立德精英素质教育基地 All rights reserved.</div>
+                </div>
+                <div class="copyright-item">
+                    <div class="icp-text"><a target="_blank" rel="noopener noreferrer" href="https://beian.miit.gov.cn/">鲁ICP备XXXXXXXX号</a></div>
+                </div>
+                <div class="copyright-item">
+                    <div class="public-security-text"><a target="_blank" rel="noopener noreferrer" href="https://www.beian.gov.cn/">鲁公网安备XXXXXXXX号</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+    /* 页脚整体样式 */
+    #comm_layout_footer {
+        background: linear-gradient(135deg, #1890ff, #40a9ff);
+        color: white;
+        padding: 40px 0 30px;
+        position: relative;
+        overflow: hidden;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    #comm_layout_footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></svg>');
+        background-size: 40px 40px;
+    }
+
+    .footer-wrapper {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* 页脚内容区域 */
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .contact-section, .qrcode-section {
+        flex: 1;
+    }
+
+    .section-title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        position: relative;
+        display: inline-block;
+        color: white;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #ffd700, #ffa500);
+        border-radius: 2px;
+    }
+
+    /* Logo样式 */
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        margin: 25px 0;
+    }
+
+    .footer-logo {
+        max-width: 200px;
+        height: auto;
+        filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.25));
+        transition: transform 0.3s ease;
+    }
+
+    .footer-logo:hover {
+        transform: scale(1.03);
+    }
+
+    /* 联系信息样式 */
+    .contact-info {
+        text-align: center;
+        font-size: 16px;
+        line-height: 2.2;
+        margin-top: 15px;
+    }
+
+    .contact-info p {
+        margin: 12px 0;
+        transition: all 0.3s ease;
+        color: rgba(255, 255, 255, 0.95);
+        cursor: default;
+    }
+
+    .contact-info p:hover {
+        color: #ffd700;
+        transform: translateX(5px);
+    }
+
+    /* 二维码区域 - 网格布局 */
+    .qrcode-grid {
+        display: grid;
+        gap: 25px;
+        margin-top: 20px;
+    }
+
+    .qrcode-row {
+        display: flex;
+        justify-content: space-around;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .qrcode-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 120px;
+    }
+
+    .qrcode-image {
+        width: 100%;
+        height: 100px;
+        border-radius: 12px;
+        border: 2px solid white;
+        padding: 4px;
+        background: white;
+        object-fit: contain;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+    }
+
+    .qrcode-image:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        border-color: #ffd700;
+    }
+
+    .qrcode-label {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 版权信息样式 */
+    .copyright-container {
+        max-width: 1200px;
+        margin: 35px auto 0;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        padding-top: 25px;
+    }
+
+    .copyright-item {
+        flex: 1;
+        text-align: center;
+        min-width: 250px;
+        padding: 0 15px;
+    }
+
+    .copyright-text, .icp-text, .public-security-text {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.6;
+        transition: color 0.3s ease;
+    }
+
+    .copyright-text {
+        font-weight: 500;
+        color: white;
+    }
+
+    .icp-text a, .public-security-text a {
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        padding: 2px 4px;
+        border-radius: 4px;
+    }
+
+    .icp-text a:hover, .public-security-text a:hover {
+        color: white;
+        background: rgba(255, 255, 255, 0.15);
+        text-decoration: none;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 1200px) {
+        .footer-content {
+            gap: 30px;
+        }
+        
+        .qrcode-row {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .qrcode-grid {
+            width: 100%;
+        }
+        
+        .qrcode-row {
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .copyright-container {
+            flex-direction: column;
+            gap: 12px;
+            text-align: center;
+        }
+        
+        .copyright-item {
+            min-width: auto;
+            padding: 5px 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .qrcode-row {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .qrcode-item {
+            width: 110px;
+            margin: 5px;
+        }
+        
+        .qrcode-image {
+            height: 90px;
+        }
+        
+        .contact-info p {
+            font-size: 15px;
+            line-height: 2.0;
+        }
+        
+        .section-title {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .footer-content {
+            padding: 0 15px;
+        }
+        
+        .contact-info p {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+        
+        .qrcode-row {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .qrcode-item {
+            width: 100px;
+            margin: 8px 0;
+        }
+        
+        .qrcode-image {
+            width: 90px;
+            height: 90px;
+        }
+        
+        .copyright-text, .icp-text, .public-security-text {
+            font-size: 13px;
+        }
+        
+        .copyright-container {
+            padding: 0 10px;
+        }
+    }
+
+    /* 悬停效果优化 */
+    .qrcode-item:hover .qrcode-label {
+        color: #ffd700;
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    }
+
+    /* 淡入动画 */
+    .footer-content, .copyright-container {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .footer-content.show, .copyright-container.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    </style>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 为版权链接添加安全提示
+        const copyrightLinks = document.querySelectorAll('.icp-text a, .public-security-text a');
+        copyrightLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const confirmMsg = this.textContent.includes('ICP') ? 
+                    '即将跳转到工信部备案查询网站，是否继续？' : 
+                    '即将跳转到公安备案查询网站，是否继续？';
+                
+                if (!confirm(confirmMsg)) {
+                    e.preventDefault();
+                }
+            });
+        });
+        
+        // 二维码悬停效果 - 使用CSS过渡，JS只处理点击提示
+        const qrcodeItems = document.querySelectorAll('.qrcode-item');
+        qrcodeItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const label = this.querySelector('.qrcode-label').textContent;
+                alert(`点击扫描【${label}】二维码\n长按图片可保存或识别`);
+            });
+        });
+        
+        // 页脚加载动画
+        setTimeout(function() {
+            const elements = document.querySelectorAll('.footer-content, .copyright-container');
+            elements.forEach(el => {
+                el.classList.add('show');
+            });
+        }, 300);
+        
+        // 滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // 观察动画元素
+        document.querySelectorAll('.qrcode-item, .contact-info p').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(10px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+        
+        // 性能优化：移除不必要的事件监听
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.querySelector('#comm_layout_footer').style.boxShadow = '0 -5px 25px rgba(0, 0, 0, 0.15)';
+            } else {
+                document.querySelector('#comm_layout_footer').style.boxShadow = 'none';
+            }
+        }, { passive: true });
+    });
+    </script>
+
+    <script>
+        // ========================= 核心配置区（后台可直接修改） =========================
+        // 1. 置顶资讯配置（最多3条，填写文件名，按时间排序）
+        const TOP_NEWS = ['news_hy_20260422.html', 'news_xx_20260421.html'];
+        // 2. 分页配置：每页10条
+        const PAGE_SIZE = 10;
+        // 3. 资讯文件存放路径
+        const NEWS_PATH = 'news/';
+
+        // 全局变量
+        let allNewsData = []; // 所有资讯数据
+        let currentType = 'all'; // 当前分类
+        let currentPage = 1; // 当前页码
+
+        // ========================= 核心功能函数 =========================
+        // 1. 解析资讯文件名：news_hy_20260422.html → {type:hy, date:20260422, name:xxx}
+        function parseNewsFileName(fileName) {
+            if(!fileName.startsWith('news_') || !fileName.endsWith('.html')) return null;
+            const parts = fileName.replace('.html','').split('_');
+            if(parts.length !==3) return null;
+            return {
+                fileName: fileName,
+                type: parts[1], // hy=行业资讯，xx=学校新闻
+                date: parts[2], // 发布日期
+                url: NEWS_PATH + fileName
+            };
+        }
+
+        // 2. 获取资讯页面的title标题
+        async function getNewsTitle(url) {
+            try {
+                const res = await fetch(url);
+                const html = await res.text();
+                const titleMatch = html.match(/<title>(.*?)<\/title>/i);
+                return titleMatch ? titleMatch[1].replace('-立德精英素质教育基地','').trim() : '无标题资讯';
+            } catch (e) {
+                return '加载失败';
+            }
+        }
+
+        // 3. 模拟扫描news目录下的所有资讯文件（后台替换为接口即可）
+        async function loadAllNews() {
+            // 后台实际使用：接口返回文件列表，前端直接解析
+            // 静态模拟：手动维护文件列表（上线后删除，替换为接口数据）
+            const mockFiles = [
+                'news_hy_20260422.html','news_xx_20260421.html',
+                'news_hy_20260420.html','news_xx_20260419.html',
+                'news_hy_20260418.html','news_xx_20260417.html',
+                'news_hy_20260416.html','news_xx_20260415.html',
+                'news_hy_20260414.html','news_xx_20260413.html',
+                'news_hy_20260412.html','news_xx_20260411.html'
+            ];
+
+            // 解析所有文件
+            const newsList = [];
+            for(let file of mockFiles) {
+                const info = parseNewsFileName(file);
+                if(!info) continue;
+                info.title = await getNewsTitle(info.url);
+                newsList.push(info);
+            }
+            allNewsData = newsList;
+            renderNews();
+        }
+
+        // 4. 排序规则：置顶优先 → 日期倒序 → 同日期行业资讯(hy)优先
+        sortNewsData(list) {
+            return list.sort((a,b) => {
+                // 置顶判断
+                const aTop = TOP_NEWS.includes(a.fileName);
+                const bTop = TOP_NEWS.includes(b.fileName);
+                if(aTop && !bTop) return -1;
+                if(!aTop && bTop) return 1;
+                
+                // 日期倒序
+                if(a.date !== b.date) return b.date - a.date;
+                
+                // 同日期：行业资讯(hy)优先
+                return a.type === 'hy' ? -1 : 1;
+            });
+        }
+
+        // 5. 渲染资讯列表+分页
+        async function renderNews() {
+            // 筛选分类
+            let filteredList = [...allNewsData];
+            if(currentType !== 'all') {
+                filteredList = filteredList.filter(item => item.type === currentType);
+            }
+
+            // 排序
+            filteredList = sortNewsData(filteredList);
+
+            // 分页计算
+            const totalCount = filteredList.length;
+            const totalPage = Math.ceil(totalCount / PAGE_SIZE);
+            const start = (currentPage -1) * PAGE_SIZE;
+            const end = start + PAGE_SIZE;
+            const pageList = filteredList.slice(start, end);
+
+            // 渲染列表
+            const listDom = $('#newsList');
+            listDom.empty();
+            for(let item of pageList) {
+                const isTop = TOP_NEWS.includes(item.fileName) ? '<span class="top-tag">置顶</span>' : '';
+                const dateStr = item.date.replace(/(\d{4})(\d{2})(\d{2})/,'$1-$2-$3');
+                const li = `
+                    <li class="news-item">
+                        <div class="news-title">
+                            <a href="${item.url}" target="_blank">${isTop}${item.title}</a>
+                            <span class="news-date">${dateStr}</span>
+                        </div>
+                    </li>
+                `;
+                listDom.append(li);
+            }
+
+            // 渲染分页
+            renderPagination(totalPage);
+        }
+
+        // 6. 渲染分页按钮
+        function renderPagination(totalPage) {
+            const pageDom = $('#pagination');
+            pageDom.empty();
+            if(totalPage <=1) return;
+
+            // 上一页
+            pageDom.append(`<div class="page-btn ${currentPage===1?'disabled':''}" onclick="changePage(${currentPage-1})">&lt;</div>`);
+            
+            // 页码
+            for(let i=1; i<=totalPage; i++) {
+                pageDom.append(`<div class="page-btn ${currentPage===i?'active':''}" onclick="changePage(${i})">${i}</div>`);
+            }
+            
+            // 下一页
+            pageDom.append(`<div class="page-btn ${currentPage===totalPage?'disabled':''}" onclick="changePage(${currentPage+1})">&gt;</div>`);
+        }
+
+        // 7. 切换页码
+        window.changePage = function(page) {
+            if(page <1 || page > Math.ceil(allNewsData.length/PAGE_SIZE)) return;
+            currentPage = page;
+            renderNews();
+        }
+
+        // 8. 切换分类（无页面跳转）
+        $('.sidebar-menu li').click(function(){
+            $('.sidebar-menu li').removeClass('active');
+            $(this).addClass('active');
+            currentType = $(this).data('type');
+            currentPage = 1; // 切换分类重置为第一页
+            renderNews();
+        });
+
+        // ========================= 初始化 =========================
+        $(document).ready(function(){
+            loadAllNews();
+        });
+    </script>
+</body>
+</html>

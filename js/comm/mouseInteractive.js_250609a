@@ -1,0 +1,483 @@
+
+mouseInteractiveAnimate();  //鼠标交互动画效果
+
+function mouseInteractiveAnimate(){
+    let animateElements = document.querySelectorAll(".mouseInteractive");
+    for (let i = 0; i < animateElements.length; i++) {
+        let modelElement = animateElements[i];
+        let animateType = modelElement.getAttribute("animateType");
+        let followType = modelElement.getAttribute("animateFollowType") || 'XY';  //跟随类型 X Y XY
+        let followX = followType === 'X' || followType === 'XY';
+        let followY = followType === 'Y' || followType === 'XY';
+        let isBodyAnimate = modelElement.getAttribute("animateFollowView") || 'model';  //跟随视图 model body
+        let elementAll = [];
+        
+        let includeBlockViewElement = modelElement.querySelectorAll(".a_includeBlockView");
+        let isincludeBlockViewModel = includeBlockViewElement.length > 0 ? true : false;   //是否自由容器
+        if(isincludeBlockViewModel){
+            let viewContentEelement = modelElement.querySelector(".a_includeBlockView");
+            elementAll.push(viewContentEelement);
+        }else{
+            let miaLiContElement = modelElement.querySelectorAll(".mia_li_cont .mia_li_item");
+            let isListModel = miaLiContElement.length > 0 ? true : false;   //是否列表模型
+            if(isListModel){
+                elementAll = miaLiContElement;
+            }else{
+                let viewContentEelement = modelElement.querySelector(".view_contents");
+                elementAll.push(viewContentEelement);
+            }
+        }
+        
+        switch(animateType){
+            case 'incline-3d': incline3DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate); break;   //3D倾斜效果
+            case 'rotate-3d': rotate3DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate); break;   //3D旋转效果
+            case 'flip-3d': flip3DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate); break;   //3D翻转效果
+            case 'translation-2d': translation2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate); break;   //2d平移效果
+            case 'swing-2d' : swing2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate); break;   //2d摇摆效果
+            case 'askew-3d' : askew3DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate); break;   //3d歪斜效果
+            case 'scale-2d' : scale2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate); break;   //2d缩放效果
+            case 'rotate-2d' : rotate2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate); break;   //2d旋转效果
+            case 'shadow-2d' : shadow2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate); break;   //2d阴影效果
+            case 'vague-2d' : vague2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate); break;   //2d变模糊效果
+            case 'clarity-2d' : clarity2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate); break;   //2d变清晰效果
+            default:break;
+        }
+    }
+}
+
+// 2d摇摆效果
+function swing2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate) {
+    let maxDeg = modelElement.getAttribute("animateRotate") || 20;
+    let maxTranslate = modelElement.getAttribute("animateTranslate") || 36;
+    for (let i = 0; i < elementAll.length; i++) {
+        let element = elementAll[i];
+        let mouseOverContainer = isBodyAnimate == 'body' ? document.body : element.parentElement;
+        // 设置 3D 样式
+        element.style.transition = "transform 0.1s";
+        // 添加鼠标事件
+        mouseOverContainer.addEventListener("mousemove", (e) => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    transformElement(e.clientX, e.clientY, maxTranslate);
+                });
+            }
+        });
+        mouseOverContainer.addEventListener("mouseleave", () => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    element.style.transform = "translate(0px, 0px) rotate(0deg)";
+                });
+            }
+        });
+
+
+        function transformElement(x, y, maxTranslate) {
+            let box = element.getBoundingClientRect();
+            let translateX, translateY, rotateY;
+            if(isBodyAnimate == 'model'){
+                translateX = followX ? ((2 * (box.x - x) / box.width + 1) * maxTranslate) : 0;
+                translateY = followY ? ((2 * (box.y - y) / box.height + 1) * maxTranslate) : 0;
+                rotateY = followX ? ((2 * (box.x - x) / box.width + 1) * maxDeg) : 0;
+            }else{
+                translateX = followX ? (((box.x + box.width/2 - x) / window.innerWidth) * maxTranslate) : 0;
+                translateY = followY ? (((box.y + box.height/2 - y) / window.innerHeight) * maxTranslate) : 0;
+                rotateY = followX ? (((box.x + box.width/2 - x) / window.innerWidth) * maxDeg) : 0;
+            }
+            element.style.transform = `translate(${translateX}px, ${translateY}px) rotate(${rotateY}deg)`;
+        }
+    }
+}
+
+//2d平移效果
+function translation2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate) {
+    let maxTranslate = modelElement.getAttribute("animateTranslate") || 36;
+    for (let i = 0; i < elementAll.length; i++) {
+        let element = elementAll[i];
+        let mouseOverContainer = isBodyAnimate == 'body' ? document.body : element.parentElement;
+        // 设置 3D 样式
+        element.style.transition = "transform 0.1s";
+
+        // 添加鼠标事件
+        mouseOverContainer.addEventListener("mousemove", (e) => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    transformElement(e.clientX, e.clientY, maxTranslate);
+                });
+            }
+        });
+        mouseOverContainer.addEventListener("mouseleave", () => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    element.style.transform = "translate(0px, 0px)";
+                });
+            }
+        });
+        
+        function transformElement(x, y, maxTranslate) {
+            let box = element.getBoundingClientRect();
+            let translateX, translateY;
+            if(isBodyAnimate == 'model'){
+                translateX = followX ? (-(2 * (box.x - x) / box.width + 1) * maxTranslate) : 0;
+                translateY = followY ? (-(2 * (box.y - y) / box.height + 1) * maxTranslate) : 0;
+            }else{
+                translateX = followX ? (-((box.x + box.width/2 - x) / window.innerWidth) * maxTranslate) : 0;
+                translateY = followY ? (-((box.y + box.height/2 - y) / window.innerHeight) * maxTranslate) : 0;
+            }
+            element.style.transform = `translate(${translateX}px, ${translateY}px)`;
+        }
+    }
+}
+
+//  3D倾斜效果
+function incline3DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate) {
+    let maxDeg = modelElement.getAttribute("animateRotate") || 20;
+    let maxTranslate = modelElement.getAttribute("animateTranslate") || 36;
+    for (let i = 0; i < elementAll.length; i++) {
+        let element = elementAll[i];
+        let mouseOverContainer = isBodyAnimate == 'body' ? document.body : element.parentElement;
+        let areaElement = element.parentElement;
+        let elementW = element.offsetWidth;
+        // 设置 3D 样式
+        areaElement.parentElement.style.transformStyle = "preserve-3d";
+        element.style.transition = "transform 0.1s";
+        areaElement.parentElement.style.perspective = elementW * 3 / 1 + "px";
+
+        // 添加鼠标事件
+        mouseOverContainer.addEventListener("mousemove", (e) => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    transformElement(e.clientX, e.clientY, maxDeg, maxTranslate);
+                });
+            }
+        });
+        mouseOverContainer.addEventListener("mouseleave", () => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    element.style.transform = "translate(0px, 0px) rotateX(0deg) rotateY(0deg)";
+                });
+            }
+        });
+
+        function transformElement(x, y, maxDeg, maxTranslate) {
+            let box = element.getBoundingClientRect();
+            let translateX, translateY, rotateX, rotateY;
+            if(isBodyAnimate == 'model'){
+                rotateX = followY ? (-(2 * (box.y - y) / box.height + 1) * maxDeg) : 0;
+                rotateY = followX ? ((2 * (box.x - x) / box.width + 1) * maxDeg) : 0;
+                translateX = followX ? (-(2 * (box.x - x) / box.width + 1) * maxTranslate) : 0;
+                translateY = followY ? (-(2 * (box.y - y) / box.height + 1) * maxTranslate) : 0;
+            }else{
+                rotateX = followY ? (-((box.y + box.height/2 - y) / window.innerHeight) * maxDeg) : 0;
+                rotateY = followX ? (((box.x + box.width/2 - x) / window.innerWidth) * maxDeg) : 0;
+                translateX = followX ? (-((box.x + box.width/2 - x) / window.innerWidth) * maxTranslate) : 0;
+                translateY = followY ? (-((box.y + box.height/2 - y) / window.innerHeight) * maxTranslate) : 0;
+            }
+            element.style.transform = `perspective(${elementW * 3 / 1}px) translateX(${translateX}px) translateY(${translateY}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        }
+    }
+}
+
+// 3D旋转效果
+function rotate3DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate){
+    let maxDeg = modelElement.getAttribute("animateRotate") || 20;
+    let animateAxis = modelElement.getAttribute("animateAxis") || 'center center';
+    for (let i = 0; i < elementAll.length; i++) {
+        let element = elementAll[i];
+        let mouseOverContainer = isBodyAnimate == 'body' ? document.body : element.parentElement;
+        let areaElement = element.parentElement;
+        let elementW = element.offsetWidth;
+
+        // 开始
+        areaElement.style.transformStyle = "preserve-3d";
+        areaElement.style.perspective = elementW *3 / 2+"px";
+        element.style.transformOrigin = animateAxis;
+        element.style.transition = "transform 0.1s";
+
+        mouseOverContainer.addEventListener("mousemove", (e) => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    transformElement(e.clientX, e.clientY,maxDeg);
+                });
+            }
+        });
+        mouseOverContainer.addEventListener("mouseleave", (e) => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    element.style.transform = "rotateX(0) rotateY(0)";
+                });
+            }
+        });
+        function transformElement(x, y,maxDeg) {
+            let box = element.parentElement.getBoundingClientRect();
+            let rotateX, rotateY;
+            if(isBodyAnimate == 'model'){
+                rotateX = followY ? ((2 * (box.y - y) / box.height + 1) * maxDeg) : 0;
+                rotateY = followX ? (-(2 * (box.x - x) / box.width + 1) * maxDeg) : 0;
+            }else{
+                rotateX = followY ? (((box.y + box.height/2 - y) / window.innerHeight) * maxDeg) : 0;
+                rotateY = followX ? (-((box.x + box.width/2 - x) / window.innerWidth) * maxDeg) : 0;
+            }
+            element.style.transform = "rotateX(" + rotateX + "deg) " + "rotateY(" + rotateY + "deg)";
+        }
+    }
+    
+}
+
+// 3d歪斜效果
+function askew3DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate) {
+    let maxDeg = modelElement.getAttribute("animateRotate") || 20;
+    let animateAxis = modelElement.getAttribute("animateAxis") || 'center center';
+    for (let i = 0; i < elementAll.length; i++) {
+        let element = elementAll[i];
+        let mouseOverContainer = isBodyAnimate == 'body' ? document.body : element.parentElement;
+        // 设置 3D 样式
+        element.style.transition = "transform 0.1s";
+        element.style.transformStyle = "preserve-3d";
+        element.style.transformOrigin = animateAxis;
+        // 添加鼠标事件
+        mouseOverContainer.addEventListener("mousemove", (e) => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    transformElement(e.clientX, e.clientY, maxDeg);
+                });
+            }
+        });
+        mouseOverContainer.addEventListener("mouseleave", () => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    element.style.transform = "translate(0px, 0px) rotate(0deg)";
+                });
+            }
+        });
+        function transformElement(x, y, maxDeg) {
+            let box = element.getBoundingClientRect();
+            let rotateX, rotateY, skewX, skewY;
+            if(isBodyAnimate == 'model'){
+                rotateX = followX ? ((2 * (box.x - x) / box.width + 1) * maxDeg) : 0;
+                rotateY = followY ? (-(2 * (box.y - y) / box.height + 1) * maxDeg) : 0;
+            }else{
+                rotateX = followX ? (((box.x + box.width/2 - x) / window.innerWidth) * maxDeg) : 0;
+                rotateY = followY ? (-((box.y + box.height/2 - y) / window.innerHeight) * maxDeg) : 0;
+            }
+            skewX = rotateX / 2;
+            skewY = rotateY / 2;
+            rotateX = rotateX >= 0 ? rotateX : -rotateX;
+            rotateY = rotateY >= 0 ? rotateY : -rotateY;
+            if(animateAxis.includes('top')){
+                rotateX = -rotateX;
+                skewX = -skewX;
+            }
+            if(animateAxis.includes('right') || animateAxis.includes('center')){
+                rotateY = -rotateY;
+                skewY = -skewY;
+            }
+            element.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) skewX(${skewX}deg) skewY(${skewY}deg)`;
+        }
+    }
+}
+
+// 2d缩放效果
+function scale2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate) {
+    let maxScale = modelElement.getAttribute("animateScale") || 1.1;
+    let maxTranslate = modelElement.getAttribute("animateTranslate") || 36;
+    for (let i = 0; i < elementAll.length; i++) {
+        let element = elementAll[i];
+        let mouseOverContainer = isBodyAnimate == 'body' ? document.body : element.parentElement;
+        // 设置 3D 样式
+        element.style.transition = "transform 0.1s";
+        // 添加鼠标事件
+        mouseOverContainer.addEventListener("mousemove", (e) => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    transformElement(e.clientX, e.clientY, maxScale,maxTranslate);
+                });
+            }
+        });
+        mouseOverContainer.addEventListener("mouseleave", () => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    element.style.transform = "translate(0px, 0px) rotate(0deg)";
+                });
+            }
+        });
+        function transformElement(x, y, maxScale) {
+            let box = element.getBoundingClientRect();
+            let translateX, translateY, scale;
+            if(isBodyAnimate == 'model'){
+                translateX = -(2 * (box.x - x) / box.width + 1) * maxTranslate;
+                translateY = -(2 * (box.y - y) / box.height + 1) * maxTranslate;
+                let boxCir = Math.sqrt((box.width * box.width/4) + (box.height * box.height/4));    // 盒子半径
+                let clientSpacing = Math.sqrt(((box.x - x + box.width/2) * (box.x - x + box.width/2)) + ((box.y - y + box.height/2) * (box.y - y + box.height/2)));     // 鼠标到盒子中心的距离
+                let proportion = clientSpacing/boxCir;  // 鼠标到盒子中心的距离占盒子半径的比例
+                scale = 1 + (proportion * (maxScale - 1));
+            }else{
+                translateX = -((box.x + box.width/2 - x) / window.innerWidth) * maxTranslate;
+                translateY = -((box.y + box.height/2 - y) / window.innerWidth) * maxTranslate;
+                let boxCir = Math.sqrt((window.innerWidth * window.innerWidth/4) + (window.innerWidth * window.innerWidth/4));    // window半径
+                let clientSpacing = Math.sqrt(((box.x - x + box.width/2) * (box.x - x + box.width/2)) + ((box.y - y + box.height/2) * (box.y - y + box.height/2)));     // 鼠标到盒子中心的距离
+                let proportion = clientSpacing/boxCir;  // 鼠标到盒子中心的距离占window半径的比例
+                scale = 1 + (proportion * (maxScale - 1));
+            }
+            element.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+        }
+    }
+}
+
+
+// 2d旋转效果
+function rotate2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate) {
+    let maxDeg = modelElement.getAttribute("animateRotate") || 20;
+    for (let i = 0; i < elementAll.length; i++) {
+        let element = elementAll[i];
+        let mouseOverContainer = isBodyAnimate == 'body' ? document.body : element.parentElement;
+        // 设置 3D 样式
+        element.style.transition = "transform 0.1s";
+        // 添加鼠标事件
+        mouseOverContainer.addEventListener("mousemove", (e) => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    transformElement(e.clientX, e.clientY, maxDeg);
+                });
+            }
+        });
+        mouseOverContainer.addEventListener("mouseleave", () => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    element.style.transform = "rotate(0deg)";
+                });
+            }
+        });
+        function transformElement(x, y, maxDeg) {
+            let box = element.getBoundingClientRect();
+            let rotate;
+            if(isBodyAnimate == 'model'){
+                rotate = -(2 * (box.x - x) / box.width + 1) * maxDeg;
+            }else{
+                rotate = -((box.x + box.width/2 - x) / window.innerWidth) * maxDeg;
+            }
+            element.style.transform = `rotate(${rotate}deg)`;
+        }
+    }
+}
+
+
+// 2d阴影效果
+function shadow2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate) {
+    let maxTranslate = modelElement.getAttribute("animateTranslate") || 36;
+    let maxVague = modelElement.getAttribute("animateVague") || 10;
+    let animateColor = modelElement.getAttribute("animateColor");
+    animateColor = animateColor?animateColor:'rgba(51, 51, 51, .8)';
+    for (let i = 0; i < elementAll.length; i++) {
+        let element = elementAll[i];
+        let mouseOverContainer = isBodyAnimate == 'body' ? document.body : element.parentElement;
+        element.style.transition = "box-shadow 0.15s";
+        // 添加鼠标事件
+        mouseOverContainer.addEventListener("mousemove", (e) => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    transformElement(e.clientX, e.clientY, maxTranslate,maxVague,animateColor);
+                });
+            }
+        });
+        mouseOverContainer.addEventListener("mouseleave", () => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    element.style.boxShadow = ``;
+                });
+            }
+        });
+        function transformElement(x, y, maxTranslate,maxVague,animateColor) {
+            let box = element.getBoundingClientRect();
+            let shadowX,shadowY,blur=maxVague,boxShadowColor=animateColor;
+            if(isBodyAnimate == 'model'){
+                shadowX = (2 * (box.x - x) / box.width + 1) * maxTranslate;
+                shadowY = (2 * (box.y - y) / box.height + 1) * maxTranslate;
+            }else{
+                shadowX = ((box.x + box.width/2 - x) / window.innerWidth) * maxTranslate;
+                shadowY = ((box.y + box.height/2 - y) / window.innerHeight) * maxTranslate;
+            }
+            element.style.boxShadow = `${shadowX}px ${shadowY}px ${blur}px ${boxShadowColor}`;
+        }
+    }
+}
+
+
+// 2d变模糊效果
+function vague2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate) {
+    let maxVague = modelElement.getAttribute("animateVague") || 4;
+    for (let i = 0; i < elementAll.length; i++) {
+        let element = elementAll[i];
+        let mouseOverContainer = isBodyAnimate == 'body' ? document.body : element.parentElement;
+        element.style.transition = "filter 0.15s";
+        // 添加鼠标事件
+        mouseOverContainer.addEventListener("mousemove", (e) => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    transformElement(e.clientX, e.clientY, maxVague);
+                });
+            }
+        });
+        mouseOverContainer.addEventListener("mouseleave", () => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    element.style.filter = ``;
+                });
+            }
+        });
+        function transformElement(x, y, maxVague) {
+            let box = element.getBoundingClientRect();
+            let vagueX,vagueY,vague;
+            if(isBodyAnimate == 'model'){
+                vagueX = (2 * (box.x - x) / box.width + 1) * maxVague;
+                vagueY = (2 * (box.y - y) / box.height + 1) * maxVague;
+            }else{
+                vagueX = ((box.x + box.width/2 - x) / window.innerWidth) * maxVague;
+                vagueY = ((box.y + box.height/2 - y) / window.innerHeight) * maxVague;
+            }
+            vague = maxVague - Math.sqrt(vagueX * vagueX + vagueY * vagueY) + 0.2 * maxVague;
+            vague = vague > maxVague ? maxVague : vague;
+            element.style.filter = `blur(${vague}px)`;
+        }
+    }
+}
+
+
+// 2d变清晰效果
+function clarity2DAnimate(modelElement,elementAll,followX,followY,isBodyAnimate) {
+    let maxVague = modelElement.getAttribute("animateVague") || 4;
+    for (let i = 0; i < elementAll.length; i++) {
+        let element = elementAll[i];
+        let mouseOverContainer = isBodyAnimate == 'body' ? document.body : element.parentElement;
+        element.style.filter = `blur(${maxVague}px)`;
+        element.style.transition = "filter 0.15s";
+        // 添加鼠标事件
+        mouseOverContainer.addEventListener("mousemove", (e) => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    transformElement(e.clientX, e.clientY, maxVague);
+                });
+            }
+        });
+        mouseOverContainer.addEventListener("mouseleave", () => {
+            if (window.innerWidth >= 1200) {
+                window.requestAnimationFrame(function () {
+                    element.style.filter = `blur(${maxVague}px)`;
+                });
+            }
+        });
+        function transformElement(x, y, maxVague) {
+            let box = element.getBoundingClientRect();
+            let vagueX,vagueY,vague;
+            if(isBodyAnimate == 'model'){
+                vagueX = (2 * (box.x - x) / box.width + 1) * maxVague;
+                vagueY = (2 * (box.y - y) / box.height + 1) * maxVague;
+            }else{
+                vagueX = ((box.x + box.width/2 - x) / window.innerWidth) * maxVague;
+                vagueY = ((box.y + box.height/2 - y) / window.innerHeight) * maxVague;
+            }
+            vague = Math.sqrt(vagueX * vagueX + vagueY * vagueY) - 0.2 * maxVague;
+            vague = vague < 0.5 ? 0 : vague;
+            element.style.filter = `blur(${vague}px)`;
+        }
+    }
+}

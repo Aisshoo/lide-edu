@@ -1,0 +1,184 @@
+//=== viewid:qqol_style_06_1657353416805 ===//
+
+	$('#qqol_style_06_1657353416805 .item_box.backup').click(function(){
+		$('html , body').animate({scrollTop: 0},'slow');
+	});
+
+
+//=== viewid:qqol_style_06_1657353416805 ===//
+
+    //购物车
+    if(typeof showcart !== 'function'){
+        function showcart(){
+            var langid = 0;
+            if (langid==0 && BodyIsFt) langid = 1;
+            if(window.screen.width<767 || ($('body').width() > 0 && $('body').width() < 767)){
+            location.href = "//admin.mifwl.com/exusers/u_cart.php?idweb=75665&act=show&lang="+langid+"&ismobile=1";
+            }else{
+            document.getElementById("boxName").innerHTML="查看购物车";
+            if(document.getElementById("boxClose")) document.getElementById("boxClose").innerHTML="×"; 
+            document.getElementById("showiframe").src="//admin.mifwl.com/exusers/u_cart.php?idweb=75665&act=show&lang="+langid+"&v=9";
+            box.Show({width:'1000px', height:'600px'});
+            }
+        }
+    }
+    //判断是否是手机,用于处理QQ电脑端及手机端链接不一致问题
+    var mobile_flag = isMobile();
+    if(mobile_flag){
+                $('#qqol_style_06_1657353416805 .qq_pc').hide();
+        $('#qqol_style_06_1657353416805 .qq_mobile').show();
+            }
+    function isMobile() {
+        var userAgentInfo = navigator.userAgent;
+        var mobileAgents = [ "Android", "iPhone", "SymbianOS", "Windows Phone", "iPad","iPod"];
+        var mobile_flag = false;
+        //根据userAgent判断是否是手机
+        for (var v = 0; v < mobileAgents.length; v++) {
+            if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
+                mobile_flag = true;
+                break;
+            }
+        }
+        var screen_width = window.screen.width;
+        var screen_height = window.screen.height;
+
+        //根据屏幕分辨率判断是否是手机
+        if(screen_width < 500 && screen_height < 800){
+            mobile_flag = true;
+        }
+        return mobile_flag;
+    }
+
+
+//=== viewid:qqol_style_06_1657353416805,qqol_style_04_1746859204156 ===//
+
+    // 对输入内容中的尖括号、引号等进行转义
+    function html_encode(str) {
+        var s = "";
+        if (str.length == 0) return "";
+        s = str.replace(/&/g, "&amp;");
+        s = s.replace(/</g, "&lt;");
+        s = s.replace(/>/g, "&gt;");
+        s = s.replace(/ /g, "&nbsp;");
+        s = s.replace(/\'/g, "&#39;");
+        s = s.replace(/\"/g, "&quot;");
+        s = s.replace(/\n/g, "<br>");
+        return s;
+    }
+    function html_decode(str) {
+        var s = "";
+        if (str.length == 0) return "";
+        s = str.replace(/&amp;/g, "&");
+        s = s.replace(/&lt;/g, "<");
+        s = s.replace(/&gt;/g, ">");
+        s = s.replace(/&nbsp;/g, " ");
+        s = s.replace(/&#39;/g, "\'");
+        s = s.replace(/&quot;/g, "\"");
+        s = s.replace(/<br>/g, "\n");
+        return s;
+    }
+
+
+
+//=== viewid:dh_style_28_1657175677058 ===//
+
+/*pc,手机显示隐藏*/
+function is_mobile(){
+	return window.screen.width<767 || ($('body').width() > 0 && $('body').width() < 767);
+}
+var is_mobile_boolean = is_mobile();
+$(function(){
+    /*pc,手机显示隐藏*/
+    
+})
+
+
+//=== viewid:dh_style_28_1657175677058 ===//
+
+function navSwtich(obj) {
+	$(obj).siblings(".menuUlCopy").slideToggle(200);
+	$(obj).toggleClass('ontoggle');
+	$(obj).parent().siblings().find(".menuUlCopy").slideUp(200);
+	$(obj).parent().siblings().find(".fa-angle-down").removeClass('ontoggle');
+}
+function subLeft_dh_style_28_1657175677058(){
+	$("#dh_style_28_1657175677058 .menuUl>li").each(function(){
+		$(this).find(".menuUl03").css("left",'100%');
+	})
+}
+$(window).resize(function() {
+	subLeft_dh_style_28_1657175677058();
+})
+$(function(){
+    
+	$("#dh_style_28_1657175677058 .fa-navicon").click(function(){
+        $("#dh_style_28_1657175677058").addClass('clearTransform');
+		$("#dh_style_28_1657175677058 .menuUlCopy").each(function(){
+			$(this).siblings(".fa").show();
+		})
+	})
+	subLeft_dh_style_28_1657175677058();
+			$("#dh_style_28_1657175677058 .subBox").css("top",$("#dh_style_28_1657175677058 .menuUl_box").height());
+		if($("#dh_style_28_1657175677058 .menuUl").hasClass("noHover")){
+		var tabNum = 0;
+		$("#dh_style_28_1657175677058 .menuUl>li").find(".Onsub").each(function(){
+			tabNum += 1;
+			$(this).parent().attr("tabNum",tabNum)
+		})
+		$("#dh_style_28_1657175677058 .menuUl>li .Onsub").mouseover(function(){
+			$("#dh_style_28_1657175677058 .subBox").show();
+							$("#dh_style_28_1657175677058 .subBox").css("top",$("#dh_style_28_1657175677058 .menuUl_box").height());
+						var index = $(this).parent().attr("tabNum");
+			$("#dh_style_28_1657175677058 .subBox .subItems").eq(index-1).fadeIn(100).siblings().hide();
+			// 风格49，是用鼠标经过效果而不用鼠标选中效果
+										$("#dh_style_28_1657175677058 .subBox .subMenuImgArea .subMenuImgCon").eq(0).fadeIn(100).siblings().hide();
+					})
+		// 风格49，是用鼠标经过效果而不用鼠标选中效果
+								$("#dh_style_28_1657175677058 .subBox").mouseleave(function(){
+			$(this).hide();
+		});
+		$("#dh_style_28_1657175677058 .menuUl>li .Nosub").mouseover(function(){
+			$("#dh_style_28_1657175677058 .subBox").hide();
+		})
+		
+		//风格41 42
+					
+		
+		
+	}
+})
+	var color = $('#dh_style_28_1657175677058 .menuStyle_28 .menuUl02 .subMenu02').css('background-color');
+	$('#dh_style_28_1657175677058 .menuStyle_28').append(`<style>#dh_style_28_1657175677058 .menuStyle_28 .menuUl .rflex .menuUl02::before{border-bottom-color:${color}!important;}</style>`);
+	$('#dh_style_28_1657175677058 .menuStyle_28 .menuUl02 .subMenu02').mouseover(function(){
+		let that = $(this);
+		setTimeout(function(){
+			var hoverColor = that.css('background-color');
+			$('#dh_style_28_1657175677058 .menuStyle_28').append(`<style>#dh_style_28_1657175677058 .menuStyle_28 .menuUl02 .arrow:hover::before{border-left-color:${hoverColor}!important;}</style>`);
+		},100);
+	});
+
+
+//=== viewid:dh_style_menu2_02_1567585268349,dh_style_menu2_02_1657268181381,dh_style_menu2_02_1657272310539,dh_style_menu2_02_1657279277629,dh_style_menu2_02_1657279382117,dh_style_menu2_02_1657279369878 ===//
+
+        
+    // 风格style_menu2_03 交互
+    
+
+//=== viewid:homelink_style_02_1657279369257 ===//
+//--
+				$(function(){
+					var viewid="homelink_style_02_1657279369257";
+					var sys_url="viewid=homelink_style_02_1657279369257&name=homelink&style=style_02&langid=0&pageid=2541787&viewCtrl=default&isfb=1";
+					var moreParams='';
+					if(typeof(history.pushState) != 'undefined'){
+						var hstate=JSON.stringify(history.state);
+						if(hstate!='null'&& hstate!=null){
+							eval('var hjson = ' + hstate);
+							moreParams=hjson.moreParamshomelink_style_02_1657279369257;
+						}
+					}
+					RequestURL(viewid,sys_url,moreParams);
+				});
+			//--
+
+//=== viewid:homelink_style_02_1657268181089,homelink_style_02_1657279277142,homelink_style_02_1657279381650,homelink_style_02_1657279369257 ===//

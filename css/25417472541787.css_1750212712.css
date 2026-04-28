@@ -1,0 +1,313 @@
+/* ====================== 全局基础样式 ====================== */
+* {
+  box-sizing: border-box;
+  /* 统一过渡动画，合并所有重复过渡 */
+  transition: all ease 0.2s;
+}
+body {
+  background-position: left top;
+  /* 禁止字体缩放，修复移动端适配问题 */
+  -ms-text-size-adjust: 100% !important;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+/* 通用工具类 */
+.overflow-visible { overflow: visible; }
+.overflow-hidden { overflow: hidden; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+/* ====================== 头部公共布局 ====================== */
+#comm_layout_header {
+  height: 191px;
+  z-index: 99999;
+}
+/* 平板端适配 */
+@media screen and (min-width:641px) and (max-width:1200px) {
+  #comm_layout_header { height: 165px; }
+}
+/* 手机端适配 */
+@media screen and (max-width:640px) {
+  #comm_layout_header { height: 65px; }
+}
+
+/* ====================== 导航菜单（主菜单） ====================== */
+.menuStyle_28, #dh_style_28_1657175677058 {
+  width: 100%;
+  position: relative;
+}
+.menuStyle_28 ul, .menuStyle_28 li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* 主菜单容器 */
+#dh_style_28_1657175677058 {
+  width: 1200px;
+  z-index: 2;
+  position: absolute;
+  top: 135px;
+  left: calc(50% - 600px);
+}
+/* 主菜单文字样式 */
+#dh_style_28_1657175677058 .mainMenuSet {
+  color: #ffffff;
+  font-weight: normal;
+  line-height: 56px;
+}
+#dh_style_28_1657175677058 .mainMenuSet:hover {
+  color: #ffffff;
+  font-weight: bold;
+}
+/* 子菜单样式 */
+#dh_style_28_1657175677058 .subMenuSet {
+  line-height: 40px;
+}
+#dh_style_28_1657175677058 .subMenuSet:hover,
+#dh_style_28_1657175677058 #subCurSet {
+  border-color: #135596;
+  color: #135596;
+}
+/* 平板端导航适配 */
+@media screen and (min-width:641px) and (max-width:1200px) {
+  #dh_style_28_1657175677058 {
+    z-index: 999;
+    left: 2.01%;
+    top: 117px;
+    width: 96%;
+  }
+  #dh_style_28_1657175677058 .mainMenuSet {
+    line-height: 48px;
+    font-size: 15px;
+  }
+}
+/* 手机端导航适配 */
+@media screen and (max-width:640px) {
+  #dh_style_28_1657175677058 {
+    width: 19.73%;
+    z-index: 1000;
+    top: 10.5px;
+    left: 80.8%;
+  }
+  #dh_style_28_1657175677058 .mainMenuSet {
+    line-height: 40px;
+    font-size: 14px;
+    border: 1px solid #4c4c4c;
+    border-style: solid;
+    color: #cccccc;
+  }
+  #dh_style_28_1657175677058 .subMenuSet {
+    border-color: #4c4c4c;
+    border-width: 0;
+    color: #cccccc;
+  }
+  #dh_style_28_1657175677058 .subMenuSet:hover,
+  #dh_style_28_1657175677058 #subCurSet {
+    color: #ffffff;
+    border-color: #ffffff;
+    font-weight: bold;
+  }
+}
+
+/* ====================== 侧边栏菜单 ====================== */
+.menu2Style_2 {
+  width: 100%;
+  position: relative;
+}
+.menu2Style_2 ul, .menu2Style_2 li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menu2Style_2 .menu2Ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  line-height: 50px;
+  height: 50px;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 0 4px;
+}
+.menu2Style_2 .menu2Ul li a:hover,
+.menu2Style_2 .menu2Ul li #subCurSet {
+  color: #135596;
+  text-decoration: underline;
+  background: transparent;
+}
+/* 手机端侧边栏适配 */
+@media screen and (max-width:640px) {
+  .menu2Style_2 .menu2Ul li {
+    float: left;
+    margin-right: 9px;
+    margin-bottom: 8px;
+  }
+  .menu2Style_2 .menu2Ul li a {
+    line-height: 40px;
+    height: 40px;
+  }
+}
+
+/* ====================== 文本通用样式 ====================== */
+/* 基础文本模块 */
+.text-style-base {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  font-family: "Microsoft YaHei";
+  position: absolute;
+  z-index: 2;
+}
+/* 标题文本（蓝色楷体） */
+.text-title-blue {
+  font-size: 28px;
+  font-family: KaiTi;
+  color: #135596;
+  font-weight: bold;
+}
+/* 手机端文本适配 */
+@media screen and (max-width:640px) {
+  .text-style-base {
+    font-size: 12px;
+    line-height: 1.6;
+    width: 96% !important;
+    left: 2% !important;
+  }
+  .text-title-blue {
+    font-size: 16px !important;
+  }
+}
+
+/* ====================== 图片通用样式 ====================== */
+.imgStyle, .logoStyle {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.imgStyle a, .logoStyle a {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+/* 图片居中适配 */
+.CompatibleImg img {
+  width: auto;
+  height: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ====================== 轮播/背景区域 ====================== */
+#layout_1657348186421 {
+  height: 400px;
+  /* 统一替换背景图为指定路径 */
+  background: url(img/bankground.jpg) no-repeat center center !important;
+  background-size: auto 100%;
+}
+/* 平板端适配 */
+@media screen and (min-width:641px) and (max-width:1200px) {
+  #layout_1657348186421 { height: 201px; }
+}
+/* 手机端适配 */
+@media screen and (max-width:640px) {
+  #layout_1657348186421 { height: 119px; }
+}
+
+/* ====================== 底部公共布局 ====================== */
+#comm_layout_footer {
+  height: 354.86px;
+  z-index: 9999;
+  /* 统一替换底部背景图 */
+  background: url(img/bankground.jpg);
+  background-size: 100% auto;
+  background-position: center 0 !important;
+}
+/* 平板端底部适配 */
+@media screen and (min-width:641px) and (max-width:1200px) {
+  #comm_layout_footer {
+    height: 255px;
+    background-size: auto 100%;
+    background-position: center center !important;
+  }
+}
+/* 手机端底部适配 */
+@media screen and (max-width:640px) {
+  #comm_layout_footer { height: 76px; }
+}
+
+/* ====================== 版权信息样式 ====================== */
+.copyrightStyle01 {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+}
+@media screen and (max-width:640px) {
+  .copyrightStyle01 {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+}
+
+/* ====================== 在线客服悬浮样式 ====================== */
+.onlineStyle06 .main_box {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100000000;
+}
+.onlineStyle06 .item {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 12px;
+  margin: 7px 0;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  cursor: pointer;
+}
+.onlineStyle06 .item:hover {
+  background: #12518f;
+  color: #fff;
+}
+/* 客服弹窗样式 */
+.onlineStyle06 .show_box {
+  display: none;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 220px;
+}
+.onlineStyle06 .item_box:hover .show_box {
+  display: block;
+}
+/* 手机端客服适配 */
+@media screen and (max-width:640px) {
+  .onlineStyle06 .qq_mobile { display: none; }
+}
+
+/* ====================== 面包屑导航 ====================== */
+.homelink_style02 {
+  width: 100%;
+}
+.homelink_style02 .link_li {
+  display: inline-block;
+  font-size: 14px;
+}
+.homelink_style02 .link_li a {
+  padding: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+.homelink_style02 .link_li a:hover,
+.homelink_style02 .link_li.tabCurItem a {
+  color: #135596;
+}
+/* 分隔符 */
+#homelink_style_02_1657279369257 .breadcrumb > li + li:before {
+  content: ">\\00a0";
+}

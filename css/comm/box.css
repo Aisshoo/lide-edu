@@ -1,0 +1,99 @@
+/* ====================== 弹窗主容器 ====================== */
+#idBox {
+  /* 固定定位，屏幕居中 */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* 背景替换为指定图片，全屏覆盖、居中、不重复 */
+  background: url("img/bankground.jpg") no-repeat center / cover;
+  /* 最高层级，避免被遮挡 */
+  z-index: 2147583630;
+  /* 宽度占屏幕90% */
+  width: 90%;
+}
+
+/* ====================== 弹窗标题栏 ====================== */
+#boxTopTitle {
+  /* 宽度铺满父容器 */
+  width: 100%;
+  height: 45px;
+  /* 标题栏背景色 */
+  background: #33f;
+  /* 文字垂直居中 */
+  line-height: 45px;
+  /* 文字样式 */
+  font-size: 16px;
+  color: #fff;
+  font-family: "Microsoft YaHei", sans-serif;
+  /* 内边距 + 盒模型兼容 */
+  padding: 0 15px;
+  box-sizing: border-box;
+  /* 相对定位，用于关闭按钮定位 */
+  position: relative;
+}
+
+/* ====================== 关闭按钮 ====================== */
+#boxClose {
+  /* 绝对定位在标题栏右上角 */
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  /* 按钮尺寸 */
+  display: block;
+  width: 45px;
+  height: 45px;
+  /* 文字居中 */
+  line-height: 45px;
+  text-align: center;
+  /* 文字样式 */
+  font-size: 24px;
+  font-family: "黑体", sans-serif;
+  color: #fff;
+  /* 鼠标悬浮为手型 */
+  cursor: pointer;
+  /* 过渡动画（精简前缀，现代浏览器通用） */
+  transition: all 0.1s linear;
+}
+
+/* 关闭按钮悬浮效果 */
+#boxClose:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* ====================== 弹窗内容区域 ====================== */
+#boxContent {
+  position: relative;
+  width: 100%;
+  /* 溢出自动滚动（替代旧属性overlay，兼容性更好） */
+  overflow: auto;
+  /* 隐藏IE浏览器滚动条 */
+  -ms-overflow-style: none;
+}
+
+/* 内容区内嵌iframe */
+#boxContent iframe {
+  position: relative;
+}
+
+/* ====================== 自定义滚动条（WebKit内核浏览器） ====================== */
+/* 滚动条整体 */
+#boxContent::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+/* 滚动条滑块 */
+#boxContent::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+/* 滚动条轨道 */
+#boxContent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+/* 滑块悬浮效果 */
+#boxContent::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

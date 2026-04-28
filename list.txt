@@ -1,0 +1,277 @@
+Folder PATH listing
+Volume serial number is 1673-368B
+D:.
+©¦  generate-list.js
+©¦  generate-news-list.js
+©¦  index.html
+©¦  jxjy.html
+©¦  list.txt
+©¦  update-all.sh
+©¦  update_list.bat
+©¦  xxjj.html
+©¦  xxzx.html
+©¦  
+©À©¤css
+©¦  ©¦  02541743.css_1750212710.css
+©¦  ©¦  02541745.css_1750212712.css
+©¦  ©¦  02541747.css_1750212711.css
+©¦  ©¦  02541793.css_1750212713.css
+©¦  ©¦  25417452541751.css_1750212720.css
+©¦  ©¦  25417452541969.css_1750212727.css
+©¦  ©¦  25417472541785.css_1750212712.css
+©¦  ©¦  25417472541787.css_1750212712.css
+©¦  ©¦  25417472541789.css_1750212713.css
+©¦  ©¦  25417932541795.css_1750212711.css
+©¦  ©¦  25417932541797.css_1750212719.css
+©¦  ©¦  article-detail.css
+©¦  ©¦  
+©¦  ©¸©¤comm
+©¦      ©¦  alert.css
+©¦      ©¦  animate.min.css
+©¦      ©¦  box.css
+©¦      ©¦  comm.css
+©¦      ©¦  comm.css_1750212710.css
+©¦      ©¦  comm.css_1750212711.css
+©¦      ©¦  comm.css_1750212712.css
+©¦      ©¦  comm.css_1750212713.css
+©¦      ©¦  comm.css_1750212719.css
+©¦      ©¦  comm.css_1750212720.css
+©¦      ©¦  comm.css_1750212726.css
+©¦      ©¦  comm.css_1750212727.css
+©¦      ©¦  iconfont.css_1.css
+©¦      ©¦  
+©¦      ©¸©¤font
+©¦          ©À©¤css
+©¦          ©¦      font-awesome.min.css
+©¦          ©¦      
+©¦          ©¸©¤fonts
+©¦                  fontawesome-webfont.eot_
+©¦                  fontawesome-webfont.eot_v=4.7.0
+©¦                  fontawesome-webfont.svg_v=4.7.0
+©¦                  fontawesome-webfont.ttf_v=4.7.0
+©¦                  fontawesome-webfont.woff2_v=4.7.0
+©¦                  fontawesome-webfont.woff_v=4.7.0
+©¦                  
+©À©¤img
+©¦  ©¦  bankground.jpg
+©¦  ©¦  imgslide_ (1).png
+©¦  ©¦  imgslide_ (10).png
+©¦  ©¦  imgslide_ (11).png
+©¦  ©¦  imgslide_ (2).png
+©¦  ©¦  imgslide_ (3).png
+©¦  ©¦  imgslide_ (4).png
+©¦  ©¦  imgslide_ (5).png
+©¦  ©¦  imgslide_ (6).png
+©¦  ©¦  imgslide_ (7).png
+©¦  ©¦  imgslide_ (8).png
+©¦  ©¦  imgslide_ (9).png
+©¦  ©¦  logo_noword.png
+©¦  ©¦  logo_word.png
+©¦  ©¦  nature.jpg
+©¦  ©¦  poster01.png
+©¦  ©¦  poster02.png
+©¦  ©¦  qrcode.png
+©¦  ©¦  qrcode_douyin.png
+©¦  ©¦  qrcode_kuaishou.jpg
+©¦  ©¦  qrcode_personal.jpg
+©¦  ©¦  qrcode_shipinhao.jpg
+©¦  ©¦  qrcode_wepub.jpg
+©¦  ©¦  qrcode_xiaohongshu.jpg
+©¦  ©¦  
+©¦  ©À©¤comm
+©¦  ©¦      icon_ok.png
+©¦  ©¦      warning.png
+©¦  ©¦      
+©¦  ©À©¤copyright
+©¦  ©¦  ©¸©¤style_01
+©¦  ©¦          beiab.png
+©¦  ©¦          
+©¦  ©À©¤news
+©¦  ©¦      news20260427001.jpg
+©¦  ©¦      news20260427002.jpg
+©¦  ©¦      news20260427003.jpg
+©¦  ©¦      news20260427004.png
+©¦  ©¦      news20260427005.png
+©¦  ©¦      news20260427006.png
+©¦  ©¦      news20260427007.png
+©¦  ©¦      news20260427008.webp
+©¦  ©¦      news20260427009.webp
+©¦  ©¦      news20260427010.png
+©¦  ©¦      news20260427011.jpg
+©¦  ©¦      news20260427012.jpg
+©¦  ©¦      news20260427013.jpg
+©¦  ©¦      news20260427014.jpg
+©¦  ©¦      
+©¦  ©À©¤paper
+©¦  ©À©¤qqol
+©¦  ©¦  ©À©¤style_04
+©¦  ©¦  ©¦      qq_icon.png
+©¦  ©¦  ©¦      side_con_phone.png
+©¦  ©¦  ©¦      side_icon.png
+©¦  ©¦  ©¦      suspension-bg.png
+©¦  ©¦  ©¦      
+©¦  ©¦  ©¸©¤style_06
+©¦  ©¦          arrow.png
+©¦  ©¦          backup.png
+©¦  ©¦          backup_white.png
+©¦  ©¦          buycart_mobile_gray.png
+©¦  ©¦          buycart_mobile_white.png
+©¦  ©¦          buycart_pc_gray.png
+©¦  ©¦          buycart_pc_white.png
+©¦  ©¦          mail_mobile.png
+©¦  ©¦          mail_pc.png
+©¦  ©¦          message_mobile_gray.png
+©¦  ©¦          message_pc_gray.png
+©¦  ©¦          message_pc_white.png
+©¦  ©¦          mrssage_mobile_white.png
+©¦  ©¦          phone_mobile.png
+©¦  ©¦          phone_pc.png
+©¦  ©¦          qq_mobile.png
+©¦  ©¦          qq_pc.png
+©¦  ©¦          qr_mobile_gray.png
+©¦  ©¦          qr_mobile_white.png
+©¦  ©¦          qr_pc_gray.png
+©¦  ©¦          qr_pc_white.png
+©¦  ©¦          time_mobile_gray.png
+©¦  ©¦          time_mobile_white.png
+©¦  ©¦          time_pc_gray.png
+©¦  ©¦          time_pc_white.png
+©¦  ©¦          wx_mobile.png
+©¦  ©¦          wx_pc.png
+©¦  ©¦          
+©¦  ©À©¤school
+©¦  ©¦      act1.jpg
+©¦  ©¦      act2.jpg
+©¦  ©¦      act3.jpg
+©¦  ©¦      act4.jpg
+©¦  ©¦      act5.jpg
+©¦  ©¦      act6.jpg
+©¦  ©¦      act7.jpg
+©¦  ©¦      act8.jpg
+©¦  ©¦      course1.jpg
+©¦  ©¦      course2.jpg
+©¦  ©¦      course3.jpg
+©¦  ©¦      course4.jpg
+©¦  ©¦      course5.jpg
+©¦  ©¦      course6.jpg
+©¦  ©¦      course7.jpg
+©¦  ©¦      course8.jpg
+©¦  ©¦      env1.jpg
+©¦  ©¦      env2.jpg
+©¦  ©¦      env3.jpg
+©¦  ©¦      env4.jpg
+©¦  ©¦      env5.jpg
+©¦  ©¦      env6.jpg
+©¦  ©¦      env7.jpg
+©¦  ©¦      env8.jpg
+©¦  ©¦      stu1.png
+©¦  ©¦      stu2.png
+©¦  ©¦      stu3.png
+©¦  ©¦      stu4.jpg
+©¦  ©¦      stu5.png
+©¦  ©¦      stu6.png
+©¦  ©¦      stu7.png
+©¦  ©¦      stu8.png
+©¦  ©¦      teacher.jpg
+©¦  ©¦      teacher_cao.jpg
+©¦  ©¦      teacher_caochunxiao.png
+©¦  ©¦      teacher_caozhi.png
+©¦  ©¦      teacher_chen.jpg
+©¦  ©¦      teacher_chenhui.jpg
+©¦  ©¦      teacher_chenxi.jpg
+©¦  ©¦      teacher_dai.png
+©¦  ©¦      teacher_feng.png
+©¦  ©¦      teacher_gong.png
+©¦  ©¦      teacher_hao.png
+©¦  ©¦      teacher_huang.png
+©¦  ©¦      teacher_li.png
+©¦  ©¦      teacher_lijiaoguan.png
+©¦  ©¦      teacher_liu.png
+©¦  ©¦      teacher_liujiaoguan.jpg
+©¦  ©¦      teacher_lixinrong.png
+©¦  ©¦      teacher_ma.jpg
+©¦  ©¦      teacher_ren.png
+©¦  ©¦      teacher_sang.png
+©¦  ©¦      teacher_sun.png
+©¦  ©¦      teacher_wang.jpg
+©¦  ©¦      teacher_wangdawei.png
+©¦  ©¦      teacher_wangjiaoguan.png
+©¦  ©¦      teacher_wangmengyuan.png
+©¦  ©¦      teacher_wangxiaodi.png
+©¦  ©¦      teacher_xin.png
+©¦  ©¦      teacher_yan.png
+©¦  ©¦      teacher_yin.png
+©¦  ©¦      teacher_yu.png
+©¦  ©¦      teacher_zhang.png
+©¦  ©¦      teacher_zhanglingling.png
+©¦  ©¦      teacher_zhao.png
+©¦  ©¦      teacher_zheng.png
+©¦  ©¦      teacher_zhou.jpg
+©¦  ©¦      teacher_zhu.png
+©¦  ©¦      
+©¦  ©¸©¤upimages
+©¦          favicon.ico
+©¦          
+©À©¤js
+©¦  ©¦  02541743.js_1750212710
+©¦  ©¦  02541743_model.js_1750212711
+©¦  ©¦  02541743_user.js_1750212711
+©¦  ©¦  02541745.js_1750212712
+©¦  ©¦  02541745_model.js_1750212712
+©¦  ©¦  02541747.js_1750212711
+©¦  ©¦  02541747_model.js_1750212712
+©¦  ©¦  02541793.js_1750212713
+©¦  ©¦  02541793_model.js_1750212713
+©¦  ©¦  25417452541751.js_1750212720
+©¦  ©¦  25417452541751_model.js_1750212720
+©¦  ©¦  25417452541969.js_1750212727
+©¦  ©¦  25417452541969_model.js_1750212728
+©¦  ©¦  25417472541785.js_1750212712
+©¦  ©¦  25417472541785_model.js_1750212712
+©¦  ©¦  25417472541787.js_1750212712
+©¦  ©¦  25417472541787_model.js_1750212713
+©¦  ©¦  25417472541789.js_1750212713
+©¦  ©¦  25417472541789_model.js_1750212714
+©¦  ©¦  25417932541795.js_1750212711
+©¦  ©¦  25417932541795_model.js_1750212711
+©¦  ©¦  25417932541797.js_1750212719
+©¦  ©¦  25417932541797_model.js_1750212719
+©¦  ©¦  25417932541799.js_1750212726
+©¦  ©¦  article-detail.js
+©¦  ©¦  comm_user.js_1750212711
+©¦  ©¦  comm_user.js_1750212712
+©¦  ©¦  comm_user.js_1750212713
+©¦  ©¦  comm_user.js_1750212714
+©¦  ©¦  comm_user.js_1750212719
+©¦  ©¦  comm_user.js_1750212720
+©¦  ©¦  comm_user.js_1750212728
+©¦  ©¦  
+©¦  ©¸©¤comm
+©¦          alert.js
+©¦          comm.js_7
+©¦          jquery.lazyload.min.js
+©¦          jquery.min.js
+©¦          jquery.nicescroll.min.js
+©¦          mouseInteractive.js_250609a
+©¦          transform.js_201603091
+©¦          ubox.js
+©¦          wow.js
+©¦          
+©À©¤news
+©¦      list.json
+©¦      news_hy_20250504.html
+©¦      news_xx_20230707.html
+©¦      news_xx_20240426.html
+©¦      news_xx_20240515.html
+©¦      news_xx_20250205.html
+©¦      news_xx_20250606.html
+©¦      news_xx_20260422.html
+©¦      news_xx_20260522.html
+©¦      
+©À©¤paper
+©¦      list.json
+©¦      teaching_xlfd_20260422.html
+©¦      
+©¸©¤video
+        bankground.mp4
+        

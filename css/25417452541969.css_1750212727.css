@@ -1,0 +1,347 @@
+/* ============================
+   全局基础样式
+   作用：统一盒模型、禁止字体缩放、背景定位
+============================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-position: left top;
+  /* 禁止移动端字体自动缩放 */
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+}
+ul, li { list-style: none; }
+a { text-decoration: none; color: #333; }
+
+/* ============================
+   头部区域（LOGO+顶部文字）
+============================= */
+/* 头部总容器 */
+#comm_layout_header {
+  height: 191px;
+  position: relative;
+  z-index: 99999;
+}
+/* 头部内容居中容器 */
+#div_a_includeBlock_1657175608177 {
+  width: 1200px;
+  height: 131px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 600px);
+  z-index: 3;
+}
+/* LOGO图片 */
+#image_logo_1568079273147 {
+  width: 37.83%;
+  height: 86px;
+  position: absolute;
+  top: 36.5px;
+  left: 0;
+  z-index: 2;
+  background: url(img/bankground.jpg) no-repeat center;
+  background-size: contain;
+}
+/* 头部左侧文字 */
+#text_style_01_1568094787835 {
+  width: 30.83%;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  font-family: "Microsoft YaHei";
+  position: absolute;
+  top: 7.5px;
+  left: 0;
+  z-index: 2;
+}
+#text_style_01_1568094787835 > .view_contents {
+  font-size: 16px;
+  color: #666;
+}
+/* 头部右侧标题文字 */
+#text_style_01_1657175350615,
+#text_style_01_1657175423300 {
+  width: 31.17%;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  font-family: "Microsoft YaHei";
+  position: absolute;
+  left: 63.42%;
+  z-index: 2;
+}
+#text_style_01_1657175350615 { top: 7.5px; }
+#text_style_01_1657175423300 { top: 65.5px; }
+#text_style_01_1657175350615 > .view_contents,
+#text_style_01_1657175423300 > .view_contents {
+  font-size: 32px;
+  font-family: KaiTi;
+  text-align: right;
+  color: #135596;
+  font-weight: bold;
+}
+
+/* ============================
+   导航栏区域（菜单+背景条）
+============================= */
+/* 导航背景条 */
+#div_blank_new01_1657175687846 {
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  top: 135px;
+  left: 0;
+  z-index: 1;
+}
+#div_blank_new01_1657175687846 .modSet {
+  background: #135596;
+}
+/* 主导航菜单 */
+#dh_style_28_1657175677058 {
+  width: 1200px;
+  position: absolute;
+  top: 135px;
+  left: calc(50% - 600px);
+  z-index: 2;
+}
+#dh_style_28_1657175677058 .mainMenuSet {
+  color: #fff;
+  font-weight: normal;
+  line-height: 56px;
+}
+#dh_style_28_1657175677058 .mainMenuSet:hover {
+  font-weight: bold;
+}
+#dh_style_28_1657175677058 .subMenuSet:hover,
+#dh_style_28_1657175677058 #subCurSet {
+  border-color: #135596;
+  color: #135596;
+}
+
+/* ============================
+   横幅大图区域（替换为本地图片）
+============================= */
+#layout_1746863407198 {
+  height: 400px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: url(img/bankground.jpg) no-repeat center center !important;
+  background-size: auto 100%;
+}
+
+/* ============================
+   侧边栏菜单区域
+============================= */
+/* 侧边栏容器 */
+#div_a_includeBlock_1746867676223 {
+  width: 22.67%;
+  height: 202.5px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+}
+/* 侧边栏标题背景 */
+#div_blank_new01_1746867676284 {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#div_blank_new01_1746867676284 .modSet {
+  background: #135596;
+}
+/* 侧边栏标题文字 */
+#image_style_13_1_1746867676286 {
+  width: 94.49%;
+  position: absolute;
+  top: 11.5px;
+  left: 5.51%;
+}
+#image_style_13_1_1746867676286 .titleSet {
+  font-size: 24px;
+  color: #fff;
+  line-height: 30px;
+}
+/* 侧边栏子菜单 */
+#dh_style_menu2_02_1746867676288 {
+  width: 100%;
+  position: absolute;
+  top: 52.5px;
+  left: 0;
+  z-index: 2;
+}
+#dh_style_menu2_02_1746867676288 .subMenuSet {
+  font-size: 14px;
+  line-height: 50px;
+  height: 50px;
+  color: #666;
+  border-bottom: 1px solid #d6d6d6;
+}
+#dh_style_menu2_02_1746867676288 .subMenuSet:hover,
+#dh_style_menu2_02_1746867676288 #subCurSet {
+  color: #135596;
+  text-decoration: underline;
+}
+
+/* ============================
+   内容标题+面包屑区域
+============================= */
+/* 内容主标题 */
+#text_style_01_1746867612390 {
+  width: 74.67%;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  font-family: "Microsoft YaHei";
+  position: absolute;
+  top: 40px;
+  left: 25.33%;
+  z-index: 2;
+}
+#text_style_01_1746867612390 > .view_contents {
+  font-size: 20px;
+  line-height: 58px;
+  border-bottom: 2px solid #135596;
+  color: #135596;
+}
+/* 面包屑导航 */
+#homelink_style_02_1746867612392 {
+  width: 60.58%;
+  position: absolute;
+  top: 60px;
+  left: 39.42%;
+  z-index: 2;
+}
+#homelink_style_02_1746867612392 .tabItemSet:hover,
+#homelink_style_02_1746867612392 .tabCurItem {
+  color: #c81111;
+}
+
+/* ============================
+   新闻列表区域
+============================= */
+#newsList_style_18_1746867638872 {
+  width: 74.5%;
+  position: absolute;
+  top: 108px;
+  left: 25.5%;
+  z-index: 2;
+}
+#newsList_style_18_1746867638872 .titleSet {
+  font-size: 16px;
+  line-height: 27px;
+  color: #555;
+  border-bottom: 1px dashed #eee;
+}
+#newsList_style_18_1746867638872 .timesSet {
+  font-size: 15px;
+  color: #999;
+}
+#newsList_style_18_1746867638872 #pagecurSet,
+#newsList_style_18_1746867638872 .pageSet:hover {
+  background: #135596;
+}
+
+/* ============================
+   底部区域（替换为本地背景图）
+============================= */
+#comm_layout_footer {
+  height: 355px;
+  position: relative;
+  z-index: 9999;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: url(img/bankground.jpg) no-repeat center 0;
+  background-size: 100% auto;
+}
+/* 底部内容容器 */
+#div_a_includeBlock_1657265077743 {
+  width: 1200px;
+  height: 355px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/* 版权信息 */
+#copyright_style_01_1657265732234 {
+  width: 83.33%;
+  position: absolute;
+  top: 249px;
+  left: 8.33%;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+}
+
+/* ============================
+   右侧悬浮客服样式
+============================= */
+.onlineStyle06 .main_box {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100000000;
+}
+.onlineStyle06 .item {
+  width: 40px;
+  height: 40px;
+  margin: 7px 0;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+}
+.onlineStyle06 .item:hover {
+  background: #12518f;
+  color: #fff;
+}
+.onlineStyle06 .show_box {
+  display: none;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+.onlineStyle06 .item_box:hover .show_box {
+  display: block;
+}
+
+/* ============================
+   平板响应式（641px-1200px）
+============================= */
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  #comm_layout_header { height: 165px; }
+  #div_a_includeBlock_1657175608177 { width: 96%; left: 2%; }
+  #image_logo_1568079273147 { height: 64px; width: 365px; }
+  #dh_style_28_1657175677058 { width: 96%; left: 2%; top: 117px; }
+  #layout_1746863407198 { height: 201px; }
+  #comm_layout_footer { height: 255px; }
+}
+
+/* ============================
+   手机响应式（≤640px）
+============================= */
+@media screen and (max-width: 640px) {
+  #comm_layout_header { height: 65px; }
+  #div_a_includeBlock_1657175608177 { width: 80%; left: 0; }
+  #image_logo_1568079273147 { width: 96%; height: 47px; top: 9px; }
+  #text_style_01_1568094787835,
+  #text_style_01_1657175350615,
+  #text_style_01_1657175423300 { display: none; }
+  #div_blank_new01_1657175687846 { display: none; }
+  #layout_1746863407198 { height: 116px; }
+  #newsList_style_18_1746867638872 { width: 96%; left: 2%; }
+  #comm_layout_footer { height: 76px; }
+  #copyright_style_01_1657265732234 { width: 100%; left: 0; font-size: 12px; }
+}

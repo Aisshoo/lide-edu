@@ -1,0 +1,860 @@
+/* 全局基础样式 */
+body {
+  background-position: left top;
+  -ms-text-size-adjust: 100% !important;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+}
+
+/* 通用工具类 */
+.view_contents {
+  overflow: visible;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 公共文本样式 */
+.text-common {
+  font-family: "Microsoft YaHei", 微软雅黑;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+}
+
+/* -------------------------- 头部模块 -------------------------- */
+#comm_layout_header {
+  height: 191px;
+  z-index: 99999;
+}
+
+/* Logo */
+#image_logo_1568079273147 {
+  width: 37.8333%;
+  height: 86px;
+  position: absolute;
+  top: 36.5px;
+  left: 0;
+  z-index: 2;
+}
+
+/* 顶部文字 */
+#text_style_01_1568094787835,
+#text_style_01_1657175350615,
+#text_style_01_1657175423300 {
+  width: 30.8333%;
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  position: absolute;
+  z-index: 2;
+}
+#text_style_01_1568094787835 { top: 7.5px; left: 0; }
+#text_style_01_1657175350615 { width: 31.1667%; top: 7.5px; left: 63.4167%; }
+#text_style_01_1657175423300 { top: 65.5px; left: 69.1667%; }
+
+#text_style_01_1568094787835 > .view_contents {
+  font-size: 16px;
+  color: #666;
+}
+#text_style_01_1657175350615 > .view_contents,
+#text_style_01_1657175423300 > .view_contents {
+  font-size: 32px;
+  font-family: KaiTi;
+  text-align: right;
+  color: #135596;
+  font-weight: bold;
+}
+
+/* 顶部容器 */
+#div_a_includeBlock_1657175608177 {
+  width: 1200px;
+  height: 131px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 600px);
+  z-index: 3;
+}
+
+/* 导航 */
+#dh_style_28_1657175677058 {
+  width: 1200px;
+  position: absolute;
+  top: 135px;
+  left: calc(50% - 600px);
+  z-index: 2;
+}
+#dh_style_28_1657175677058 .mainMenuSet {
+  color: #fff;
+  font-weight: normal;
+  line-height: 56px;
+}
+#dh_style_28_1657175677058 .mainMenuSet:hover {
+  font-weight: bold;
+}
+#dh_style_28_1657175677058 #hot > a,
+#dh_style_28_1657175677058 #hot .aview {
+  font-weight: bold;
+}
+#dh_style_28_1657175677058 .subMenuSet {
+  line-height: 40px;
+}
+#dh_style_28_1657175677058 .subMenuSet:hover,
+#dh_style_28_1657175677058 #subCurSet {
+  border-color: #135596;
+  color: #135596;
+}
+
+/* 导航背景 */
+#div_blank_new01_1657175687846 {
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  top: 135px;
+  left: 0;
+  z-index: 1;
+}
+#div_blank_new01_1657175687846 .modSet {
+  background: #135596;
+}
+
+/* 右侧在线客服 */
+#qqol_style_06_1657353416805 {
+  width: 17.5%;
+  position: absolute;
+  left: 44.6667%;
+  top: 44.5px;
+  display: none;
+}
+
+/* -------------------------- Banner -------------------------- */
+#layout_1657348728537 {
+  height: 854.3333px;
+  display: block;
+}
+#banner_style_01_1657348728545 {
+  width: 100%;
+  height: 854px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* -------------------------- 核心内容模块 -------------------------- */
+#layout_1746866255003 {
+  height: 542px;
+  max-width: 1200px;
+}
+
+/* 模块标题 */
+#titleText_style_04_1746694737003 {
+  width: 62.8333%;
+  position: absolute;
+  top: 35px;
+  left: 18.5833%;
+}
+#titleText_style_04_1746694737003 .bigtitsSet {
+  font-size: 32px;
+  line-height: 1.75em;
+  font-weight: bold;
+  color: #070000;
+}
+#titleText_style_04_1746694737003 .minititsSet {
+  font-size: 22px;
+  line-height: 1.75em;
+}
+#titleText_style_04_1746694737003 .lineshapeSet {
+  height: 1px;
+  background: #ff7f00;
+}
+
+/* 简介文本 */
+#text_style_01_1746695112159 {
+  width: 75.6667%;
+  font-size: 16px;
+  line-height: 1.75;
+  position: absolute;
+  top: 102px;
+  left: 12.1667%;
+}
+#text_style_01_1746695112159 > .view_contents {
+  text-indent: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* 4个卡片公共样式 */
+#div_a_includeBlock_1746695527133,
+#div_a_includeBlock_1746695785782,
+#div_a_includeBlock_1746695792840,
+#div_a_includeBlock_1746695803199 {
+  width: 23.5%;
+  height: 351px;
+  position: absolute;
+  top: 163px;
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 0 6px #ccc;
+}
+#div_a_includeBlock_1746695527133:hover,
+#div_a_includeBlock_1746695785782:hover,
+#div_a_includeBlock_1746695792840:hover,
+#div_a_includeBlock_1746695803199:hover {
+  box-shadow: 0 0 10px #999;
+}
+#div_a_includeBlock_1746695527133 { left: 0; }
+#div_a_includeBlock_1746695785782 { left: 25.5%; }
+#div_a_includeBlock_1746695792840 { left: 51%; }
+#div_a_includeBlock_1746695803199 { left: 76.5%; }
+
+/* 卡片内图片 */
+#image_style_01_1746695527196,
+#image_style_01_1746695785851,
+#image_style_01_1746695792890,
+#image_style_01_1746695803248 {
+  width: 55.5556%;
+  height: 66px;
+  position: absolute;
+  left: 22.2185%;
+  top: 46px;
+  z-index: 2;
+}
+
+/* 卡片内标题 */
+#titleText_style_05_1746695527200,
+#titleText_style_05_1746695785854,
+#titleText_style_05_1746695792893,
+#titleText_style_05_1746695803251 {
+  width: 79.4444%;
+  position: absolute;
+  left: 10.2778%;
+  top: 139px;
+  z-index: 1;
+  text-align: center;
+}
+#titleText_style_05_1746695527200 .bigtitsSet,
+#titleText_style_05_1746695785854 .bigtitsSet,
+#titleText_style_05_1746695792893 .bigtitsSet,
+#titleText_style_05_1746695803251 .bigtitsSet {
+  font-size: 18px;
+  line-height: 1.75em;
+  padding-bottom: 13px;
+}
+#titleText_style_05_1746695527200 .minititsSet,
+#titleText_style_05_1746695785854 .minititsSet,
+#titleText_style_05_1746695792893 .minititsSet,
+#titleText_style_05_1746695803251 .minititsSet {
+  font-size: 14px;
+  color: #666;
+  padding-top: 20px;
+}
+#titleText_style_05_1746695527200 .lineshapeSet,
+#titleText_style_05_1746695785854 .lineshapeSet,
+#titleText_style_05_1746695792893 .lineshapeSet,
+#titleText_style_05_1746695803251 .lineshapeSet {
+  background: #cc0000;
+  padding: 0 28px;
+}
+
+/* 图片展示组 */
+#image_style_22_1746865605195,
+#image_style_22_1746865722129,
+#image_style_22_1746865740521,
+#image_style_22_1746865771935 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+#image_style_22_1746865605195 ul li,
+#image_style_22_1746865722129 ul li,
+#image_style_22_1746865740521 ul li,
+#image_style_22_1746865771935 ul li {
+  width: 23.5%;
+}
+
+/* 选项卡 */
+#layout_1657183387369 {
+  height: 782.7813px;
+  max-width: 1200px;
+}
+#tab_style_03_1746754550771 {
+  width: 100%;
+  height: 580.8906px;
+  position: absolute;
+  top: 201.7813px;
+  left: 0;
+}
+#tab_style_03_1746754550771 .tabItemSet {
+  background: url(https://cdn.yun.sooce.cn/6/12067/png/1585016563661ca802ee75db5de83.png?version=1585016560);
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  line-height: 50px;
+  height: 50px;
+}
+#tab_style_03_1746754550771 .tabItemSet.tabCurItem,
+#tab_style_03_1746754550771 .tabItemSet.hotImg {
+  background: #135596;
+  color: #fff;
+  font-weight: bold;
+}
+#tab_style_03_1746754550771 .arrowSet {
+  background: #135596;
+}
+
+/* 蓝色标题区 */
+#layout_1657188254324 {
+  height: 175px;
+  background: #135596;
+  max-width: 1200px;
+}
+#titleText_style_08_1746753839444 {
+  width: 66.5%;
+  position: absolute;
+  top: 27px;
+  left: 16.7361%;
+}
+#titleText_style_08_1746753839444 .bigtitsSet {
+  font-size: 32px;
+  line-height: 1.75em;
+  color: #fff;
+  font-weight: bold;
+}
+#titleText_style_08_1746753839444 .minititsSet {
+  color: #999;
+}
+#titleText_style_08_1746753839444 .lineshapeSet {
+  height: 1px;
+  background: #ff7f00;
+}
+#text_style_01_1746753699824 {
+  width: 73.5833%;
+  position: absolute;
+  top: 83px;
+  left: 13.19%;
+}
+#text_style_01_1746753699824 > .view_contents {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 图文介绍 */
+#layout_1657188273000 {
+  height: 556.6771px;
+  background: #135596;
+  max-width: 1200px;
+}
+#image_style_01_1746754251590 {
+  width: 45%;
+  height: 404px;
+  position: absolute;
+  top: 70px;
+  left: 1.5677%;
+}
+#image_style_01_1746754251590 .picSet {
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px #b2b2b2;
+}
+#text_style_15_1746754274609,
+#text_style_15_1746770739632 {
+  width: 50%;
+  position: absolute;
+  left: 48.9028%;
+}
+#text_style_15_1746754274609 { top: 156px; }
+#text_style_15_1746770739632 { top: 31px; }
+#text_style_15_1746754274609 .modSet,
+#text_style_15_1746770739632 .modSet {
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  background: #f0f0f0;
+}
+#text_style_15_1746754274609 .titleSet,
+#text_style_15_1746770739632 .titleSet {
+  color: #005fbf;
+}
+#text_style_15_1746754274609 .modSet:hover,
+#text_style_15_1746770739632 .modSet:hover {
+  box-shadow: 2px 2px 10px #333;
+}
+
+/* 新闻资讯 */
+#layout_1567495507411 {
+  height: 1356.4766px;
+  max-width: 1200px;
+}
+#titleText_style_08_1746754891980 {
+  width: 63.5%;
+  position: absolute;
+  top: 29px;
+  left: 18.24%;
+}
+#titleText_style_08_1746754891980 .bigtitsSet {
+  font-size: 32px;
+  font-weight: bold;
+}
+#titleText_style_08_1746754891980 .lineshapeSet {
+  background: #ff7f00;
+}
+#text_style_01_1746754897518 {
+  width: 76.75%;
+  position: absolute;
+  top: 98px;
+  left: 11.6146%;
+}
+#text_style_01_1746754897518 > .view_contents {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+#image_style_01_1746757490830 {
+  width: 36.0833%;
+  height: 289px;
+  position: absolute;
+  top: 191px;
+  left: 0;
+}
+#image_style_01_1746757490830 .picSet {
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px #b2b2b2;
+}
+
+/* 新闻列表 */
+#newsList_style_09_1746757605812 {
+  width: 100%;
+  position: absolute;
+  top: 536.4766px;
+  left: 0;
+}
+#newsList_style_09_1746757605812 .modSet {
+  padding: 20px 15px 15px;
+  margin-bottom: 15px;
+  border: 2px solid #e1dcd6;
+}
+#newsList_style_09_1746757605812 .modSet:hover {
+  border-color: #af9c85;
+}
+#newsList_style_09_1746757605812 .titleSet {
+  font-size: 16px;
+}
+#newsList_style_09_1746757605812 .btnaSet {
+  background: #9a8a78;
+  padding: 8px 24px;
+}
+#newsList_style_09_1746757605812 .btnaSet:hover {
+  background: #63503c;
+}
+#newsList_style_18_1746757787060 {
+  width: 61%;
+  position: absolute;
+  top: 178px;
+  left: 39%;
+}
+
+/* 合作展示 */
+#layout_1746758071982 {
+  height: 801.1979px;
+  max-width: 1200px;
+}
+#titleText_style_08_1746758089245 {
+  width: 61.3333%;
+  position: absolute;
+  top: 24px;
+  left: 19.3333%;
+}
+#titleText_style_08_1746758089245 .bigtitsSet {
+  font-size: 32px;
+  font-weight: bold;
+}
+#text_style_01_1746758095511 {
+  width: 68.8333%;
+  position: absolute;
+  top: 93px;
+  left: 15.57%;
+}
+#text_style_01_1746758095511 > .view_contents {
+  text-align: center;
+  font-weight: bold;
+}
+#image_style_28_1746758227443 {
+  width: 100%;
+  position: absolute;
+  top: 189px;
+  left: 0;
+}
+#image_style_28_1746758227443 ul li {
+  width: 23.5%;
+}
+
+/* 右侧悬浮客服 */
+#qqol_style_04_1746859204156 {
+  width: 210px;
+  position: fixed;
+  top: 662.7188px;
+  left: calc(50% - 951.5px);
+  z-index: 9999;
+}
+
+/* -------------------------- 底部 -------------------------- */
+#comm_layout_footer {
+  height: 354.8594px;
+  z-index: 9999;
+  background: url(https://cdn.yun.sooce.cn/6/39613/jpg/165726504901090ef0a6db8931ceb.jpg?version=0);
+  background-size: 100% auto;
+  background-position: center top;
+}
+#div_a_includeBlock_1657265077743 {
+  width: 1200px;
+  height: 354.8594px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 底部左侧Logo */
+#image_style_01_1657265139434 {
+  width: 17.1667%;
+  height: 155px;
+  position: absolute;
+  left: 0;
+  top: 53px;
+}
+#image_style_01_1657265139434 .picSet {
+  opacity: 0.8;
+}
+
+/* 底部文字 */
+#div_blank_new01_1657265247149 {
+  width: 11.8333%;
+  height: 135px;
+  position: absolute;
+  left: 12.125%;
+  top: 63px;
+}
+#div_blank_new01_1657265247149 .modSet {
+  background: transparent;
+  border: 1px solid #999;
+}
+#text_style_01_1568087096966 {
+  width: 30.8333%;
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  position: absolute;
+  top: 69px;
+  left: 27.25%;
+  z-index: 2;
+}
+#text_style_01_1568087096966 > .view_contents {
+  color: #fff;
+  font-size: 20px;
+  line-height: 26px;
+}
+#text_style_01_1657265317176 {
+  width: 44.75%;
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  position: absolute;
+  left: 27.25%;
+  top: 112px;
+}
+#text_style_01_1657265317176 > .view_contents {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* 底部二维码 */
+#image_style_12_1_1657265469916 {
+  width: 12.9167%;
+  position: absolute;
+  left: 87.0833%;
+  top: 58px;
+}
+#image_style_12_1_1657265469916 .titProSet {
+  color: #fff;
+  font-size: 14px;
+  padding-top: 7px;
+}
+
+/* 版权 */
+#copyright_style_01_1657265732234 {
+  width: 83.3333%;
+  position: absolute;
+  top: 249px;
+  left: 8.3333%;
+}
+.copyrightStyle01 {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  font-family: "Microsoft YaHei", 微软雅黑;
+}
+
+/* -------------------------- 公共组件样式 -------------------------- */
+.logoStyle {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.logoStyle > a {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.logoName {
+  white-space: nowrap;
+}
+
+/* 在线客服样式 */
+.onlineStyle06 .main_box {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100000000;
+}
+.onlineStyle06 .item_box {
+  position: relative;
+}
+.onlineStyle06 .item_box:hover .show_box {
+  display: block;
+}
+.onlineStyle06 .item {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 12px;
+  margin: 7px 0;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+.onlineStyle06 .item:hover {
+  background: #2a8cf0;
+  color: #fff;
+}
+.onlineStyle06 .show_box {
+  display: none;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 220px;
+}
+
+/* 导航组件 */
+.menuStyle_28 {
+  width: 100%;
+  position: relative;
+}
+.menuStyle_28 ul, .menuStyle_28 li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Banner组件 */
+.bannerStyle_1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.bannerStyle_1 .main_visual {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 图片兼容样式 */
+.imgStyle,
+.imgStyle_22,
+.imgStyle_28,
+.imgStyle_12_1 {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* 标题样式 */
+.titleStyle_4, .titleStyle_5, .titleStyle_8 {
+  text-align: center;
+}
+
+/* -------------------------- 响应式（统一集中） -------------------------- */
+/* 平板 641px - 1200px */
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  #comm_layout_header { height: 165px; }
+  #image_logo_1568079273147 { height: 64px; width: 365px; top: 42.5px; }
+  #text_style_01_1568094787835 { top: 12.5px; }
+  #text_style_01_1657175350615 { top: 15.5px; left: 52.1443%; width: 413px; }
+  #text_style_01_1657175423300 { left: 62.4689%; top: 54.5px; width: 334px; }
+  #div_a_includeBlock_1657175608177 { width: 96%; left: 2%; height: 117px; }
+  #dh_style_28_1657175677058 { left: 2%; top: 117px; width: 96%; z-index: 999; }
+  #div_blank_new01_1657175687846 { left: calc(50% - 471.5px); top: 117px; height: 48px; }
+  #layout_1657348728537 { height: 434.3281px; }
+  #banner_style_01_1657348728545 { height: 434px; }
+  #layout_1746866255003 { height: 553px; }
+  #titleText_style_04_1746694737003 .bigtitsSet { font-size: 20px; }
+  #titleText_style_04_1746694737003 .minititsSet { font-size: 20px; }
+  #text_style_01_1746695112159 { width: 828.2813px; left: 5%; top: 86px; }
+  #div_a_includeBlock_1746695527133,
+  #div_a_includeBlock_1746695785782,
+  #div_a_includeBlock_1746695792840,
+  #div_a_includeBlock_1746695803199 { z-index: 4; }
+  #image_style_01_1746695527196,
+  #image_style_01_1746695785851,
+  #image_style_01_1746695792890,
+  #image_style_01_1746695803248 { left: 17%; width: 66%; height: 52px; top: 31px; }
+  #titleText_style_05_1746695527200,
+  #titleText_style_05_1746695785854,
+  #titleText_style_05_1746695792893,
+  #titleText_style_05_1746695803251 { left: 7.5%; width: 85%; top: 101px; }
+  #titleText_style_05_1746695527200 .bigtitsSet,
+  #titleText_style_05_1746695785854 .bigtitsSet,
+  #titleText_style_05_1746695792893 .bigtitsSet,
+  #titleText_style_05_1746695803251 .bigtitsSet { font-size: 16px; padding-bottom: 8px; }
+  #image_style_22_1746865605195,
+  #image_style_22_1746865722129,
+  #image_style_22_1746865740521,
+  #image_style_22_1746865771935 { width: 96%; left: 2%; }
+  #layout_1657183387369 { height: 627px; }
+  #tab_style_03_1746754550771 { width: 96%; left: 2%; height: 408px; }
+  #dh_style_28_1657175677058 .mainMenuSet { line-height: 48px; font-size: 15px; }
+  #layout_1657188254324 { height: 139px; }
+  #titleText_style_08_1746753839444 .bigtitsSet { font-size: 30px; }
+  #layout_1657188273000 { height: 598.6719px; }
+  #image_style_01_1746754251590 { height: 316px; left: 1.3554%; top: 31px; }
+  #layout_1567495507411 { height: 1227.4688px; }
+  #titleText_style_08_1746754891980 .bigtitsSet { font-size: 30px; }
+  #image_style_01_1746757490830 { width: 390px; left: 1.7928%; top: 178px; }
+  #newsList_style_18_1746757787060 { width: 498px; left: 47.1534%; }
+  #layout_1746758071982 { height: 670.1875px; }
+  #titleText_style_08_1746758089245 .bigtitsSet { font-size: 30px; }
+  #layout_1657190194123 { height: 48px; }
+  #qqol_style_04_1746859204156 { width: 21.875%; height: 46px; top: 670px; left: 0; }
+  #comm_layout_footer { height: 255px; }
+  #image_style_01_1657265139434 { width: 19.5122%; height: 122px; top: 48px; }
+  #div_blank_new01_1657265247149 { left: 13.3351%; width: 11.0286%; top: 50px; height: 119px; }
+  #text_style_01_1568087096966 { left: 27.4606%; top: 49px; }
+  #text_style_01_1657265317176 { left: 27.4606%; width: 50%; top: 88px; }
+  #image_style_12_1_1657265469916 { left: 83.8812%; width: 16.1188%; top: 41px; }
+  #copyright_style_01_1657265732234 { left: calc(50% - 432px); top: 215px; width: 864px; }
+  #div_a_includeBlock_1657265077743 { width: 100%; left: 0; height: 197px; }
+  #qqol_style_06_1657353416805 { left: 3.2552%; width: 93.4896%; display: block; }
+}
+
+/* 手机 ≤640px */
+@media screen and (max-width: 640px) {
+  #comm_layout_header { height: 65px; }
+  #image_logo_1568079273147 { width: 96.0432%; height: 47px; top: 9px; }
+  #text_style_01_1568094787835,
+  #text_style_01_1657175350615,
+  #text_style_01_1657175423300 { width: 96%; font-size: 12px; line-height: 1.6; display: none; }
+  #text_style_01_1568094787835 { top: 0; left: 2%; }
+  #text_style_01_1657175350615 { width: 50%; top: 78px; left: 25%; }
+  #text_style_01_1657175423300 { width: 50%; top: 135px; left: 25%; }
+  #div_a_includeBlock_1657175608177 { width: 80%; height: 65px; top: 0; left: 0; z-index: 1; }
+  #dh_style_28_1657175677058 { width: 19.7333%; top: 10.5px; left: 80.8%; z-index: 1000; }
+  #dh_style_28_1657175677058 .mainMenuSet { line-height: 40px; font-size: 14px; color: #ccc; border-color: #4c4c4c; }
+  #dh_style_28_1657175677058 .subMenuSet { color: #ccc; }
+  #dh_style_28_1657175677058 .subMenuSet:hover,
+  #dh_style_28_1657175677058 #subCurSet { color: #fff; border-color: #fff; font-weight: bold; }
+  #div_blank_new01_1657175687846 { width: 24.7525%; height: 50px; top: 0; left: 37.6238%; z-index: 2; display: none; }
+  #layout_1657348728537 { height: 197px; }
+  #banner_style_01_1657348728545 { height: 197px; }
+  #layout_1746866255003 { height: 704px; }
+  #titleText_style_04_1746694737003 { width: 97.3333%; top: 12px; left: 1.3333%; }
+  #titleText_style_04_1746694737003 .bigtitsSet { font-size: 18px; line-height: 1.5em; }
+  #titleText_style_04_1746694737003 .minititsSet { font-size: 18px; line-height: 2em; }
+  #text_style_01_1746695112159 { width: 96%; font-size: 12px; line-height: 2; top: 44px; left: 2%; }
+  #div_a_includeBlock_1746695527133,
+  #div_a_includeBlock_1746695792840 { width: 47%; height: 273px; top: 132px; left: 2%; }
+  #div_a_includeBlock_1746695785782,
+  #div_a_includeBlock_1746695803199 { width: 47%; height: 273px; top: 132px; left: 51.0667%; }
+  #div_a_includeBlock_1746695792840 { top: 416px; }
+  #div_a_includeBlock_1746695803199 { top: 416px; left: 51.0667%; }
+  #div_a_includeBlock_1746695527133,
+  #div_a_includeBlock_1746695785782,
+  #div_a_includeBlock_1746695792840,
+  #div_a_includeBlock_1746695803199 { box-shadow: none; }
+  #image_style_01_1746695527196,
+  #image_style_01_1746695785851,
+  #image_style_01_1746695792890,
+  #image_style_01_1746695803248 { width: 67.5978%; height: 46px; top: 20px; left: 16.5128%; }
+  #titleText_style_05_1746695527200,
+  #titleText_style_05_1746695785854,
+  #titleText_style_05_1746695792893,
+  #titleText_style_05_1746695803251 { width: 88.6364%; top: 75.5px; left: 5.6818%; }
+  #titleText_style_05_1746695527200 .bigtitsSet,
+  #titleText_style_05_1746695785854 .bigtitsSet,
+  #titleText_style_05_1746695792893 .bigtitsSet,
+  #titleText_style_05_1746695803251 .bigtitsSet { font-size: 16px; line-height: 2em; padding-bottom: 8px; }
+  #titleText_style_05_1746695527200 .minititsSet,
+  #titleText_style_05_1746695785854 .minititsSet,
+  #titleText_style_05_1746695792893 .minititsSet,
+  #titleText_style_05_1746695803251 .minititsSet { font-size: 12px; line-height: 2em; padding-top: 10px; }
+  #image_style_22_1746865605195,
+  #image_style_22_1746865722129,
+  #image_style_22_1746865740521,
+  #image_style_22_1746865771935 { width: 96%; top: 10px; left: 2%; }
+  #image_style_22_1746865605195 ul li,
+  #image_style_22_1746865722129 ul li,
+  #image_style_22_1746865740521 ul li,
+  #image_style_22_1746865771935 ul li { width: 49%; }
+  #layout_1657183387369 { height: 756px; }
+  #tab_style_03_1746754550771 { width: 96%; height: 595px; top: 155px; left: 2%; }
+  #tab_style_03_1746754550771 .tabItemSet,
+  #tab_style_03_1746754550771 .tabItemSet.tabCurItem { font-size: 15px; }
+  #layout_1657188254324 { height: 180px; }
+  #titleText_style_08_1746753839444 { width: 94.2%; top: 14px; left: 2.9%; }
+  #titleText_style_08_1746753839444 .bigtitsSet { font-size: 18px; line-height: 2em; }
+  #titleText_style_08_1746753839444 .minititsSet { font-size: 14px; }
+  #text_style_01_1746753699824 { width: 96%; font-size: 12px; line-height: 2; top: 53px; left: 2%; }
+  #text_style_01_1746753699824 > .view_contents { font-size: 14px; }
+  #layout_1657188273000 { height: 693px; }
+  #image_style_01_1746754251590 { width: 96%; height: 185px; top: 0; left: 2%; }
+  #image_style_01_1746754251590 .picSet { box-shadow: 8px 8px 10px #999; }
+  #text_style_15_1746754274609 { width: 96%; top: 304px; left: 2%; }
+  #text_style_15_1746770739632 { width: 96%; top: 204px; left: 2%; }
+  #text_style_15_1746754274609 .modSet,
+  #text_style_15_1746770739632 .modSet { padding: 16px; }
+  #layout_1567495507411 { height: 1414px; }
+  #titleText_style_08_1746754891980 { width: 96%; top: 21px; left: 2%; }
+  #titleText_style_08_1746754891980 .bigtitsSet { font-size: 18px; line-height: 2em; }
+  #titleText_style_08_1746754891980 .minititsSet { font-size: 14px; }
+  #text_style_01_1746754897518 { width: 96%; font-size: 12px; line-height: 2; top: 63px; left: 2%; }
+  #text_style_01_1746754897518 > .view_contents { font-size: 14px; }
+  #image_style_01_1746757490830 { width: 96%; height: 185px; top: 188px; left: 2%; }
+  #image_style_01_1746757490830 .picSet { box-shadow: 8px 8px 10px #999; }
+  #newsList_style_09_1746757605812 { width: 96%; top: 783px; left: 2%; }
+  #newsList_style_09_1746757605812 .modSet { padding: 10px; }
+  #newsList_style_09_1746757605812 .titleSet { font-size: 14px; }
+  #newsList_style_09_1746757605812 .btnaSet { padding: 5px 15px; font-size: 12px; }
+  #newsList_style_18_1746757787060 { width: 96%; top: 394px; left: 2%; }
+  #layout_1746758071982 { height: 878px; }
+  #titleText_style_08_1746758089245 { width: 96%; top: 16px; left: 2%; }
+  #titleText_style_08_1746758089245 .bigtitsSet { font-size: 18px; line-height: 2em; }
+  #titleText_style_08_1746758089245 .minititsSet { font-size: 14px; }
+  #text_style_01_1746758095511 { width: 96%; font-size: 12px; line-height: 2; top: 58px; left: 2%; }
+  #image_style_28_1746758227443 { width: 96%; top: 144px; left: 2%; }
+  #image_style_28_1746758227443 ul li { width: 49%; }
+  #layout_1657190194123 { height: 29px; }
+  #qqol_style_04_1746859204156 { width: 55.2632%; top: 670px; left: 0; height: 46px; }
+  #comm_layout_footer { height: 76px; }
+  #div_a_includeBlock_1657265077743 { width: 100%; height: 300px; display: none; }
+  #image_style_01_1657265139434 { width: 317px; height: 134px; top: 0; left: 0; }
+  #div_blank_new01_1657265247149 { width: 75px; height: 50px; top: 0; left: 37.6238%; }
+  #text_style_01_1568087096966 { width: 96%; font-size: 12px; line-height: 1.6; top: 0; left: 2%; display: none; }
+  #text_style_01_1657265317176 { width: 50%; font-size: 12px; line-height: 1.6; top: 0; left: 25%; }
+  #image_style_12_1_1657265469916 { width: 92%; top: 0; left: 4%; }
+  #copyright_style_01_1657265732234 { width: 100%; top: 6px; left: 0; }
+  .copyrightStyle01 { font-size: 12px; line-height: 1.75; }
+  #qqol_style_06_1657353416805 { width: 268.9531px; top: 0; left: 0; display: block; }
+}

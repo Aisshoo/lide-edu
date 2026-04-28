@@ -1,0 +1,110 @@
+/* ====================== 弹窗整体容器 ====================== */
+#popup_container {
+  /* 字体基础样式 */
+  font: 12px Arial, sans-serif;
+  color: #000;
+  /* 弹窗外观 */
+  width: 290px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  /* 定位：固定居中 + 强制优先级覆盖 */
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+  /* 层级最高，避免被遮挡 */
+  z-index: 99999;
+  /* 清除默认内外边距 */
+  padding: 0;
+  margin: 0;
+}
+
+/* ====================== 弹窗标题（默认隐藏） ====================== */
+#popup_title {
+  /* 标题字体 */
+  font: 14px 'Microsoft YaHei';
+  color: #666;
+  /* 布局样式 */
+  text-align: center;
+  line-height: 40px;
+  /* 清除默认边距 */
+  padding: 0;
+  margin: 0;
+  /* 默认隐藏标题 */
+  display: none;
+  /* 禁止鼠标选中/拖动 */
+  cursor: default;
+  font-weight: normal;
+}
+
+/* ====================== 弹窗内容区域 ====================== */
+#popup_content {
+  /* 内边距：上下左右 */
+  padding: 90px 20px 20px;
+  /* 清除默认边距 */
+  margin: 0;
+  /* 替换背景图为 img/bankground.jpg，居中定位、尺寸60px */
+  background: url("img/bankground.jpg") no-repeat center 20px;
+  background-size: 60px;
+}
+
+/* ====================== 弹窗提示文字 ====================== */
+#popup_message {
+  width: 100%;
+  color: #666;
+  /* 文字行高1.8倍，居中对齐 */
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ====================== 弹窗按钮面板 ====================== */
+#popup_panel {
+  /* 按钮居中对齐 */
+  text-align: center;
+  /* 外边距：上下间距 */
+  margin: 20px 0 5px;
+}
+
+/* ====================== 弹窗输入框（备用） ====================== */
+#popup_prompt {
+  margin: 0.5em 0;
+}
+
+/* ====================== 弹窗按钮通用样式（合并精简） ====================== */
+#popup_ok, #popup_cancel {
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 2px;
+  /* 鼠标悬浮为手型 */
+  cursor: pointer;
+  /* 清除点击高亮边框 */
+  outline: none;
+}
+
+/* 确认按钮样式 */
+#popup_ok {
+  background: #fff;
+  color: #666;
+}
+
+/* 取消按钮样式 */
+#popup_cancel {
+  background: #eee;
+  color: #333;
+  /* 左侧间距，与确认按钮分隔 */
+  margin-left: 10px;
+}
+
+/* 按钮悬浮效果：半透明 */
+#popup_panel input:hover {
+  opacity: 0.7;
+}
+
+/* ====================== 成功状态弹窗（背景图替换） ====================== */
+/* 成功状态下，修改内容区背景图尺寸为70px */
+.success #popup_content {
+  background: url("img/bankground.jpg") no-repeat center 20px;
+  background-size: 70px;
+}

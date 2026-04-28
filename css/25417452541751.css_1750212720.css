@@ -1,0 +1,331 @@
+/* ===================== 全局基础样式 ===================== */
+/* 全局盒模型统一：内边距/边框不撑开元素宽度 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 禁止移动端字体自动缩放，保证文字大小一致 */
+body {
+  -ms-text-size-adjust: 100% !important;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  background-position: left top; /* 背景图定位 */
+}
+
+/* 清除列表默认样式 */
+ul, li {
+  list-style: none;
+}
+
+/* 链接默认样式 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ===================== 头部区域样式 ===================== */
+/* 头部总容器 - 控制高度和层级 */
+#comm_layout_header {
+  height: 191px;
+  z-index: 99999; /* 最高层级，防止被遮挡 */
+  position: relative;
+}
+
+/* 头部内容包裹层 - 居中定位（PC端1200px居中） */
+#div_a_includeBlock_1657175608177 {
+  width: 1200px;
+  height: 131px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 600px);
+  z-index: 3;
+}
+
+/* Logo图片样式 */
+#image_logo_1568079273147 {
+  width: 37.833%;
+  height: 86px;
+  position: absolute;
+  top: 36.5px;
+  left: 0;
+  z-index: 2;
+}
+
+/* 头部文字模块通用样式 */
+[class^="text_style_01"] {
+  font-family: "Microsoft YaHei", 微软雅黑;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  position: absolute;
+  z-index: 2;
+}
+/* 头部右侧标题文字（蓝色加粗） */
+#text_style_01_1657175350615,
+#text_style_01_1657175423300 {
+  width: 31.166%;
+  top: 7.5px;
+  left: 63.416%;
+}
+#text_style_01_1657175350615 > .view_contents,
+#text_style_01_1657175423300 > .view_contents {
+  font-size: 32px;
+  font-family: KaiTi, 楷体;
+  text-align: right;
+  color: #135596;
+  font-weight: bold;
+}
+
+/* ===================== 导航栏样式 ===================== */
+/* 主导航容器 */
+#dh_style_28_1657175677058 {
+  width: 1200px;
+  position: absolute;
+  top: 135px;
+  left: calc(50% - 600px);
+  z-index: 2;
+}
+/* 导航栏背景条（蓝色） */
+#div_blank_new01_1657175687846 {
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  top: 135px;
+  left: 0;
+  z-index: 1;
+}
+#div_blank_new01_1657175687846 .modSet {
+  background: #135596; /* 导航主色调 */
+}
+
+/* 导航菜单文字样式 */
+#dh_style_28_1657175677058 .mainMenuSet {
+  color: #fff;
+  font-weight: normal;
+  line-height: 56px;
+}
+#dh_style_28_1657175677058 .mainMenuSet:hover {
+  font-weight: bold;
+}
+#dh_style_28_1657175677058 .subMenuSet:hover {
+  color: #135596;
+  border-color: #135596;
+}
+
+/* ===================== 横幅轮播/大图区域 ===================== */
+/* 核心横幅背景图 → 已替换为本地图片 */
+#layout_1657348261786 {
+  height: 400px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: url(img/bankground.jpg) no-repeat center center !important;
+  background-size: auto 100%;
+}
+
+/* ===================== 内容区样式 ===================== */
+/* 内容区总容器 */
+#layout_1657268181055 {
+  height: 595px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 左侧侧边栏菜单 */
+#div_a_includeBlock_1657266574300 {
+  width: 22.666%;
+  height: 202.5px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+}
+/* 侧边栏标题栏（蓝色） */
+#div_blank_new01_1657266607636 {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#div_blank_new01_1657266607636 .modSet {
+  background: #135596;
+}
+/* 侧边栏菜单文字 */
+#dh_style_menu2_02_1567585268349 .subMenuSet {
+  font-size: 14px;
+  line-height: 50px;
+  height: 50px;
+  color: #666;
+  border-bottom: 1px solid #d6d6d6;
+}
+#dh_style_menu2_02_1567585268349 .subMenuSet:hover,
+#dh_style_menu2_02_1567585268349 #subCurSet {
+  color: #135596;
+  text-decoration: underline;
+}
+
+/* 右侧面包屑导航 */
+#homelink_style_02_1657268181089 {
+  width: 60.583%;
+  position: absolute;
+  top: 60px;
+  left: 39.416%;
+  z-index: 2;
+}
+#homelink_style_02_1657268181089 .tabItemSet:hover {
+  color: #c81111;
+}
+#homelink_style_02_1657268181089 .tabCurItem {
+  color: #135596;
+}
+
+/* 新闻列表模块 */
+#newsList_style_18_1657268181102 {
+  width: 74.6%;
+  position: absolute;
+  top: 115px;
+  left: 25.416%;
+  z-index: 2;
+}
+/* 新闻列表标题 */
+#newsList_style_18_1657268181102 .titleSet {
+  font-size: 16px;
+  line-height: 27px;
+  color: #555;
+  border-bottom: 1px dashed #eee;
+}
+/* 新闻时间 */
+#newsList_style_18_1657268181102 .timesSet {
+  font-size: 15px;
+  color: #999;
+}
+/* 分页按钮高亮色 */
+#newsList_style_18_1657268181102 #pagecurSet,
+#newsList_style_18_1657268181102 .pageSet:hover {
+  background: #135596;
+}
+
+/* ===================== 底部区域样式 ===================== */
+/* 底部总容器 → 背景图已替换为本地图片 */
+#comm_layout_footer {
+  height: 354.859px;
+  z-index: 9999;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: url(img/bankground.jpg) no-repeat center 0;
+  background-size: 100% auto;
+}
+
+/* 底部内容容器 */
+#div_a_includeBlock_1657265077743 {
+  width: 1200px;
+  height: 354.859px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 底部版权信息 */
+#copyright_style_01_1657265732234 {
+  width: 83.333%;
+  position: absolute;
+  top: 249px;
+  left: 8.333%;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  font-family: "Microsoft YaHei", 微软雅黑;
+}
+
+/* ===================== 右侧在线客服悬浮窗 ===================== */
+.onlineStyle06 .main_box {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100000000;
+}
+/* 客服按钮样式 */
+.onlineStyle06 .item {
+  width: 40px;
+  height: 40px;
+  margin: 7px 0;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+}
+.onlineStyle06 .item:hover {
+  background: #12518f;
+  color: #fff;
+}
+/* 客服悬浮弹窗 */
+.onlineStyle06 .show_box {
+  display: none;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+.onlineStyle06 .item_box:hover .show_box {
+  display: block;
+}
+
+/* ===================== 响应式适配（平板+手机） ===================== */
+/* 平板设备：641px - 1200px */
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  /* 头部适配 */
+  #comm_layout_header { height: 165px; }
+  #div_a_includeBlock_1657175608177 { width: 96%; left: 2%; }
+  #image_logo_1568079273147 { height: 64px; width: 365px; }
+  #text_style_01_1657175350615 > .view_contents { font-size: 28px; }
+  
+  /* 导航适配 */
+  #dh_style_28_1657175677058 { width: 96%; left: 2%; top: 117px; }
+  #div_blank_new01_1657175687846 { height: 48px; top: 117px; }
+  #dh_style_28_1657175677058 .mainMenuSet { line-height: 48px; font-size: 15px; }
+  
+  /* 横幅适配 */
+  #layout_1657348261786 { height: 201px; }
+  
+  /* 内容区适配 */
+  #layout_1657268181055 { height: 942px; }
+  #div_a_includeBlock_1657266574300 { left: 2%; width: 229px; height: 184.5px; }
+  
+  /* 底部适配 */
+  #comm_layout_footer { height: 255px; }
+  #copyright_style_01_1657265732234 { left: calc(50% - 432px); width: 864px; }
+}
+
+/* 手机设备：≤640px */
+@media screen and (max-width: 640px) {
+  /* 头部适配 */
+  #comm_layout_header { height: 65px; }
+  #div_a_includeBlock_1657175608177 { width: 80%; left: 0; }
+  #image_logo_1568079273147 { width: 96%; height: 47px; top: 9px; }
+  [class^="text_style_01"] { display: none; } /* 手机端隐藏头部文字 */
+  
+  /* 导航适配 */
+  #dh_style_28_1657175677058 { width: 20%; top: 10px; left: 80%; z-index: 1000; }
+  #div_blank_new01_1657175687846 { display: none; } /* 手机端隐藏导航背景条 */
+  #dh_style_28_1657175677058 .mainMenuSet { font-size: 14px; color: #ccc; }
+  
+  /* 横幅适配 */
+  #layout_1657348261786 { height: 119px; }
+  
+  /* 内容区适配 */
+  #layout_1657268181055 { height: 611px; }
+  #div_a_includeBlock_1657266574300 { width: 96%; left: 2%; height: 89px; }
+  #newsList_style_18_1657268181102 { width: 96%; left: 2%; }
+  #newsList_style_18_1657268181102 .titleSet { font-size: 14px; }
+  
+  /* 底部适配 */
+  #comm_layout_footer { height: 76px; }
+  #copyright_style_01_1657265732234 { width: 100%; left: 0; font-size: 12px; }
+}

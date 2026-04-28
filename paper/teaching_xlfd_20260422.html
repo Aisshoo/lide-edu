@@ -1,0 +1,1161 @@
+<!--
+ * 文件名: news/article-detail.html (学校资讯-文章详情页)
+ * 作者: 金保虎（Aisshoo Adolf Kinyong）
+ * 创建时间: 2026-04-22
+ * 代码仓库: https://gitee.com/aisshoo
+ * 版权信息: © 2026 立德精英素质教育基地 版权所有
+ * 页面说明: 立德精英素质教育基地官网-学校资讯文章详情页，适配PC/移动端
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- ========== 基础渲染与兼容配置 ========== -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <!-- ========== SEO核心优化配置 ========== -->
+    <title>立德精英素质教育基地践行新时代学生心理健康工作政策 创新实践先进理念解读</title>
+    <meta name="keywords" content="立德精英素质教育基地,青少年素质教育,叛逆矫正,厌学辅导,网瘾戒除,全封闭军事化管理">
+    <meta name="description" content="济南立德精英青少年素质教育基地隶属于济南精英教育集团，2002年经教育局批准成立的正规全寄宿民办学校，专注8-17周岁青春期少年不良行为矫正，全封闭军事化管理，构建家校医社四方共管模式。">
+    <meta name="applicable-device" content="pc,mobile">
+    
+    <!-- ========== 移动端适配配置 ========== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <!-- ========== 网站图标 ========== -->
+    <link rel="shortcut icon" href="../img/upimages/favicon.ico">
+    
+    <!-- ========== 全站通用第三方资源引入 ========== -->
+    <link rel="stylesheet" href="../css/comm/font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/comm/animate.min.css">
+    <link rel="stylesheet" href="../css/comm/box.css">
+    <link rel="stylesheet" href="../css/comm/alert.css">
+    <link rel="stylesheet" href="../css/comm/comm.css">
+    <link rel="stylesheet" href="../css/02541743.css">
+    <link rel="stylesheet" href="../css/comm/iconfont.css">
+    
+    <!-- ========== 延迟加载JS资源（避免阻塞渲染） ========== -->
+    <script src="../js/comm/jquery.min.js" defer></script>
+    <script src="../js/comm/jquery.lazyload.min.js" defer></script>
+    <script src="../js/comm/jquery.nicescroll.min.js" defer></script>
+    <script src="../js/comm/ubox.js" charset="utf-8" defer></script>
+    <script src="../js/comm/wow.js" charset="utf-8" defer></script>
+    <script src="../js/comm/alert.js" charset="utf-8" defer></script>
+    <script src="../js/02541743.js" charset="utf-8" defer></script>
+    <script src="../js/comm/comm.js" charset="utf-8" defer></script>
+
+    <!-- ========== 页面专属样式（分层模块化） ========== -->
+    <style>
+        /* ======================================
+           1. 全局基础重置与通用规范（全站复用）
+           ====================================== */
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+        body { 
+            font-family: "Microsoft YaHei", sans-serif; 
+            background-color: #f5f5f5; 
+            line-height: 1.5;
+        }
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            vertical-align: middle; 
+        }
+        a { 
+            text-decoration: none; 
+            color: inherit; 
+            transition: color 0.3s ease;
+        }
+        ul { 
+            list-style: none; 
+        }
+
+        /* ======================================
+           2. 通用组件样式（全站复用）
+           ====================================== */
+        /* 顶部通栏 */
+        .header-top {
+            background-color: #0b1e3d;
+            color: #aebac6;
+            font-size: 12px;
+            padding: 5px 5%;
+            text-align: right;
+        }
+
+        /* 头部LOGO与标语区域 */
+        .header-main {
+            background: linear-gradient(135deg, #051836 0%, #1a3c7a 100%);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .header-logo img { 
+            height: 80px; 
+            display: block; 
+        }
+        .header-text-group {
+            text-align: right;
+            color: #fff;
+            line-height: 1.4;
+        }
+        .header-text-main {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .header-text-en {
+            font-size: 18px;
+            color: #ff6600;
+            font-weight: 500;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* 主导航栏 */
+        .header-nav {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 100;
+        }
+        .nav-list { 
+            display: flex; 
+            justify-content: center; 
+        }
+        .nav-item { 
+            position: relative; 
+        }
+        .nav-item > a {
+            display: block;
+            padding: 15px 25px;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav-item > a:hover { 
+            color: #ff6600; 
+        }
+
+        /* 导航下拉菜单 */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            min-width: 160px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-top: 2px solid #ff6600;
+        }
+        .nav-item:hover .dropdown-menu { 
+            display: block; 
+        }
+        .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: #666;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
+        }
+        .dropdown-menu li a:hover { 
+            background: #f9f9f9; 
+            color: #ff6600; 
+        }
+
+        /* 页面顶部Banner（已修正拼写错误） */
+        .banner {
+            width: 100%;
+            height: 300px;
+            background: url("../img/bankground.jpg") center/cover no-repeat;
+            background-color: #0052CC; /* 回退背景色 */
+        }
+
+        /* ======================================
+           3. 页面主体-文章详情专属样式
+           ====================================== */
+        /* 左侧固定分类侧边栏 */
+        .fixed-category-sidebar {
+            position: fixed;
+            left: 0;
+            top: 200px;
+            width: 200px;
+            background: #fff;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+            padding: 20px;
+            z-index: 99;
+        }
+        .sidebar-head {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1890ff;
+        }
+        .category-news-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .category-news-list a {
+            color: #666;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        .category-news-list a:hover { 
+            color: #1890ff; 
+        }
+
+        /* 文章详情容器 */
+        .detail-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        /* 面包屑导航 */
+        .breadcrumb {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        .breadcrumb a { 
+            color: #1890ff; 
+        }
+
+        /* 文章标题 */
+        .article-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        /* 文章元信息 */
+        .article-meta {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .article-meta span { 
+            margin-right: 20px; 
+        }
+
+        /* 文章摘要 */
+        .article-summary {
+            background: #f0f7ff;
+            padding: 20px;
+            border-left: 4px solid #1890ff;
+            margin-bottom: 30px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* 文章正文核心样式（严格匹配设计稿） */
+        .article-content {
+            font-size: 16px;
+            color: #333;
+            line-height: 2;
+        }
+        .article-content h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1890ff;
+            margin: 30px 0 15px;
+        }
+        .article-content p { 
+            margin-bottom: 20px; 
+            text-align: justify; 
+        }
+        .article-content ul {
+            margin: 10px 0 20px 30px;
+            list-style: disc;
+        }
+        .article-content ul li {
+            margin-bottom: 8px;
+        }
+
+        /* 上下篇导航 */
+        .article-nav {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .article-nav .nav-item { 
+            flex: 1; 
+        }
+        .article-nav a { 
+            color: #666; 
+            font-size: 14px; 
+            transition: color 0.3s; 
+        }
+        .article-nav a:hover { 
+            color: #1890ff; 
+        }
+
+        /* ======================================
+           4. 右侧悬浮客服组件（全站复用）
+           ====================================== */
+        .floating-service {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        .service-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: #e6f7ff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border: 1px solid #91d5ff;
+        }
+        .service-item { 
+            position: relative; 
+            width: 100%; 
+        }
+        .service-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 15px;
+            background: white;
+            border: 1px solid #d6e7ff;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .service-button:hover {
+            background: #1890ff;
+            color: white;
+            border-color: #1890ff;
+            transform: translateY(-1px);
+        }
+        .emoji { 
+            font-size: 20px; 
+            transition: transform 0.3s ease; 
+        }
+
+        /* 悬浮提示气泡 */
+        .service-tooltip {
+            position: absolute;
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 220px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            padding: 15px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e6f7ff;
+        }
+        .service-tooltip.active { 
+            opacity: 1; 
+            visibility: visible; 
+        }
+        .tooltip-content { 
+            text-align: center; 
+        }
+        .tooltip-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1890ff;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .tooltip-phone {
+            font-size: 18px;
+            font-weight: 700;
+            color: #e63946;
+            letter-spacing: 1px;
+        }
+        .qr-code {
+            width: 140px;
+            height: 140px;
+            margin: 10px auto;
+            border-radius: 8px;
+            border: 2px solid #1890ff;
+            object-fit: contain;
+        }
+        .tooltip-arrow {
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-bottom: 1px solid #e6f7ff;
+            border-left: 1px solid #e6f7ff;
+            transform: rotate(-135deg);
+            z-index: -1;
+        }
+
+        /* PC端hover显示气泡 */
+        @media (min-width: 992px) {
+            .phone-item:hover .service-tooltip,
+            .wechat-item:hover .service-tooltip,
+            .public-account-item:hover .service-tooltip {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        /* 回到顶部按钮特殊样式 */
+        .top-item .service-button {
+            background: linear-gradient(135deg, #1890ff, #40a9ff);
+            color: white;
+            border: none;
+        }
+        .top-item .service-button:hover {
+            background: linear-gradient(135deg, #40a9ff, #1890ff);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+        }
+
+        /* ======================================
+           5. 页脚样式（全站复用）
+           ====================================== */
+        #comm_layout_footer {
+            background: linear-gradient(135deg, #1890ff, #40a9ff);
+            color: white;
+            padding: 40px 0 30px;
+            position: relative;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin-top: 60px;
+        }
+        #comm_layout_footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></svg>');
+            background-size: 40px 40px;
+        }
+        .footer-wrapper { 
+            position: relative; 
+            z-index: 2; 
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .contact-section, .qrcode-section { 
+            flex: 1; 
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #ffd700, #ffa500);
+            border-radius: 2px;
+        }
+        .logo-container { 
+            display: flex; 
+            justify-content: center; 
+            margin: 25px 0; 
+        }
+        .footer-logo {
+            max-width: 200px;
+            height: auto;
+            filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.25));
+            transition: transform 0.3s ease;
+        }
+        .footer-logo:hover { 
+            transform: scale(1.03); 
+        }
+        .contact-info {
+            text-align: center;
+            font-size: 16px;
+            line-height: 2.2;
+            margin-top: 15px;
+        }
+        .contact-info p {
+            margin: 12px 0;
+            transition: all 0.3s ease;
+            color: rgba(255, 255, 255, 0.95);
+            cursor: default;
+        }
+        .contact-info p:hover { 
+            color: #ffd700; 
+            transform: translateX(5px); 
+        }
+        .qrcode-grid { 
+            display: grid; 
+            gap: 25px; 
+            margin-top: 20px; 
+        }
+        .qrcode-row {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .qrcode-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 120px;
+        }
+        .qrcode-image {
+            width: 100%;
+            height: 100px;
+            border-radius: 12px;
+            border: 2px solid white;
+            padding: 4px;
+            background: white;
+            object-fit: contain;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .qrcode-image:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: #ffd700;
+        }
+        .qrcode-label {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        .copyright-container {
+            max-width: 1200px;
+            margin: 35px auto 0;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 25px;
+        }
+        .copyright-item { 
+            flex: 1; 
+            text-align: center; 
+            min-width: 250px; 
+            padding: 0 15px; 
+        }
+        .copyright-text, .icp-text, .public-security-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+        .copyright-text { 
+            font-weight: 500; 
+            color: white; 
+        }
+        .icp-text a, .public-security-text a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .icp-text a:hover, .public-security-text a:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            text-decoration: none;
+        }
+
+        /* ======================================
+           6. 响应式适配（全断点统一管理）
+           ====================================== */
+        /* 桌面端中等屏幕 */
+        @media (max-width: 1200px) {
+            .footer-content { 
+                gap: 30px; 
+            }
+            .qrcode-row { 
+                justify-content: center; 
+            }
+        }
+
+        /* 平板端 */
+        @media (max-width: 992px) {
+            /* 头部适配 */
+            .header-main { 
+                flex-direction: column; 
+                text-align: center; 
+                padding: 30px 20px; 
+            }
+            .header-text-group { 
+                text-align: center; 
+                margin-top: 20px; 
+            }
+            .header-text-main { 
+                font-size: 22px; 
+            }
+            .header-text-en { 
+                font-size: 16px; 
+            }
+            .nav-list { 
+                flex-direction: column; 
+            }
+            .nav-item > a { 
+                text-align: center; 
+                border-bottom: 1px solid #eee; 
+            }
+            .dropdown-menu { 
+                position: static; 
+                box-shadow: none; 
+                border-top: none; 
+                background: #f9f9f9; 
+            }
+
+            /* 主体适配 */
+            .fixed-category-sidebar { 
+                display: none; 
+            }
+            .detail-container { 
+                padding: 20px 15px; 
+            }
+
+            /* 页脚适配 */
+            .footer-content { 
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .qrcode-grid { 
+                width: 100%; 
+            }
+            .copyright-container { 
+                flex-direction: column; 
+                gap: 12px; 
+                text-align: center; 
+            }
+            .copyright-item { 
+                min-width: auto; 
+                padding: 5px 0; 
+            }
+        }
+
+        /* 手机端 */
+        @media (max-width: 768px) {
+            /* 基础适配 */
+            .banner { 
+                height: 200px; 
+            }
+            .article-title { 
+                font-size: 24px; 
+            }
+            .article-content { 
+                font-size: 15px; 
+            }
+
+            /* 悬浮客服适配 */
+            .floating-service { 
+                right: 15px; 
+            }
+            .service-container { 
+                gap: 8px; 
+                padding: 8px; 
+            }
+            .service-button { 
+                padding: 10px 12px; 
+                font-size: 13px; 
+            }
+            .emoji { 
+                font-size: 18px; 
+            }
+            .service-tooltip { 
+                width: 200px; 
+            }
+            .qr-code { 
+                width: 120px; 
+                height: 120px; 
+            }
+
+            /* 页脚适配 */
+            .qrcode-row { 
+                flex-wrap: wrap; 
+                justify-content: center; 
+                gap: 20px; 
+            }
+            .qrcode-item { 
+                width: 110px; 
+                margin: 5px; 
+            }
+            .qrcode-image { 
+                height: 90px; 
+            }
+            .contact-info p { 
+                font-size: 15px; 
+                line-height: 2.0; 
+            }
+            .section-title { 
+                font-size: 20px; 
+            }
+        }
+
+        /* 小屏手机端 */
+        @media (max-width: 480px) {
+            /* 文章适配 */
+            .article-title { 
+                font-size: 20px; 
+            }
+            .article-nav { 
+                flex-direction: column; 
+                gap: 10px; 
+            }
+            .article-meta span { 
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+
+            /* 悬浮客服适配 */
+            .floating-service { 
+                right: 10px; 
+            }
+            .service-container { 
+                gap: 6px; 
+                padding: 6px; 
+                border-radius: 10px; 
+            }
+            .service-button { 
+                padding: 8px 10px; 
+                font-size: 12px; 
+            }
+            .emoji { 
+                font-size: 16px; 
+            }
+            .service-tooltip { 
+                width: 180px; 
+                font-size: 12px; 
+            }
+
+            /* 页脚适配 */
+            .qrcode-row { 
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .qrcode-item { 
+                width: 100px; 
+                margin: 8px 0; 
+            }
+            .qrcode-image { 
+                width: 90px; 
+                height: 90px; 
+            }
+            .contact-info p { 
+                font-size: 14px; 
+                margin: 8px 0; 
+            }
+            .copyright-text, .icp-text, .public-security-text { 
+                font-size: 13px; 
+            }
+            .copyright-container { 
+                padding: 0 10px; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ======================================
+         页面头部（全站通用）
+         ====================================== -->
+    <header id="comm_layout_header" class="layout">
+        <div class="view_contents">
+            <!-- 顶部欢迎通栏 -->
+            <div class="header-top">
+                您好，欢迎访问立德精英素质教育基地官网！
+            </div>
+
+            <!-- LOGO与标语区域 -->
+            <div class="header-main">
+                <div class="header-logo">
+                    <a href="../index.html">
+                        <img src="../img/logo_word.png" alt="立德精英素质教育基地LOGO">
+                    </a>
+                </div>
+                <div class="header-text-group">
+                    <div class="header-text-main">针对8-17周岁青春期少年</div>
+                    <div class="header-text-en">叛逆行为矫正服务</div>
+                </div>
+            </div>
+
+            <!-- 主导航栏 -->
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html">首页</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="../xxjj.html">学校简介 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../xxjj.html">关于我们</a></li>
+                            <li><a href="../xxjj.html#motto">校训理念</a></li>
+                            <li><a href="../xxjj.html#campus">校区环境</a></li>
+                            <li><a href="../xxjj.html#teachers">师资队伍</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="../xxzx.html" class="active">学校资讯 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../xxzx.html">行业资讯</a></li>
+                            <li><a href="../xxzx.html#news">学校新闻</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="../jxjy.html">教学教研 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../jxjy.html#psychology">心理辅导</a></li>
+                            <li><a href="../jxjy.html#behavior">行为矫正</a></li>
+                            <li><a href="../jxjy.html#culture">文化素养</a></li>
+                            <li><a href="../jxjy.html#physical">坚强体格</a></li>
+                            <li><a href="../jxjy.html#students">学员风采</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面顶部Banner -->
+    <div class="banner"></div>
+
+    <!-- ======================================
+         页面主体-文章详情（格式严格匹配设计稿）
+         ====================================== -->
+    <main>
+        <!-- 左侧固定分类资讯侧边栏 -->
+        <div class="fixed-category-sidebar">
+            <div class="sidebar-head">相关资讯</div>
+            <ul class="category-news-list" id="newsList">
+                <!-- JS动态加载资讯列表 -->
+            </ul>
+        </div>
+
+        <!-- 文章详情核心内容 -->
+        <div class="detail-container">
+            <!-- 面包屑导航 -->
+            <div class="breadcrumb">
+                <a href="../index.html">首页</a> > <a href="../xxzx.html">学校资讯</a> > 文章详情
+            </div>
+
+            <!-- 文章标题 -->
+            <h1 class="article-title">立德精英素质教育基地践行新时代学生心理健康工作政策 创新实践先进理念解读</h1>
+
+            <!-- 文章元信息 -->
+            <div class="article-meta">
+                <span>浏览: 13</span>
+                <span>作者: 立德精英素质教育基地</span>
+                <span>来源: 基地办公室</span>
+                <span>时间: 2025-05-11</span>
+                <span>分类: 教学教研-心理辅导</span>
+            </div>
+
+            <!-- 文章摘要 -->
+            <div class="article-summary">
+                通过家长参与机制和家庭教育指导服务，将政策要求的家庭教育指导服务站点实体化运作，定期开展家长培训课程，帮助建立科学的家庭教育观，形成政策落地的闭环管理
+            </div>
+
+            <!-- 文章正文（格式与内容完全匹配设计稿） -->
+            <div class="article-content">
+                <p>为深入落实教育部等十七部门《全面加强和改进新时代学生心理健康工作专项行动计划（2023—2025年）》（以下简称《专项行动计划》）核心要求，立德精英素质教育基地（以下简称"立德基地"）立足学员成长特点与矫正教育实际，将政策精神与基地实践深度融合，创新探索出兼具专业性、针对性与实效性的教育模式，从五个维度彰显基地践行政策、引领行业的先进理念，推动学生心理健康工作走深走实。</p>
+
+                <h3>一、创新协同育人机制，构建家校社联动教育生态</h3>
+                <p>立德基地严格对标《专项行动计划》中"完善家校社协同育人机制"的核心部署，构建起"家庭-学校-社会"三方联动、协同发力的教育生态体系。基地将政策要求的"家庭教育指导服务站点"落到实处、实体化运作，建立健全家长参与机制，常态化开展家长培训课程、家庭教育沙龙等活动，系统普及科学的家庭教育理念与方法，引导家长树立正确的教育观、成才观，打通政策落地"最后一公里"，形成"政策引领、基地主导、家长参与、社会支持"的闭环管理模式，切实凝聚家校社育人合力。</p>
+
+                <h3>二、构建四级干预体系，筑牢学生心理健康防线</h3>
+                <p>- 正知阶段，聚焦认知重建，对应政策要求的心理健康课程，帮助学员树立正确的世界观、人生观、价值观，筑牢心理健康思想根基；
+                    - 明志阶段，对标《专项行动计划》第14条发展指导要求，开展系统的生涯规划教育，引导学员明确人生方向、树立成长目标；
+                    - 正行阶段，严格落实《专项行动计划》第11条危机干预要求，制定个性化行为干预方案，规范学员行为习惯、矫正不良倾向；
+                    - 赋能阶段，衔接《专项行动计划》第18条转介诊疗相关要求，着力推动学员社会功能恢复，助力学员顺利回归家庭、融入社会。</p>
+
+                <h3>三、深化综合素质教育，落实五育并举育人要求</h3>
+                <p>立德基地紧扣《专项行动计划》"五育并举促进心理健康"的工作要求，构建涵盖心理辅导、生活技能、团队协作、文化素养等多模块的特色课程体系，将"以德育心、以智慧心、以体强心、以美润心、以劳健心"的育人理念贯穿教育全过程。基地创新开展军事化拓展训练，将其作为劳动教育的特色载体，深入落实《专项行动计划》第8条"丰富劳动体验"的要求，通过沉浸式营地实践，培养学员的抗压能力、协作意识与社会适应能力，促进学员身心健康全面发展。</p>
+
+                <h3>四、强化专业化师资建设，夯实教育服务核心支撑</h3>
+                <p>立德基地高度重视师资队伍建设，严格落实《专项行动计划》第20条相关要求，建立高标准师资招录与培养体系。基地教官招录严格执行士官班长及以上标准，组建由心理咨询师、教育专家、行为矫正师组成的复合型师资团队，师生配比远超政策规定的1:4000基础要求，为学员提供专业化、个性化的教育指导。同时，建立常态化师资培训机制，要求师资每月完成不少于40小时的继续教育，持续提升师资队伍的专业素养与业务能力，为教育服务质量提供坚实保障。</p>
+                
+                <h3>五、整合社会优质力量，发挥示范引领辐射作用</h3>
+                <p>作为《专项行动计划》鼓励发展的社会心理服务机构，立德基地积极履行社会责任，创新整合社会优质资源，构建起志愿者援助服务、公益基金支持、商业保险兜底的多元筹资模式，为学员教育矫正工作提供有力保障。基地凭借科学的教育模式与显著的实践成效，实现学员教育矫正低复发率，为《专项行动计划》中"培育社会心理服务机构"的要求提供了可复制、可推广的优质样本，充分发挥了社会力量在学生心理健康工作中的示范引领作用。</p>
+
+                <p>综上，立德精英素质教育基地创新性地将《专项行动计划》政策文本转化为可操作、可落地、可推广的实践框架，尤其在个性化教育方案设计（一生一案）、服务效果可持续性（家长持续支持机制）等方面形成了鲜明特色，构建起具有立德特色、行业引领价值的学生心理健康教育与矫正解决方案，为全面加强和改进新时代学生心理健康工作贡献坚实力量。</p>
+
+                <p>让我们的每一句教导都带着温度，让每一次惩戒都藏着慈悲。期待全体同仁携手践行"幼吾幼"精神，用真诚感化影响生命，共同缔造矫正教育奇迹！</p>
+            </div>
+
+            <!-- 上下篇导航 -->
+            <div class="article-nav">
+                <div class="nav-item">上一篇: <a href="paper_xlfd_prev.html">立德精英素质教育基地的独特优势</a></div>
+                <div class="nav-item">下一篇: <a href="paper_xlfd_next.html">走进立德精英 携手同行</a></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ======================================
+         右侧悬浮客服（全站通用）
+         ====================================== -->
+    <div class="floating-service">
+        <div class="service-container">
+            <!-- 咨询电话 -->
+            <div class="service-item phone-item">
+                <a href="tel:18605316398" class="service-button">
+                    <span class="emoji">📞</span>
+                </a>
+                <div class="service-tooltip phone-tooltip">
+                    <div class="tooltip-content">
+                        <div class="tooltip-title">咨询热线</div>
+                        <div class="tooltip-phone">18605316398</div>
+                    </div>
+                    <div class="tooltip-arrow"></div>
+                </div>
+            </div>
+            
+            <!-- 招生微信 -->
+            <div class="service-item wechat-item">
+                <button class="service-button qr-toggle">
+                    <span class="emoji">💬</span>
+                </button>
+                <div class="service-tooltip qr-tooltip">
+                    <div class="tooltip-content qr-content">
+                        <div class="tooltip-title">招生微信</div>
+                        <img src="../img/qrcode_personal.jpg" alt="立德精英招生微信二维码" class="qr-code">
+                    </div>
+                    <div class="tooltip-arrow"></div>
+                </div>
+            </div>
+            
+            <!-- 微信公众号 -->
+            <div class="service-item public-account-item">
+                <button class="service-button account-toggle">
+                    <span class="emoji">📱</span>
+                </button>
+                <div class="service-tooltip account-tooltip">
+                    <div class="tooltip-content account-content">
+                        <div class="tooltip-title">公众号</div>
+                        <img src="../img/qrcode.png" alt="立德精英微信公众号二维码" class="qr-code">
+                    </div>
+                    <div class="tooltip-arrow"></div>
+                </div>
+            </div>
+            
+            <!-- 回到顶部 -->
+            <div class="service-item top-item">
+                <button class="service-button" onclick="btnTop()">
+                    <span class="emoji">🔝</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================
+         页面页脚（全站通用）
+         ====================================== -->
+    <footer id="comm_layout_footer" class="layout">
+        <div class="footer-wrapper">
+            <div class="footer-content">
+                <!-- 联系我们板块 -->
+                <div class="contact-section">
+                    <div class="section-title">联系我们</div>
+                    <div class="logo-container">
+                        <a href="../index.html" aria-label="返回首页">
+                            <img class="footer-logo" src="../img/logo_noword.png" alt="立德精英素质教育基地">
+                        </a>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="icon-location"></i> 山东省济南市长清区长孝路1108号</p>
+                        <p><i class="icon-post"></i> 邮编：250001</p>
+                        <p><i class="icon-phone"></i> 电话：18605316398</p>
+                    </div>
+                </div>
+                
+                <!-- 关注我们二维码板块 -->
+                <div class="qrcode-section">
+                    <div class="section-title">关注我们</div>
+                    <div class="qrcode-grid">
+                        <div class="qrcode-row">
+                            <div class="qrcode-item">
+                                <img src="../img/qrcode_personal.jpg" alt="官方客服微信二维码" class="qrcode-image">
+                                <div class="qrcode-label">官方客服</div>
+                            </div>
+                            <div class="qrcode-item">
+                                <img src="../img/qrcode_wepub.jpg" alt="微信公众号二维码" class="qrcode-image">
+                                <div class="qrcode-label">公众号</div>
+                            </div>
+                            <div class="qrcode-item">
+                                <img src="../img/qrcode.png" alt="微信服务号二维码" class="qrcode-image">
+                                <div class="qrcode-label">服务号</div>
+                            </div>
+                        </div>
+                        <div class="qrcode-row">
+                            <div class="qrcode-item">
+                                <img src="../img/qrcode_shipinhao.jpg" alt="视频号二维码" class="qrcode-image">
+                                <div class="qrcode-label">视频号</div>
+                            </div>
+                            <div class="qrcode-item">
+                                <img src="../img/qrcode_douyin.png" alt="抖音二维码" class="qrcode-image">
+                                <div class="qrcode-label">抖音</div>
+                            </div>
+                            <div class="qrcode-item">
+                                <img src="../img/qrcode_kuaishou.jpg" alt="快手二维码" class="qrcode-image">
+                                <div class="qrcode-label">快手</div>
+                            </div>
+                            <div class="qrcode-item">
+                                <img src="../img/qrcode_xiaohongshu.jpg" alt="小红书二维码" class="qrcode-image">
+                                <div class="qrcode-label">小红书</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 版权与备案信息 -->
+            <div class="copyright-container">
+                <div class="copyright-item">
+                    <div class="copyright-text">Copyright © 2025-2026 立德精英素质教育基地 All rights reserved.</div>
+                </div>
+                <div class="copyright-item">
+                    <div class="icp-text"><a target="_blank" rel="noopener noreferrer" href="https://beian.miit.gov.cn/">鲁ICP备XXXXXXXX号</a></div>
+                </div>
+                <div class="copyright-item">
+                    <div class="public-security-text"><a target="_blank" rel="noopener noreferrer" href="https://www.beian.gov.cn/">鲁公网安备XXXXXXXX号</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======================================
+         页面专属脚本（仅保留必需功能）
+         ====================================== -->
+    <script>
+        // DOM加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // ========== 1. 回到顶部功能 ==========
+            window.btnTop = function() {
+                window.scrollTo({ 
+                    top: 0, 
+                    behavior: 'smooth' 
+                });
+            };
+
+            // ========== 2. 移动端悬浮客服气泡点击交互 ==========
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                // 二维码按钮点击切换气泡
+                const qrButtons = document.querySelectorAll('.qr-toggle, .account-toggle');
+                qrButtons.forEach(button => {
+                    let isTooltipActive = false;
+                    button.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        const tooltip = this.closest('.service-item').querySelector('.service-tooltip');
+                        
+                        // 切换气泡显示状态
+                        if (isTooltipActive) {
+                            tooltip.classList.remove('active');
+                            isTooltipActive = false;
+                        } else {
+                            // 关闭其他所有气泡
+                            document.querySelectorAll('.service-tooltip').forEach(t => t.classList.remove('active'));
+                            tooltip.classList.add('active');
+                            isTooltipActive = true;
+                        }
+                    });
+                });
+
+                // 点击页面空白处关闭所有气泡
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.service-item')) {
+                        document.querySelectorAll('.service-tooltip').forEach(t => t.classList.remove('active'));
+                    }
+                });
+            }
+
+            // ========== 3. 页脚备案链接安全提示 ==========
+            const copyrightLinks = document.querySelectorAll('.icp-text a, .public-security-text a');
+            copyrightLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const confirmMsg = this.textContent.includes('ICP') 
+                        ? '即将跳转到工信部备案查询网站，是否继续？' 
+                        : '即将跳转到公安备案查询网站，是否继续？';
+                    
+                    if (!confirm(confirmMsg)) e.preventDefault();
+                });
+            });
+
+            // ========== 4. 二维码点击提示 ==========
+            const qrcodeItems = document.querySelectorAll('.qrcode-item');
+            qrcodeItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const label = this.querySelector('.qrcode-label').textContent;
+                    alert(`点击扫描【${label}】二维码\n长按图片可保存或识别`);
+                });
+            });
+        });
+
+        // ========== 百度SEO自动提交 ==========
+        (function(){
+            var bp = document.createElement('script');
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
+    <!-- 全站通用业务JS（延迟加载） -->
+    <script src="../js/02541743_model.js" charset="utf-8" defer></script>
+    <script src="../js/02541743_user.js" charset="utf-8" defer></script>
+    <script src="../js/comm_user.js" charset="utf-8" defer></script>
+    <script src="../js/comm/transform.js" defer></script>
+</body>
+</html>

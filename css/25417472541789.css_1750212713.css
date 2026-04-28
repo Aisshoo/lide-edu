@@ -1,0 +1,552 @@
+/* ====================== 全局基础样式 ====================== */
+/* 统一盒模型：内边距/边框不撑开元素宽度 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none; /* 清除列表默认样式 */
+}
+
+/* 统一字体、禁止字体缩放、行高基础值 */
+body {
+  font-family: "Microsoft YaHei", sans-serif;
+  text-size-adjust: 100% !important;
+  -webkit-text-size-adjust: 100% !important;
+  background-position: left top; /* 背景定位 */
+  line-height: 1.8;
+  color: #333;
+}
+
+/* 统一过渡动画：所有元素平滑过渡 */
+* {
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+}
+
+/* 链接默认样式 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 图片容器通用样式 */
+.img-box {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 图片自适应填充 */
+}
+
+/* ====================== 响应式断点定义 ====================== */
+/* 平板端：641px ~ 1200px */
+/* 移动端：≤640px */
+
+/* ====================== 头部区域 (Header) ====================== */
+/* 头部总容器：控制高度、层级 */
+#comm_layout_header {
+  height: 191px;
+  z-index: 99999;
+  position: relative;
+}
+/* 平板端头部高度 */
+@media (min-width: 641px) and (max-width: 1200px) {
+  #comm_layout_header {
+    height: 165px;
+  }
+}
+/* 移动端头部高度 */
+@media (max-width: 640px) {
+  #comm_layout_header {
+    height: 65px;
+  }
+}
+
+/* 头部内容包裹层：居中定位、宽度控制 */
+.header-wrap {
+  width: 1200px;
+  height: 131px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 600px);
+  z-index: 3;
+  overflow: visible;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .header-wrap {
+    width: 96%;
+    left: 2%;
+    height: 117px;
+  }
+}
+@media (max-width: 640px) {
+  .header-wrap {
+    width: 80%;
+    height: 65px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+/* Logo样式：尺寸、绝对定位 */
+.logo {
+  width: 37.8%;
+  height: 86px;
+  position: absolute;
+  top: 36.5px;
+  left: 0;
+  z-index: 2;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .logo {
+    height: 64px;
+    width: 365px;
+    top: 42.5px;
+  }
+}
+@media (max-width: 640px) {
+  .logo {
+    width: 96%;
+    height: 47px;
+    top: 9px;
+  }
+}
+
+/* 头部左侧文本 */
+.header-text-left {
+  width: 30.8%;
+  font-size: 16px;
+  position: absolute;
+  top: 7.5px;
+  left: 0;
+  z-index: 2;
+}
+.header-text-left .content {
+  font-size: 16px;
+  color: #666;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .header-text-left {
+    top: 12.5px;
+  }
+  .header-text-left .content {
+    font-size: 14px;
+  }
+}
+@media (max-width: 640px) {
+  .header-text-left {
+    width: 96%;
+    font-size: 12px;
+    line-height: 1.6;
+    top: 0;
+    left: 2%;
+    display: none; /* 移动端隐藏 */
+  }
+}
+
+/* 头部右侧文本（标题） */
+.header-text-right {
+  width: 31.2%;
+  font-size: 16px;
+  position: absolute;
+  top: 7.5px;
+  left: 63.4%;
+  z-index: 2;
+}
+.header-text-right .content {
+  font-size: 32px;
+  font-family: "KaiTi";
+  text-align: right;
+  color: #135596;
+  font-weight: bold;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .header-text-right {
+    top: 15.5px;
+    left: 52.1%;
+    width: 413px;
+  }
+  .header-text-right .content {
+    font-size: 28px;
+  }
+}
+@media (max-width: 640px) {
+  .header-text-right {
+    width: 50%;
+    font-size: 12px;
+    line-height: 1.6;
+    top: 78px;
+    left: 25%;
+    display: none; /* 移动端隐藏 */
+  }
+}
+
+/* 头部右侧副标题 */
+.header-text-sub {
+  width: 30.8%;
+  font-size: 16px;
+  position: absolute;
+  top: 65.5px;
+  left: 69.2%;
+  z-index: 2;
+}
+.header-text-sub .content {
+  font-size: 32px;
+  font-family: "KaiTi";
+  text-align: right;
+  color: #135596;
+  font-weight: bold;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .header-text-sub {
+    left: 62.5%;
+    top: 54.5px;
+    width: 334px;
+  }
+  .header-text-sub .content {
+    font-size: 28px;
+  }
+}
+@media (max-width: 640px) {
+  .header-text-sub {
+    width: 50%;
+    font-size: 12px;
+    line-height: 1.6;
+    top: 135px;
+    left: 25%;
+    display: none; /* 移动端隐藏 */
+  }
+}
+
+/* ====================== 导航区域 (Nav) ====================== */
+/* 主导航容器 */
+.main-nav {
+  width: 1200px;
+  z-index: 2;
+  position: absolute;
+  top: 135px;
+  left: calc(50% - 600px);
+  overflow: visible;
+}
+/* 导航背景条 */
+.nav-bg {
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  top: 135px;
+  left: 0;
+  z-index: 1;
+  background: #135596; /* 导航主色 */
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .main-nav {
+    left: 2%;
+    top: 117px;
+    width: 96%;
+    z-index: 999;
+  }
+  .nav-bg {
+    left: calc(50% - 471.5px);
+    top: 117px;
+    height: 48px;
+  }
+}
+@media (max-width: 640px) {
+  .main-nav {
+    width: 19.7%;
+    z-index: 1000;
+    top: 10.5px;
+    left: 80.8%;
+  }
+  .nav-bg {
+    display: none; /* 移动端隐藏导航背景 */
+  }
+}
+
+/* 主导航菜单样式 */
+.main-nav .main-menu {
+  color: #fff;
+  font-weight: normal;
+  line-height: 56px;
+}
+.main-nav .main-menu:hover {
+  font-weight: bold;
+}
+.main-nav .sub-menu:hover {
+  border-color: #135596;
+  color: #135596;
+}
+/* 平板端导航字体 */
+@media (min-width: 641px) and (max-width: 1200px) {
+  .main-nav .main-menu {
+    line-height: 48px;
+    font-size: 15px;
+  }
+}
+/* 移动端导航样式 */
+@media (max-width: 640px) {
+  .main-nav .main-menu {
+    line-height: 40px;
+    font-size: 14px;
+    border: 1px solid #4c4c4c;
+    border-top: none;
+    color: #ccc;
+  }
+  .main-nav .sub-menu:hover {
+    color: #fff;
+    border-color: #fff;
+    font-weight: bold;
+  }
+}
+
+/* ====================== 轮播/横幅区域 (Banner) ====================== */
+.banner {
+  height: 400px;
+  max-width: 1200px;
+  overflow: visible;
+  /* 替换为指定背景图，居中、不重复、自适应 */
+  background: url("img/bankground.jpg") no-repeat center center !important;
+  background-size: auto 100% !important;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .banner {
+    height: 201px;
+  }
+}
+@media (max-width: 640px) {
+  .banner {
+    height: 119px;
+  }
+}
+
+/* ====================== 侧边栏 (Sidebar) ====================== */
+.sidebar {
+  width: 22.7%;
+  height: 352.5px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  overflow: visible;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .sidebar {
+    left: 2%;
+    width: 229px;
+    height: 184.5px;
+  }
+}
+@media (max-width: 640px) {
+  .sidebar {
+    width: 96%;
+    height: 89px;
+    top: 13px;
+    left: 2%;
+    border: 1px solid #135596; /* 移动端加边框 */
+  }
+}
+
+/* 侧边栏标题 */
+.sidebar-title {
+  width: 74.7%;
+  font-size: 16px;
+  position: absolute;
+  top: 40px;
+  left: 25.3%;
+  z-index: 2;
+}
+.sidebar-title .content {
+  font-size: 20px;
+  line-height: 58px;
+  border-bottom: 2px solid #135596;
+  color: #135596;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .sidebar-title {
+    left: 29.8%;
+    top: 40px;
+    width: 645px;
+  }
+  .sidebar-title .content {
+    line-height: 48px;
+  }
+}
+@media (max-width: 640px) {
+  .sidebar-title {
+    width: 96%;
+    font-size: 12px;
+    line-height: 1.6;
+    top: 16px;
+    left: 2%;
+  }
+  .sidebar-title .content {
+    font-size: 16px;
+    line-height: 36px;
+    border-width: 1px;
+  }
+}
+
+/* 侧边栏子菜单 */
+.sidebar-menu .sub-menu {
+  font-size: 14px;
+  line-height: 50px;
+  height: 50px;
+  color: #666;
+  border-bottom: 1px solid #d6d6d6;
+}
+.sidebar-menu .sub-menu:hover {
+  color: #135596;
+  text-decoration: underline;
+}
+.sidebar-menu .sub-menu.active {
+  color: #135596;
+  text-decoration: underline;
+}
+@media (max-width: 640px) {
+  .sidebar-menu .sub-menu {
+    padding: 0 4px;
+    line-height: 40px;
+    height: 40px;
+    margin: 0 9px 8px 0;
+  }
+}
+
+/* ====================== 主体内容 (Main Content) ====================== */
+/* 产品/图文列表容器 */
+.content-list {
+  width: 74.6%;
+  position: absolute;
+  top: 127.5px;
+  left: 25.4%;
+  overflow: visible;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .content-list {
+    width: 661px;
+    left: 29.9%;
+  }
+}
+@media (max-width: 640px) {
+  .content-list {
+    width: 96%;
+    top: 70.5px;
+    left: 2%;
+  }
+}
+
+/* 列表项样式：PC端4列，平板4列，移动端2列 */
+.content-list li {
+  width: 23.5%;
+  margin-bottom: 2%;
+  background: #f2f2f2;
+  padding-bottom: 12px;
+}
+.content-list .item-title {
+  font-size: 16px;
+  text-align: center;
+  padding: 12px 0 3px;
+}
+.content-list .item-desc {
+  font-size: 14px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .content-list li {
+    width: 49%;
+  }
+}
+
+/* ====================== 右侧悬浮客服 (Float Service) ====================== */
+/* 悬浮客服默认隐藏 */
+.float-service {
+  width: 17.5%;
+  position: absolute;
+  left: 44.7%;
+  top: 44.5px;
+  display: none;
+  z-index: 100000000;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .float-service {
+    left: 3.3%;
+    width: 93.5%;
+    display: block;
+  }
+}
+@media (max-width: 640px) {
+  .float-service {
+    width: 269px;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+}
+
+/* 客服悬浮按钮基础样式 */
+.float-service .item {
+  width: 40px;
+  height: 40px;
+  margin: 7px 0;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+}
+.float-service .item:hover {
+  background: #12518f;
+}
+
+/* ====================== 底部区域 (Footer) ====================== */
+#comm_layout_footer {
+  height: 354.9px;
+  z-index: 9999;
+  max-width: 1200px;
+  overflow: visible;
+  /* 替换为指定背景图 */
+  background: url("img/bankground.jpg");
+  background-size: 100% auto;
+  background-position: center top !important;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  #comm_layout_footer {
+    height: 255px;
+    background-size: auto 100%;
+    background-position: center center !important;
+  }
+}
+@media (max-width: 640px) {
+  #comm_layout_footer {
+    height: 76px;
+  }
+}
+
+/* 版权信息样式 */
+.copyright {
+  width: 83.3%;
+  position: absolute;
+  top: 249px;
+  left: 8.3%;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .copyright {
+    left: calc(50% - 432px);
+    top: 215px;
+    width: 864px;
+  }
+}
+@media (max-width: 640px) {
+  .copyright {
+    width: 100%;
+    top: 6px;
+    left: 0;
+    font-size: 12px;
+  }
+}

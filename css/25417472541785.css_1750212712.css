@@ -1,0 +1,377 @@
+/* ====================== 全局基础样式 ====================== */
+* {
+  box-sizing: border-box; /* 统一盒模型，避免宽高计算异常 */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-position: left top; /* 背景图定位 */
+  /* 禁止移动端字体自动缩放 */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-family: "Microsoft YaHei", sans-serif; /* 全局默认字体 */
+  line-height: 1.8;
+  color: #333;
+}
+
+/* 清除列表默认样式 */
+ul, li {
+  list-style: none;
+}
+
+/* 链接默认样式 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ====================== 头部模块 (Header) ====================== */
+/* 头部总容器 */
+.comm-layout-header {
+  height: 191px;
+  z-index: 99999; /* 置顶层级 */
+  position: relative;
+}
+/* 头部内容区 */
+.header-wrap {
+  width: 1200px;
+  height: 131px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 600px);
+  z-index: 3;
+}
+/* Logo样式 */
+.logo {
+  width: 37.83%;
+  height: 86px;
+  position: absolute;
+  top: 36.5px;
+  left: 0;
+  z-index: 2;
+}
+/* 头部标题文本1 */
+.header-title-1 {
+  width: 31.17%;
+  font-size: 32px;
+  font-family: KaiTi;
+  text-align: right;
+  color: #135596;
+  font-weight: bold;
+  position: absolute;
+  top: 7.5px;
+  left: 63.42%;
+  z-index: 2;
+}
+/* 头部标题文本2 */
+.header-title-2 {
+  width: 30.83%;
+  font-size: 32px;
+  font-family: KaiTi;
+  text-align: right;
+  color: #135596;
+  font-weight: bold;
+  position: absolute;
+  top: 65.5px;
+  left: 69.17%;
+  z-index: 2;
+}
+
+/* ====================== 导航模块 (Nav) ====================== */
+/* 主导航容器 */
+.main-nav {
+  width: 1200px;
+  position: absolute;
+  top: 135px;
+  left: calc(50% - 600px);
+  z-index: 2;
+}
+/* 导航背景条 */
+.nav-bg {
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  top: 135px;
+  left: 0;
+  z-index: 1;
+  background: #135596; /* 导航背景色 */
+}
+/* 主导航菜单样式 */
+.main-nav .main-menu {
+  color: #fff;
+  font-weight: normal;
+  line-height: 56px;
+}
+.main-nav .main-menu:hover {
+  font-weight: bold;
+}
+/* 子菜单样式 */
+.main-nav .sub-menu:hover {
+  border-color: #135596;
+  color: #135596;
+}
+/* 当前子菜单高亮 */
+.main-nav .sub-menu.active {
+  border-color: #135596;
+  color: #135596;
+}
+
+/* ====================== Banner/轮播模块 ====================== */
+.banner {
+  height: 400px;
+  /* 核心：替换为本地背景图 */
+  background: url(img/bankground.jpg) no-repeat center center !important;
+  background-size: auto 100% !important;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ====================== 侧边栏模块 (Sidebar) ====================== */
+/* 侧边栏容器 */
+.sidebar {
+  width: 22.67%;
+  height: 352.5px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+}
+/* 侧边栏标题 */
+.sidebar-title {
+  width: 100%;
+  height: 60px;
+  background: #135596;
+}
+.sidebar-title-text {
+  width: 94.49%;
+  font-size: 24px;
+  color: #fff;
+  line-height: 30px;
+  position: absolute;
+  top: 11.5px;
+  left: 5.51%;
+}
+/* 侧边栏菜单 */
+.sidebar-menu {
+  width: 100%;
+  position: absolute;
+  top: 52.5px;
+  left: 0;
+  z-index: 2;
+}
+.sidebar-menu .sub-menu {
+  font-size: 14px;
+  line-height: 50px;
+  height: 50px;
+  color: #666;
+  border-bottom: 1px solid #d6d6d6;
+}
+.sidebar-menu .sub-menu:hover {
+  color: #135596;
+  text-decoration: underline;
+}
+.sidebar-menu .sub-menu.active {
+  color: #135596;
+  text-decoration: underline;
+}
+
+/* ====================== 内容区模块 (Content) ====================== */
+/* 内容主容器 */
+.content {
+  width: 74.67%;
+  position: absolute;
+  top: 40px;
+  left: 25.33%;
+  z-index: 2;
+}
+/* 内容标题 */
+.content-title {
+  font-size: 20px;
+  line-height: 58px;
+  border-bottom: 2px solid #135596;
+  color: #135596;
+}
+/* 面包屑导航 */
+.breadcrumb {
+  width: 60.58%;
+  position: absolute;
+  top: 60px;
+  left: 39.42%;
+  z-index: 2;
+  text-align: right;
+}
+.breadcrumb .item {
+  font-size: 14px;
+  padding: 0 10px;
+}
+.breadcrumb .item.active,
+.breadcrumb .item:hover {
+  color: #c81111;
+}
+/* 内容文本 */
+.content-text {
+  font-size: 16px;
+  color: #666;
+  text-indent: 2em; /* 首行缩进 */
+  line-height: 32px;
+  text-align: justify; /* 两端对齐 */
+}
+/* 内容图片组 */
+.content-img-group {
+  width: 74.6%;
+  position: absolute;
+  top: 309px;
+  left: 25.4%;
+}
+
+/* ====================== 底部模块 (Footer) ====================== */
+/* 底部总容器 */
+.comm-layout-footer {
+  height: 354.86px;
+  z-index: 9999;
+  /* 核心：替换为本地背景图 */
+  background: url(img/bankground.jpg) no-repeat center 0;
+  background-size: 100% auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+/* 底部版权 */
+.copyright {
+  width: 83.33%;
+  position: absolute;
+  top: 249px;
+  left: 8.33%;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+/* 底部文本 */
+.footer-text {
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  left: 27.25%;
+  top: 112px;
+}
+
+/* ====================== 在线客服模块 (右侧悬浮) ====================== */
+.online-service {
+  width: 17.5%;
+  position: absolute;
+  left: 44.67%;
+  top: 44.5px;
+  display: none;
+  z-index: 100000000;
+}
+/* 客服悬浮容器 */
+.online-service .main-box {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+/* 客服按钮样式 */
+.online-service .item {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  margin: 7px 0;
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+}
+.online-service .item:hover {
+  background: #12518f;
+}
+
+/* ====================== 通用图片/组件样式 ====================== */
+/* 圆形图片组件 */
+.img-circle {
+  width: 120px;
+  margin: 0 auto;
+}
+.img-circle img {
+  border-radius: 50%;
+  width: 100%;
+}
+/* 空白占位符 */
+.blank-box {
+  width: 100%;
+  height: 100%;
+}
+
+/* ====================== 响应式媒体查询 (统一合并) ====================== */
+/* 平板端：641px ~ 1200px */
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  /* 头部 */
+  .comm-layout-header { height: 165px; }
+  .header-wrap { width: 96%; left: 2%; height: 117px; }
+  .logo { height: 64px; width: 365px; top: 42.5px; }
+  .header-title-1 { left: 52.14%; width: 413px; font-size: 28px; }
+  .header-title-2 { left: 62.47%; width: 334px; font-size: 28px; }
+
+  /* 导航 */
+  .main-nav { left: 2%; top: 117px; width: 96%; z-index: 999; }
+  .main-nav .main-menu { line-height: 48px; font-size: 15px; }
+  .nav-bg { left: calc(50% - 471.5px); top: 117px; height: 48px; }
+
+  /* Banner */
+  .banner { height: 201px; }
+
+  /* 侧边栏 */
+  .sidebar { left: 2%; width: 229px; height: 184.5px; }
+  .sidebar-title { height: 48px; }
+  .sidebar-menu .sub-menu { line-height: 44px; height: 44px; }
+
+  /* 内容区 */
+  .content { left: 29.76%; width: 645px; }
+  .content-title { line-height: 48px; }
+  .content-text { font-size: 14px; line-height: 27px; }
+  .content-img-group { width: 645px; left: 29.76%; }
+
+  /* 底部 */
+  .comm-layout-footer { height: 255px; background-size: auto 100%; }
+  .copyright { left: calc(50% - 432px); top: 215px; width: 864px; }
+}
+
+/* 手机端：≤640px */
+@media screen and (max-width: 640px) {
+  /* 头部 */
+  .comm-layout-header { height: 65px; }
+  .header-wrap { width: 80%; height: 65px; left: 0; z-index: 1; }
+  .logo { width: 96.04%; height: 47px; top: 9px; }
+  .header-title-1, .header-title-2 { display: none; } /* 手机端隐藏头部标题 */
+
+  /* 导航 */
+  .main-nav { width: 19.73%; z-index: 1000; top: 10.5px; left: 80.8%; }
+  .main-nav .main-menu { line-height: 40px; font-size: 14px; color: #ccc; }
+  .nav-bg { display: none; } /* 手机端隐藏导航背景 */
+
+  /* Banner */
+  .banner { height: 119px; }
+
+  /* 侧边栏 */
+  .sidebar { width: 96%; height: 90px; top: 13px; left: 2%; }
+  .sidebar-title { width: 360px; height: 41px; }
+  .sidebar-title-text { font-size: 16px; font-weight: bold; line-height: 24px; }
+  .sidebar-menu { width: 96%; top: 41px; left: 2%; }
+  .sidebar-menu .sub-menu { padding: 0 4px; line-height: 40px; height: 40px; margin: 0 9px 8px 0; }
+
+  /* 内容区 */
+  .content { width: 96%; top: 16px; left: 2%; }
+  .content-title { font-size: 16px; line-height: 36px; border-width: 1px; }
+  .content-text { font-size: 14px; line-height: 27px; }
+  .content-img-group { display: none; } /* 手机端隐藏图片组 */
+
+  /* 底部 */
+  .comm-layout-footer { height: 76px; }
+  .copyright { width: 100%; top: 6px; left: 0; font-size: 12px; }
+  .footer-text { display: none; }
+
+  /* 客服 */
+  .online-service { width: 268.95px; top: 0; left: 0; display: block; }
+}

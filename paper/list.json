@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "success": true,
+    "total": 1,
+    "pageSize": 15,
+    "totalPages": 1,
+    "generated": "2026/4/27 13:59:48",
+    "byType": {
+      "xlfd": 1,
+      "xwjz": 0,
+      "whsy": 0,
+      "jqtg": 0,
+      "xyfc": 0
+    },
+    "skippedFiles": 1
+  },
+  "articles": [
+    {
+      "filename": "teaching_xlfd_20260422.html",
+      "url": "paper/teaching_xlfd_20260422.html",
+      "type": "xlfd",
+      "typeName": "心理辅导",
+      "date": "2026-04-22",
+      "timestamp": 1776816000000,
+      "sortDate": "20260422",
+      "title": "立德精英素质教育基地践行新时代学生心理健康工作政策 创新实践先进理念解读",
+      "summary": "立德精英素质教育基地践行新时代学生心理健康工作政策 创新实践先进理念解读..."
+    }
+  ]
+}

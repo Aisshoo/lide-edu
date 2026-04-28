@@ -1,0 +1,476 @@
+/*
+ * author Saquib Shaikh
+ * created on 21-04-2026-15h-22m
+ * github: https://github.com/saquibshaikh14
+ * copyright 2026
+ */
+
+/* ====================== 全局通用基础样式 ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====================== 1. 特色模块样式 ====================== */
+.feature-section {
+  /* 背景替换为指定图片：居中、覆盖、不重复 */
+  background: url("img/bankground.jpg") no-repeat center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/* 模块头部 */
+.section-header {
+  margin-bottom: 50px;
+}
+
+/* 主标题 */
+.main-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* 副标题组 */
+.sub-title-group {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* 小屏幕自动换行 */
+}
+
+.sub-title {
+  font-size: 18px;
+  color: #eee;
+}
+
+/* 卡片容器 */
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 卡片样式 */
+.feature-card {
+  background: #121212;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 30px 20px;
+  width: calc(25% - 15px);
+  min-width: 220px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* 卡片悬浮效果 */
+.feature-card:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* 卡片图标 */
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  color: #fff;
+}
+
+.card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* 卡片标题 */
+.card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* 卡片分割线 */
+.divider {
+  width: 60px;
+  height: 2px;
+  background: #e53935;
+  margin: 0 auto 20px;
+}
+
+/* 卡片描述 */
+.card-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* ====================== 2. 特色课程模块样式 ====================== */
+.feature-course-section {
+  background: #000;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* 标题橙色分割线 */
+.title-line {
+  display: inline-block;
+  width: 140px;
+  height: 3px;
+  background: #ff9500;
+  margin: 0 15px;
+  vertical-align: middle;
+}
+
+/* 模块主标题 */
+.feature-course-section .bigtitsSet {
+  font-size: 34px;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 模块描述 */
+.section-desc {
+  font-size: 18px;
+  line-height: 2;
+  color: #eee;
+  margin: 25px auto 45px;
+  max-width: 1100px;
+}
+
+/* 标签导航栏 */
+.tab-nav {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  overflow: hidden;
+}
+
+/* 标签项 */
+.tab-item {
+  flex: 1;
+  padding: 16px 0;
+  background: #fff;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+/* 标签激活状态 */
+.tab-item.active {
+  background: #0056b3;
+  color: #fff;
+}
+
+/* 标签悬浮效果 */
+.tab-item:hover:not(.active) {
+  background: #f5f5f5;
+}
+
+/* 内容容器 */
+.tab-content-box {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 内容默认隐藏 */
+.tab-content {
+  display: none;
+}
+
+/* 内容激活显示 */
+.tab-content.active {
+  display: block;
+}
+
+/* 图片网格布局 */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* 网格图片 */
+.grid-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* ====================== 响应式适配（合并优化） ====================== */
+/* 平板端适配 */
+@media (max-width: 1024px) {
+  .feature-card {
+    width: calc(50% - 10px);
+  }
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feature-course-section .bigtitsSet {
+    font-size: 28px;
+  }
+}
+
+/* 手机端适配 */
+@media (max-width: 600px) {
+  .feature-card {
+    width: 100%;
+  }
+  .main-title {
+    font-size: 20px;
+  }
+  .sub-title-group {
+    gap: 15px;
+  }
+  .sub-title {
+    font-size: 16px;
+  }
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+  .tab-item {
+    flex: 1 1 50%;
+    font-size: 16px;
+  }
+  .title-line {
+    display: none;
+  }
+
+/* ==============================================
+   德弘基地风格头部样式（无视频+水蓝色导航）
+============================================== */
+/* 1. 头部整体容器 */
+#comm_layout_header.layout {
+  width: 100%;
+  background-color: #000000; /* 顶部黑色背景，和德弘一致 */
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+/* 2. 顶部欢迎条 */
+.top-welcome-bar {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #000000;
+}
+.top-welcome-bar .view.style_01.text .view_contents {
+  color: #cccccc; /* 浅灰色文字，和德弘一致 */
+  font-size: 14px;
+  margin: 0;
+}
+
+/* 3. LOGO与标语区域 */
+.header-brand-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px; /* LOGO和标语的间距 */
+  padding: 20px 20px;
+  background-color: #000000;
+}
+
+/* LOGO样式 */
+.header-logo .imgSet {
+  height: 120px; /* 可根据你的LOGO尺寸调整 */
+  width: auto;
+  display: block;
+}
+
+/* 标语样式（和德弘一致的浅蓝色文字） */
+.header-slogan {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.header-slogan .slogan-line1,
+.header-slogan .slogan-line2 {
+  color: #73a6ff;
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* 4. 水蓝色导航栏（德弘风格） */
+.header-nav {
+  width: 100%;
+  background-color: #1677ff; /* 水蓝色背景，和德弘一致 */
+  padding: 0 20px;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-item {
+  position: relative;
+}
+.nav-link {
+  display: block;
+  padding: 15px 25px;
+  color: #ffffff; /* 导航文字白色 */
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+.nav-link:hover {
+  background-color: #0d52b3; /* hover时加深蓝色 */
+}
+
+/* 下拉菜单样式 */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(22, 119, 255, 0.95); /* 半透明水蓝色下拉背景 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 180px;
+  display: none; /* 默认隐藏 */
+}
+.dropdown:hover .dropdown-menu {
+  display: block; /* hover时显示 */
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.dropdown-menu li a:hover {
+  background-color: #0d52b3;
+}
+
+/* 移动端响应式适配 */
+@media screen and (max-width: 768px) {
+  .header-brand-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .header-slogan .slogan-line1,
+  .header-slogan .slogan-line2 {
+    font-size: 28px;
+  }
+  .nav-list {
+    flex-direction: column;
+  }
+  .dropdown-menu {
+    position: static;
+    background-color: #0d52b3;
+  }
+}
+/* ==============================================
+   立德精英头部样式：水蓝色背景 + 德弘结构适配
+============================================== */
+/* 1. 强制让整个header背景变为水蓝色 */
+#comm_layout_header.layout {
+    background-color: #E0F7FF !important; /* 水蓝色背景 */
+    color: #333;
+}
+
+/* 2. LOGO与标语区域容器（匹配德弘的flex布局） */
+.header-brand-section {
+    display: flex !important; /* 强制使用flex，与德弘结构一致 */
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 30px !important; /* LOGO与文字间距 */
+    padding: 20px 20px !important;
+    background-color: #E0F7FF !important; /* 水蓝色背景 */
+}
+
+/* 3. LOGO样式控制（确保高度适配） */
+.header-brand-section .imgSet {
+    height: 120px !important; /* 可根据实际LOGO大小微调 */
+    width: auto !important;
+}
+
+/* 4. 三行文字样式（匹配德弘的蓝色大字） */
+.header-brand-section .view.style_01.text {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.header-brand-section .view.style_01.text .view_contents {
+    color: #1677FF !important; /* 深蓝色字体，适配水蓝背景 */
+    font-size: 42px !important; /* 大标题尺寸 */
+    font-weight: bold !important;
+    line-height: 1.4 !important;
+}
+/* 第二行（英文）可以适当减小字号 */
+.header-brand-section .view.style_01.text:nth-child(2) .view_contents {
+    font-size: 24px !important;
+    font-weight: normal !important;
+}
+/* 第三行（标语） */
+.header-brand-section .view.style_01.text:last-child .view_contents {
+    font-size: 22px !important;
+    color: #0850A8 !important;
+}
+
+/* 5. 导航栏水蓝色背景（承接下方） */
+.header-nav {
+    background-color: #1677FF !important; /* 深一点的水蓝作为导航栏 */
+    width: 100% !important;
+}
+.header-nav .nav-list {
+    list-style: none !important;
+    display: flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.header-nav .nav-item {
+    position: relative !important;
+}
+.header-nav .nav-item a {
+    display: block !important;
+    padding: 15px 25px !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 18px !important;
+}
+.header-nav .nav-item a:hover,
+.header-nav .nav-item.dropdown:hover > a {
+    background-color: #0A5BC4 !important;
+    text-decoration: none !important;
+}
+/* 下拉菜单样式 */
+.dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: #1677FF !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 200px !important;
+    display: none !important;
+    z-index: 999 !important;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+.dropdown-menu li a {
+    padding: 12px 20px !important;
+    font-size: 16px !important;
+}
+.dropdown-menu li a:hover {
+    background-color: #0A5BC4 !important;
+}
+}

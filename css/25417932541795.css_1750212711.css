@@ -1,0 +1,345 @@
+/* ====================== 1. 全局基础样式 ====================== */
+/* 统一盒模型，避免重复书写 */
+* {
+  box-sizing: border-box;
+}
+
+/* 页面基础样式 */
+body {
+  margin: 0;
+  padding: 0;
+  background-position: left top;
+  /* 禁止移动端字体自动缩放 */
+  -ms-text-size-adjust: 100% !important;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+}
+
+/* 通用清除浮动 */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ====================== 2. 头部区域 (Header) ====================== */
+/* 头部总容器 */
+#comm_layout_header {
+  height: 191px;
+  z-index: 99999;
+  position: relative;
+}
+/* 头部容器 - 居中版心 */
+.header-wrap {
+  width: 1200px;
+  height: 131px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+/* Logo样式 */
+.logo {
+  width: 37.83%;
+  height: 86px;
+  position: absolute;
+  top: 36.5px;
+  left: 0;
+  z-index: 2;
+}
+/* 头部文字公共样式 */
+.header-text {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  font-family: "Microsoft YaHei";
+  position: absolute;
+  z-index: 2;
+}
+/* 头部标题文字（蓝色加粗） */
+.header-title {
+  font-size: 32px;
+  font-family: "KaiTi";
+  text-align: right;
+  color: #135596;
+  font-weight: bold;
+}
+
+/* 轮播/头部背景图 */
+.banner {
+  height: 400px;
+  background: url(img/bankground.jpg) no-repeat center center !important;
+  background-size: auto 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ====================== 3. 导航区域 (Nav) ====================== */
+/* 主导航容器 */
+.main-nav {
+  width: 1200px;
+  position: absolute;
+  top: 135px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+/* 导航背景条 */
+.nav-bg {
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  top: 135px;
+  left: 0;
+  z-index: 1;
+}
+.nav-bg .modSet {
+  background: #135596;
+}
+/* 导航菜单公共样式 */
+.mainMenuSet {
+  color: #fff;
+  font-weight: normal;
+  line-height: 56px;
+}
+.mainMenuSet:hover {
+  font-weight: bold;
+}
+.subMenuSet:hover {
+  border-color: #135596;
+  color: #135596;
+}
+
+/* 侧边子导航 */
+.sub-nav {
+  width: 100%;
+  position: absolute;
+  top: 52.5px;
+  left: 0;
+  z-index: 2;
+}
+.subMenuSet {
+  font-size: 14px;
+  line-height: 50px;
+  height: 50px;
+  color: #666;
+  border-bottom: 1px solid #d6d6d6;
+}
+.subMenuSet:hover {
+  color: #135596;
+  text-decoration: underline;
+}
+/* 子导航当前项 */
+#subCurSet {
+  color: #135596;
+  text-decoration: underline;
+}
+
+/* ====================== 4. 内容区域 (Content) ====================== */
+/* 内容版心 */
+.content-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+/* 左侧侧边栏 */
+.sidebar {
+  width: 22.67%;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+}
+/* 右侧主内容 */
+.main-content {
+  width: 74.67%;
+  position: absolute;
+  top: 40px;
+  left: 25.33%;
+  z-index: 2;
+}
+/* 内容标题 */
+.content-title {
+  font-size: 20px;
+  line-height: 58px;
+  border-bottom: 2px solid #135596;
+  color: #135596;
+}
+
+/* 面包屑导航 */
+.breadcrumb {
+  text-align: right;
+}
+.breadcrumb li + li:before {
+  content: ">";
+  padding: 0 5px;
+}
+.breadcrumb a:hover {
+  color: #c81111;
+}
+
+/* ====================== 5. 新闻列表 (News List) ====================== */
+.news-list {
+  width: 74.6%;
+  position: absolute;
+  top: 115px;
+  left: 25.42%;
+  z-index: 2;
+}
+/* 新闻列表项 */
+.news-item {
+  border-bottom: 1px dashed #ccc;
+  padding: 10px 0;
+}
+/* 新闻标题 */
+.news-title {
+  font-size: 16px;
+  color: #555;
+  line-height: 27px;
+}
+/* 新闻时间 */
+.news-time {
+  font-size: 15px;
+  color: #999;
+  float: right;
+}
+/* 新闻简介 */
+.news-desc {
+  font-size: 14px;
+  line-height: 26px;
+  color: #999;
+}
+/* 分页激活态 */
+.news-page .active {
+  background: #135596;
+}
+
+/* ====================== 6. 底部区域 (Footer) ====================== */
+/* 底部总容器 */
+#comm_layout_footer {
+  height: 355px;
+  z-index: 9999;
+  /* 替换为本地背景图 */
+  background: url(img/bankground.jpg) no-repeat center 0;
+  background-size: 100% auto;
+  position: relative;
+}
+/* 底部内容 */
+.footer-content {
+  width: 83.33%;
+  position: absolute;
+  top: 249px;
+  left: 8.33%;
+}
+/* 底部文字 */
+.footer-text {
+  color: #fff;
+  font-size: 14px;
+}
+/* 版权信息 */
+.copyright {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+}
+
+/* ====================== 7. 右侧在线客服 (Online Service) ====================== */
+.online-service {
+  width: 17.5%;
+  position: absolute;
+  right: 0;
+  top: 44.5px;
+  z-index: 100000000;
+}
+/* 客服悬浮定位 */
+.online-service .main_box {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+/* 客服按钮 */
+.service-item {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  margin: 7px 0;
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+}
+.service-item:hover {
+  background: #12518f;
+}
+/* 客服悬浮弹窗 */
+.service-popup {
+  display: none;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+.service-item:hover .service-popup {
+  display: block;
+}
+
+/* ====================== 8. 响应式媒体查询 (Responsive) ====================== */
+/* 平板端：641px - 1200px */
+@media screen and (min-width:641px) and (max-width:1200px) {
+  /* 头部 */
+  #comm_layout_header { height: 165px; }
+  .header-wrap { width: 96%; left: 2%; height: 117px; }
+  .logo { height: 64px; width: 365px; top: 42.5px; }
+  /* 导航 */
+  .main-nav { width: 96%; left: 2%; top: 117px; }
+  .nav-bg { height: 48px; top: 117px; }
+  .mainMenuSet { line-height: 48px; font-size: 15px; }
+  /* 轮播 */
+  .banner { height: 201px; }
+  /* 内容 */
+  .sidebar { left: 2%; width: 229px; height: 184px; }
+  .main-content { left: 29.76%; width: 645px; }
+  .content-title { line-height: 48px; }
+  /* 新闻 */
+  .news-list { width: 645px; left: 29.76%; top: 106px; }
+  .news-title { font-size: 14px; }
+  /* 底部 */
+  #comm_layout_footer { height: 255px; background-size: auto 100%; }
+  .footer-content { left: 50%; transform: translateX(-50%); width: 864px; }
+}
+
+/* 手机端：≤640px */
+@media screen and (max-width:640px) {
+  /* 头部 */
+  #comm_layout_header { height: 65px; }
+  .header-wrap { width: 80%; left: 0; height: 65px; }
+  .logo { width: 96%; height: 47px; top: 9px; }
+  .header-text { display: none; }
+  /* 导航 */
+  .main-nav { width: 20%; top: 10.5px; left: 80%; z-index: 1000; }
+  .mainMenuSet { line-height: 40px; font-size: 14px; color: #ccc; }
+  .nav-bg { display: none; }
+  /* 轮播 */
+  .banner { height: 119px; }
+  /* 侧边栏+内容 */
+  .sidebar { display: none; }
+  .main-content { width: 96%; left: 2%; top: 16px; }
+  .content-title { font-size: 16px; line-height: 36px; border-width: 1px; }
+  .breadcrumb { display: none; }
+  /* 新闻 */
+  .news-list { width: 96%; left: 2%; top: 68px; }
+  .news-time { font-size: 14px; }
+  .news-desc { font-size: 12px; }
+  /* 底部 */
+  #comm_layout_footer { height: 76px; }
+  .footer-content { width: 100%; top: 6px; left: 0; }
+  .copyright { font-size: 12px; }
+  /* 在线客服 */
+  .online-service { display: block; width: 100%; top: 0; left: 0; }
+}

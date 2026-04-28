@@ -1,0 +1,276 @@
+<!--
+ * 文件名: news/article-detail.html
+ * 作者: 金保虎（Aisshoo Adolf Kinyong）
+ * 创建时间: 2026-04-27
+ * 代码仓库: https://gitee.com/aisshoo
+ * 页面说明: 立德精英素质教育基地官网-学校资讯文章详情页
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 锁定相对路径基准 -->
+    <base href="../">
+
+    <!-- 基础配置与SEO -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <title>花开夏日五月至 学子归来正当时 - 立德精英素质教育基地</title>
+    <meta name="keywords" content="立德精英素质教育基地,教学,青少年素质教育,行为矫正，叛逆">
+    <meta name="description" content="立德精英素质教育基地非常注重学生的的各项相关工作。">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <!-- 网站图标 -->
+    <link rel="shortcut icon" href="img/upimages/favicon.ico">
+    
+    <!-- 【引入1】全站通用第三方样式 -->
+    <link rel="stylesheet" href="css/comm/font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/comm/animate.min.css">
+    <link rel="stylesheet" href="css/comm/box.css">
+    <link rel="stylesheet" href="css/comm/alert.css">
+    <link rel="stylesheet" href="css/comm/comm.css">
+    <link rel="stylesheet" href="css/02541743.css">
+    <link rel="stylesheet" href="css/comm/iconfont.css">
+    
+    <!-- 【引入2】本页面专属样式（拆分后的CSS） -->
+    <link rel="stylesheet" href="css/article-detail.css">
+
+    <!-- 延迟加载通用第三方JS -->
+    <script src="js/comm/jquery.min.js" defer></script>
+    <script src="js/comm/jquery.lazyload.min.js" defer></script>
+    <script src="js/comm/jquery.nicescroll.min.js" defer></script>
+    <script src="js/comm/ubox.js" charset="utf-8" defer></script>
+    <script src="js/comm/wow.js" charset="utf-8" defer></script>
+    <script src="js/comm/alert.js" charset="utf-8" defer></script>
+    <script src="js/02541743.js" charset="utf-8" defer></script>
+    <script src="js/comm/comm.js" charset="utf-8" defer></script>
+</head>
+
+<body>
+    <!-- 页面头部 -->
+    <header id="comm_layout_header" class="layout">
+        <div class="view_contents">
+            <div class="header-top">您好，欢迎访问立德精英素质教育基地官网！</div>
+            <div class="header-main">
+                <div class="header-logo">
+                    <a href="index.html"><img src="img/logo_word.png" alt="立德精英素质教育基地LOGO"></a>
+                </div>
+                <div class="header-text-group">
+                    <div class="header-text-main">针对8-17周岁青春期少年</div>
+                    <div class="header-text-en">叛逆行为矫正服务</div>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">首页</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="xxjj.html">学校简介 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="xxjj.html">关于我们</a></li>
+                            <li><a href="xxjj.html#motto">校训理念</a></li>
+                            <li><a href="xxjj.html#campus">校区环境</a></li>
+                            <li><a href="xxjj.html#teachers">师资队伍</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="xxzx.html" class="active">学校资讯 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="xxzx.html">行业资讯</a></li>
+                            <li><a href="xxzx.html#news">学校新闻</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="jxjy.html">教学教研 <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="jxjy.html#psychology">心理辅导</a></li>
+                            <li><a href="jxjy.html#behavior">行为矫正</a></li>
+                            <li><a href="jxjy.html#culture">文化素养</a></li>
+                            <li><a href="jxjy.html#physical">坚强体格</a></li>
+                            <li><a href="jxjy.html#students">学员风采</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面顶部Banner -->
+    <div class="banner"></div>
+
+    <!-- 页面主体 -->
+    <main>
+        <!-- 左侧固定分类资讯侧边栏 -->
+        <div class="fixed-category-sidebar">
+            <div class="sidebar-head">相关资讯</div>
+            <ul class="category-news-list" id="newsList">
+                <li class="loading-state">加载中...</li>
+            </ul>
+        </div>
+
+        <!-- 文章详情核心内容 -->
+        <div class="detail-container">
+            <div class="breadcrumb">
+                <a href="index.html">首页</a> > <a href="xxzx.html">学校资讯</a> > 文章详情
+            </div>
+            <h1 class="article-title">花开夏日五月至 学子归来正当时</h1>
+            <div class="article-meta">
+                <span>浏览: 13</span>
+                <span>作者: 立德精英素质教育基地</span>
+                <span>来源: 基地办公室</span>
+                <span>时间: 2026-05-22</span>
+                <span>分类: 学员风采-校园活动</span>
+            </div>
+            <div class="article-content">
+                <p>五月如期而至，此刻阳光正好，微风不躁，万物生机盎然，正是学童读书的大好时光。立德精英素质教育基地全体师生，在曹士昌校长的带领下，以饱满的热情，迎接学子的归来。</p>
+                <p>2026年5月14日下午，济南立德精英素质教育基地召开复学工作部署会，会议由曹士昌校长主持，全体教职工参加此次会议。曹校长向全体教师传达了区教体局复学工作会议精神，详细解读了《学校复学工作方案》，围绕学生错时错峰入学、摸清底数、上好开好复学“两课四会”、加强与学生沟通交流等工作做了具体要求。</p>
+                <figure><img src="img/news/news20260427012.jpg" alt="校园"></figure>
+                <figure><img src="img/news/news20260427013.jpg" alt="部署工作"><figcaption>部署工作</figcaption></figure>
+                <figure><img src="img/news/news20260427014.jpg" alt="打扫卫生"><figcaption>打扫卫生</figcaption></figure>
+            </div>
+            <div class="article-nav">
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- 右侧悬浮客服 -->
+    <div class="floating-service">
+        <div class="service-container">
+            <div class="service-item phone-item">
+                <a href="tel:18605316398" class="service-button"><span class="emoji">📞</span></a>
+                <div class="service-tooltip phone-tooltip">
+                    <div class="tooltip-content"><div class="tooltip-title">咨询热线</div><div class="tooltip-phone">18605316398</div></div>
+                    <div class="tooltip-arrow"></div>
+                </div>
+            </div>
+            <div class="service-item wechat-item">
+                <button class="service-button qr-toggle"><span class="emoji">💬</span></button>
+                <div class="service-tooltip qr-tooltip">
+                    <div class="tooltip-content qr-content"><div class="tooltip-title">招生微信</div><img src="img/qrcode_personal.jpg" alt="立德精英招生微信二维码" class="qr-code"></div>
+                    <div class="tooltip-arrow"></div>
+                </div>
+            </div>
+            <div class="service-item public-account-item">
+                <button class="service-button account-toggle"><span class="emoji">📱</span></button>
+                <div class="service-tooltip account-tooltip">
+                    <div class="tooltip-content account-content"><div class="tooltip-title">公众号</div><img src="img/qrcode.png" alt="立德精英微信公众号二维码" class="qr-code"></div>
+                    <div class="tooltip-arrow"></div>
+                </div>
+            </div>
+            <div class="service-item top-item">
+                <button class="service-button" onclick="btnTop()"><span class="emoji">🔝</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页面页脚 -->
+    <footer id="comm_layout_footer" class="layout">
+        <div class="footer-wrapper">
+            <div class="footer-content">
+                <div class="contact-section">
+                    <div class="section-title">联系我们</div>
+                    <div class="logo-container">
+                        <a href="index.html" aria-label="返回首页"><img class="footer-logo" src="img/logo_noword.png" alt="立德精英素质教育基地"></a>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="icon-location"></i> 山东省济南市长清区长孝路1108号</p>
+                        <p><i class="icon-post"></i> 邮编：250001</p>
+                        <p><i class="icon-phone"></i> 电话：18605316398</p>
+                    </div>
+                </div>
+                <div class="qrcode-section">
+                    <div class="section-title">关注我们</div>
+                    <div class="qrcode-grid">
+                        <div class="qrcode-row">
+                            <div class="qrcode-item"><img src="img/qrcode_personal.jpg" alt="官方客服微信二维码" class="qrcode-image"><div class="qrcode-label">官方客服</div></div>
+                            <div class="qrcode-item"><img src="img/qrcode_wepub.jpg" alt="微信公众号二维码" class="qrcode-image"><div class="qrcode-label">公众号</div></div>
+                            <div class="qrcode-item"><img src="img/qrcode.png" alt="微信服务号二维码" class="qrcode-image"><div class="qrcode-label">服务号</div></div>
+                        </div>
+                        <div class="qrcode-row">
+                            <div class="qrcode-item"><img src="img/qrcode_shipinhao.jpg" alt="视频号二维码" class="qrcode-image"><div class="qrcode-label">视频号</div></div>
+                            <div class="qrcode-item"><img src="img/qrcode_douyin.png" alt="抖音二维码" class="qrcode-image"><div class="qrcode-label">抖音</div></div>
+                            <div class="qrcode-item"><img src="img/qrcode_kuaishou.jpg" alt="快手二维码" class="qrcode-image"><div class="qrcode-label">快手</div></div>
+                            <div class="qrcode-item"><img src="img/qrcode_xiaohongshu.jpg" alt="小红书二维码" class="qrcode-image"><div class="qrcode-label">小红书</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-container">
+                <div class="copyright-item"><div class="copyright-text">Copyright © 2025-2026 立德精英素质教育基地 All rights reserved.</div></div>
+                <div class="copyright-item"><div class="icp-text"><a target="_blank" rel="noopener noreferrer" href="https://beian.miit.gov.cn/">鲁ICP备XXXXXXXX号</a></div></div>
+                <div class="copyright-item"><div class="public-security-text"><a target="_blank" rel="noopener noreferrer" href="https://www.beian.gov.cn/">鲁公网安备XXXXXXXX号</a></div></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 【引入3】本页面专属脚本（拆分后的JS） -->
+    <script src="js/article-detail.js" defer></script>
+
+    <!-- ========== 全平台SEO自动提交代码 开始 ========== -->
+    <script>
+    // 页面加载完成后执行所有推送，避免阻塞渲染
+    window.addEventListener('load', function() {
+        const currUrl = window.location.href; // 当前页面URL
+
+        // 1. 百度搜索自动推送（官方原版）
+        (function(){
+            var bp = document.createElement('script');
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+
+        // 2. 360搜索自动收录（替换siteid为你的360专属站点ID）
+        (function(){
+            var src = "https://jspassport.ssl.qhimg.com/11.js?siteid=你的360站点ID&dot=1";
+            var script = document.createElement('script');
+            script.src = src;
+            script.defer = true;
+            document.body.appendChild(script);
+        })();
+
+        // 3. 搜狗搜索自动收录（替换为你验证的主域名，比如ccwu.cc）
+        (function(){
+            var src = "https://zhanzhang.sogou.com/push.js?site=你的主域名&cat=auto";
+            var script = document.createElement('script');
+            script.src = src;
+            script.defer = true;
+            document.body.appendChild(script);
+        })();
+
+        // 4. 头条/抖音搜索自动推送（替换sid为你的头条专属站点ID）
+        (function(){
+            var src = "https://lf3-data.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulh/push.js?sid=你的头条站点ID";
+            var script = document.createElement('script');
+            script.src = src;
+            script.defer = true;
+            document.body.appendChild(script);
+        })();
+
+        // 5. 必应Bing自动提交（IndexNow协议，替换为你的专属密钥）
+        (function(){
+            // 必应IndexNow密钥，在Bing站长平台生成
+            const bingKey = "你的IndexNow专属密钥";
+            const bingUrl = "https://www.bing.com/indexnow?url=" + encodeURIComponent(currUrl) + "&key=" + bingKey;
+            // 用iframe无感知提交，不影响页面
+            const iframe = document.createElement('iframe');
+            iframe.src = bingUrl;
+            iframe.style.cssText = "width:0;height:0;border:none;display:none;";
+            document.body.appendChild(iframe);
+        })();
+    });
+    </script>
+    <!-- ========== 全平台SEO自动提交代码 结束 ========== -->
+
+    <!-- 全站通用业务JS（延迟加载） -->
+    <script src="js/02541743_model.js" charset="utf-8" defer></script>
+    <script src="js/02541743_user.js" charset="utf-8" defer></script>
+    <script src="js/comm_user.js" charset="utf-8" defer></script>
+    <script src="js/comm/transform.js" defer></script>
+</body>
+</html>

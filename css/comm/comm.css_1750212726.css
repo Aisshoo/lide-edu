@@ -1,0 +1,360 @@
+/**
+ * 编辑器公共样式
+ * 编辑器         \View\css\diy\editPageComm.css
+ * 编辑器-预览    \View\css\diy\pageCom.css
+ * 编辑器-发布    \Model\viewsRes\publish\comm.css
+ */
+@charset "utf-8";
+
+/* ======================================
+   一、全局样式重置 & 基础公共样式
+====================================== */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+  box-sizing: border-box;
+}
+/* 隐藏横向滚动条，纵向滚动条自动 */
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* 页面主体：设置自定义背景图，重置基础样式 */
+body {
+  background: url("img/bankground.jpg") no-repeat left top;
+  position: relative;
+  overflow-x: hidden;
+  font: 12px/1.5 "Microsoft YaHei", tahoma, arial;
+  color: #333;
+}
+
+/* 基础标签样式重置 */
+ul, ol, li, dl, dt, dd, form, input, textarea, h1-h6, p, select {
+  list-style: none;
+  outline: 0;
+}
+i { font-style: normal; }
+a { color: #333; text-decoration: none; }
+img { border: none; -ms-interpolation-mode: bicubic; }
+/* 表格隔行背景色 */
+.ue-table-interlace-color-double { background-color: #f7faff; }
+
+/* 苹果设备移除表单原生样式 */
+select,
+input[type='button'],
+input[type="reset"],
+input[type="submit"],
+input[type='text'],
+input[type="password"],
+input[name='query'],
+input[name='d'] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+input:focus {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* ======================================
+   二、编辑器核心布局样式
+====================================== */
+/* 编辑器模块容器 */
+.view { z-index: 1; position: absolute; }
+/* 水平布局：模块左浮动 */
+.horizontal .view { position: relative; float: left; }
+/* 垂直布局：模块默认排列 */
+.vertical .view { position: relative; }
+/* 透明隐藏（配合JS动画显示） */
+.opacityHide { opacity: 0; }
+.opacityHide.animated { opacity: 1; }
+
+/* 模块内容容器 */
+.view_contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 10;
+  overflow: hidden;
+}
+/* 文本模块自动换行 */
+.view.style_01.text > .view_contents { word-break: break-word; }
+
+/* 页面布局容器 */
+.layout {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+.layout > .view_contents { cursor: default; }
+
+/* 页面背景画布层 */
+.canvas_background_view {
+  position: absolute;
+  z-index: -9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body > .canvas_background_view {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+.canvas_background_view .canvas_layout {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100% !important;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* 流布局 & 清除浮动工具类 */
+.flow .view_contents > .view { float: left; }
+.clear { clear: both; }
+
+/* ======================================
+   三、分页组件样式（旧版+新版+响应式）
+====================================== */
+/* 分页容器 */
+.page_btn {
+  clear: both;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* 旧版分页 */
+.page_btn .old_page a {
+  display: inline-block;
+  margin: 0 5px 5px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}
+.page_btn .old_page a.cur,
+.page_btn .old_page a:hover { border-color: #4c4c4c; }
+.old_page .prev_btn, .old_page .next_btn { border: 0 !important; font-family: '黑体'; }
+.no_page { border: 0 !important; }
+
+/* 新版分页 */
+.page_btn .new_page {
+  clear: both;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.page_btn .new_page .page {
+  display: inline-block;
+  padding: 0 15px;
+  margin: 0 5px 10px;
+  line-height: 35px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+.page_btn .new_page .cur,
+.page_btn .new_page .page:hover {
+  background: red;
+  color: #fff;
+  cursor: pointer;
+}
+.page_btn .new_page a {
+  display: inline-block;
+  margin: 0 5px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border: 1px solid #ccc;
+  font-family: 'Microsoft YaHei';
+}
+
+/* 分页按钮显示隐藏规则 */
+.page_btn .new_page a:nth-child(n+10) { display: none; }
+.page_btn .new_page a:nth-last-child(-n+3) { display: inline-block !important; }
+.page_btn .new_page .prev_btn,
+.page_btn .new_page .next_btn { border: 0 !important; font-family: '黑体' !important; }
+.page_btn .new_page .all_page { display: inline-block; margin: 0 10px; }
+.submit_div { display: inline-block; }
+.page_btn .new_page .submit_div input { width: 50px; margin: 0 5px; }
+.page_btn .new_page .submit_div input:hover { cursor: default; background: #fff; color: #333; }
+.page_btn .new_page .page_submit { margin-left: 5px; }
+
+/* 分页特殊样式 */
+.page_btn .new_page .page.sty04 {
+  margin: 0 -1px 12px;
+  border-radius: 0;
+  line-height: 32px;
+  z-index: 3;
+}
+.page_btn .new_page .sty04.cur {
+  border-color: red #e5e5e5;
+  border-left-color: #e5e5e5 !important;
+  border-right-color: #e5e5e5 !important;
+  z-index: 5;
+}
+.page_btn .new_page .sty04.new_prev_btn { border-radius: 200px 0 0 200px !important; }
+.page_btn .new_page .sty04.new_next_btn { border-radius: 0 200px 200px 0 !important; }
+
+/* 响应式适配 */
+@media (max-width:1200px) {
+  .page_btn .new_page .page { margin: 0 3px 10px; padding: 0 12px; line-height: 32px; }
+}
+@media (max-width:640px) {
+  .page_btn .new_page .page { margin: 0 2px 10px; padding: 0 10px; line-height: 28px; font-size: 12px; }
+  .page_btn .new_page .page.sty02 { padding: 0 7px; }
+  .page_btn .new_page .page.sty04 { padding: 0 11px; line-height: 28px; }
+  .page_btn .new_page .submit_div { display: none; }
+}
+
+/* ======================================
+   四、图片放大预览组件样式
+====================================== */
+/* 图片预览遮罩层 */
+.imgBox {
+  position: fixed;
+  z-index: 9999;
+  background: rgba(0,0,0,0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 预览图片居中样式 */
+.imgBox img {
+  position: absolute;
+  max-width: 80%;
+  border: 20px solid #fff;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+/* 滚动模式 */
+.imgBox.scroll { overflow-y: scroll; overflow-x: hidden; }
+/* 自定义滚动条 */
+.imgBox.scroll::-webkit-scrollbar { width: 6px; height: 6px; background: rgba(0,0,0,.02); }
+.imgBox.scroll::-webkit-scrollbar-button { height: 0; }
+.imgBox.scroll::-webkit-scrollbar-corner { background: rgba(0,0,0,.05); }
+.imgBox.scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,.7); border-radius: 3px; }
+/* 滚动模式下图片定位 */
+.imgBox.scroll img { top: 5%; margin-bottom: 5%; transform: translate(-50%, 0); }
+
+/* 图片操作按钮 */
+.imageButton {
+  position: fixed;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.imageButton span {
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0,0,0,.2);
+  transition: all 0.2s ease;
+}
+.imageButton span:hover { opacity: .8; }
+.imageButton span.closeShowPic {
+  font-size: 40px;
+  border-radius: 50%;
+  font-family: serif;
+  background: #fff;
+  padding: .2em;
+  line-height: 1;
+  text-align: center;
+}
+
+/* 移动端图片适配 */
+@media (max-width:768px) {
+  .imgBox img { border-width: 10px; }
+  .imgBox.scroll img { margin-bottom: 10vh; }
+}
+
+/* ======================================
+   五、权限提示弹窗样式
+====================================== */
+/* 弹窗遮罩层 */
+.jurisdiction_mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 2147483647;
+  display: none;
+}
+/* 弹窗主体 */
+.jurisdiction_tips {
+  width: 400px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  padding: 23px 20px;
+  text-align: center;
+}
+.jurisdiction_tips img { display: block; margin: 0 auto; }
+.jurisdiction_tips h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #575757;
+  margin: 5px 0 0;
+}
+.jurisdiction_tips p {
+  color: #999;
+  font-size: 16px;
+  font-weight: 300;
+}
+/* 弹窗按钮 */
+.jurisdiction_tips button {
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 0;
+  margin: 10px 3px 0;
+  background: #aaa;
+  cursor: pointer;
+  border: none;
+  width: 98px;
+}
+.jurisdiction_tips .jurisdiction_login { background: #ff0099; }
+.jurisdiction_tips button:hover { opacity: 0.8; }
+.jurisdiction_tips_mobile { display: none; }
+
+/* 移动端弹窗适配 */
+@media (max-width:450px) {
+  .jurisdiction_tips { width: 80%; padding: 20px 15px; }
+  .jurisdiction_tips p { display: none; }
+  .jurisdiction_tips_mobile { display: block; }
+  .jurisdiction_tips img { width: 60px; }
+  .jurisdiction_tips h3 { font-size: 16px; }
+  .jurisdiction_tips button { margin-top: 12px; padding: 8px 0; }
+}
+
+/* ======================================
+   六、通用工具类样式
+====================================== */
+/* 固定定位 */
+.pos_fixed { position: fixed; width: 100%; }
+/* 内链样式继承父级元素 */
+.inherit_the_style {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  background: inherit;
+  display: unset;
+  margin: 0;
+  padding: 0;
+}

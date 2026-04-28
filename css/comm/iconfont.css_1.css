@@ -1,0 +1,28 @@
+/**
+ * 阿里图标字体 引入样式
+ * 字体名称：bbx-new-font
+ * 阿里图标项目ID：1766857
+ * 作用：全局引入自定义图标字体，解决图标渲染模糊、跨浏览器兼容问题
+ */
+@font-face {
+  font-family: 'bbx-new-font';
+  /* 引入多格式字体文件，兼容所有浏览器 */
+  src: url('//at.alicdn.com/t/font_1766857_pc8oo3bomjs.woff2?t=1648796063411') format('woff2'),
+       url('//at.alicdn.com/t/font_1766857_pc8oo3bomjs.woff?t=1648796063411') format('woff'),
+       url('//at.alicdn.com/t/font_1766857_pc8oo3bomjs.ttf?t=1648796063411') format('truetype');
+}
+
+/**
+ * 图标字体通用类
+ * 所有使用该图标的元素都需添加此类，统一图标渲染规则
+ */
+.bbx-new-font {
+  font-family: "bbx-new-font" !important;
+  /* 基础样式：默认图标大小、取消斜体 */
+  font-size: 16px;
+  font-style: normal;
+  /* 核心兼容：解决浏览器图标渲染模糊、锯齿问题 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke-width: 0.2px;
+}
