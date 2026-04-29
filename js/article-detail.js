@@ -226,3 +226,157 @@ window.reloadNavigation = setupArticleNavigation;
 window.findCurrentPageIndex = findCurrentPageIndex;
 
 console.log('✅ article-detail.js 加载完成');
+document.addEventListener('DOMContentLoaded', function() {
+    // 字体大小调整功能
+    const fontSizeBtns = document.querySelectorAll('.font-size-btn');
+    const articleBody = document.querySelector('.article-body');
+    
+    fontSizeBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // 移除所有按钮的active类
+            fontSizeBtns.forEach(b => b.classList.remove('active'));
+            // 添加当前按钮的active类
+            this.classList.add('active');
+            
+            // 设置字体大小
+            const size = this.getAttribute('data-size');
+            let fontSize;
+            switch(size) {
+                case 'small':
+                    fontSize = '0.95rem';
+                    break;
+                case 'large':
+                    fontSize = '1.2rem';
+                    break;
+                default:
+                    fontSize = '1.05rem';
+            }
+            articleBody.style.fontSize = fontSize;
+            
+            // 保存用户偏好到localStorage
+            localStorage.setItem('articleFontSize', fontSize);
+        });
+    });
+    
+    // 恢复用户上次的字体大小设置
+    const savedFontSize = localStorage.getItem('articleFontSize');
+    if (savedFontSize) {
+        articleBody.style.fontSize = savedFontSize;
+        // 根据保存的字体大小设置active按钮
+        fontSizeBtns.forEach(btn => {
+            const size = btn.getAttribute('data-size');
+            let targetSize;
+            if (savedFontSize === '0.95rem') targetSize = 'small';
+            else if (savedFontSize === '1.2rem') targetSize = 'large';
+            else targetSize = 'medium';
+            
+            if (size === targetSize) {
+                btn.classList.add('active');
+            }
+        });
+    } else {
+        // 默认medium按钮为active
+        document.querySelector('.font-size-btn[data-size="medium"]').classList.add('active');
+    }
+    
+    // 夜间模式切换
+    const readModeBtn = document.querySelector('.read-mode-btn');
+    const body = document.body;
+    
+    // 检查是否有保存的夜间模式设置
+    const isNightMode = localStorage.getItem('nightMode') === 'true';
+    if (isNightMode) {
+        body.classList.add('night-mode');
+        readModeBtn.innerHTML = '<i class="icon-sun"></i> 日间模式';
+    }
+    
+    readModeBtn.addEventListener('click', function() {
+        body.classList.toggle('night-mode');
+        const isNight = body.classList.contains('night-mode');
+        
+        if (isNight) {
+            this.innerHTML = '<i class="icon-sun"></i> 日间模式';
+        } else {
+            this.innerHTML = '<i class="icon-moon"></i> 夜间模式';
+        }
+        
+        // 保存用户偏好
+        localStorage.setItem('nightMode', isNight.toString());
+    });
+    
+    // 平滑滚动到锚点
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // 返回顶部按钮（动态创建）
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.innerHTML = '↑';
+    backToTopBtn.style.position = 'fixed';
+    backToTopBtn.style.bottom = '2rem';
+    backToTopBtn.style.right = '2rem';
+    backToTopBtn.style.width = '2.5rem';
+    backToTopBtn.style.height = '2.5rem';
+    backToTopBtn.style.backgroundColor = 'var(--primary-color)';
+    backToTopBtn.style.color = 'white';
+    backToTopBtn.style.border = 'none';
+    backToTopBtn.style.borderRadius = '50%';
+    backToTopBtn.style.cursor = 'pointer';
+    backToTopBtn.style.display = 'none';
+    backToTopBtn.style.boxShadow = 'var(--shadow-md)';
+    backToTopBtn.style.zIndex = '1000';
+    backToTopBtn.style.transition = 'var(--transition)';
+    
+    document.body.appendChild(backToTopBtn);
+    
+    // 显示/隐藏返回顶部按钮
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+    
+    // 返回顶部功能
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // 悬停效果增强
+    const shareIcons = document.querySelectorAll('.share-icon');
+    shareIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px) scale(1.05)';
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+    
+    // 打印优化
+    window.addEventListener('beforeprint', function() {
+        document.body.classList.add('print-mode');
+    });
+    
+    window.addEventListener('afterprint', function() {
+        document.body.classList.remove('print-mode');
+    });
+});

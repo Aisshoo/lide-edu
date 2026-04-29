@@ -1,0 +1,1305 @@
+/*
+ * author 金保虎（Aisshoo Adolf Kinyong）
+ * created on 29-04-2026-09h-02m
+ * github: https://gitee.com/aisshoo
+ * copyright 2026
+*/
+/* ======================================
+   1. 全局基础重置与通用规范（全站复用）
+   ====================================== */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+body { 
+    font-family: "仿宋_GB2312", "Microsoft YaHei", sans-serif; /* 公文首选仿宋_GB2312 */
+    background-color: #f5f5f5; 
+    line-height: 1.8; /* 公文标准行距（约28磅） */
+}
+img { 
+    max-width: 100%; 
+    height: auto; 
+    vertical-align: middle; 
+}
+a { 
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.3s ease;
+}
+ul { 
+    list-style: none; 
+}
+
+/* ======================================
+   2. 通用组件样式（全站复用）
+   ====================================== */
+/* 顶部通栏 */
+.header-top {
+    background-color: #0b1e3d;
+    color: #aebac6;
+    font-size: 12px;
+    padding: 5px 5%;
+    text-align: right;
+}
+
+/* 头部LOGO与标语区域 */
+.header-main {
+    background: linear-gradient(135deg, #051836 0%, #1a3c7a 100%);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.header-logo img { 
+    height: 80px; 
+    display: block; 
+}
+.header-text-group {
+    text-align: right;
+    color: #fff;
+    line-height: 1.4;
+}
+.header-text-main {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.header-text-en {
+    font-size: 18px;
+    color: #ff6600;
+    font-weight: 500;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 主导航栏 */
+.header-nav {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 100;
+}
+.nav-list { 
+    display: flex; 
+    justify-content: center; 
+}
+.nav-item { 
+    position: relative; 
+}
+.nav-item > a {
+    display: block;
+    padding: 15px 25px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-item > a:hover { 
+    color: #ff6600; 
+}
+
+/* 导航下拉菜单 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-top: 2px solid #ff6600;
+}
+.nav-item:hover .dropdown-menu { 
+    display: block; 
+}
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #666;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+.dropdown-menu li a:hover { 
+    background: #f9f9f9; 
+    color: #ff6600; 
+}
+
+/* 页面顶部Banner */
+.banner {
+    width: 100%;
+    height: 300px;
+    background: url("../img/bankground.jpg") center/cover no-repeat;
+    background-color: #0052CC; /* 回退背景色 */
+}
+
+/* ======================================
+   3. 行政公文核心样式（符合GB/T 9704-2012）
+   ====================================== */
+/* 左侧固定分类侧边栏 */
+.fixed-category-sidebar {
+    position: fixed;
+    left: 0;
+    top: 200px;
+    width: 200px;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    padding: 20px;
+    z-index: 99;
+}
+.sidebar-head {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1890ff;
+}
+.category-news-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.category-news-list a {
+    color: #666;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+.category-news-list a:hover { 
+    color: #1890ff; 
+}
+
+/* 文章详情容器 */
+.detail-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* 面包屑导航 */
+.breadcrumb {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+}
+.breadcrumb a { 
+    color: #1890ff; 
+}
+
+/* 公文标题（二号宋体、居中、加粗、段后间距） */
+.article-title {
+    font-family: "宋体", sans-serif;
+    font-size: 22px; /* 二号字体对应22px */
+    font-weight: bold;
+    color: #333;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+    text-align: center; /* 公文标题居中 */
+    letter-spacing: 1px; /* 公文标题字间距 */
+}
+
+/* 公文版头（发文机关、日期等） */
+.article-meta {
+    font-family: "仿宋_GB2312", sans-serif;
+    font-size: 14px; /* 三号字体对应16px，此处略小适配页面 */
+    color: #666;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    text-align: right; /* 公文版头右对齐 */
+}
+.article-meta span { 
+    margin-left: 20px; 
+}
+
+/* 公文摘要（提要） */
+.article-summary {
+    background: #f0f7ff;
+    padding: 20px;
+    border-left: 4px solid #1890ff;
+    margin-bottom: 30px;
+    color: #333;
+    line-height: 1.8;
+    text-indent: 2em; /* 首行缩进2字符 */
+    font-family: "仿宋_GB2312", sans-serif;
+    font-size: 16px; /* 三号字体 */
+}
+
+/* 公文正文核心样式（严格符合GB/T 9704-2012） */
+.article-content {
+    font-family: "仿宋_GB2312", sans-serif;
+    font-size: 16px; /* 三号字体（公文正文标准） */
+    color: #333;
+    line-height: 1.8; /* 公文标准行距28磅 */
+}
+/* 正文首行缩进2字符（公文核心要求） */
+.article-content p { 
+    margin-bottom: 15px; 
+    text-align: justify; 
+    text-indent: 2em; /* 首行缩进2字符 */
+}
+/* 公文一级标题（一、）：黑体、三号、段前段后间距 */
+.gov-level-1 {
+    font-family: "黑体", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin: 25px 0 15px;
+    text-indent: 0; /* 一级标题取消缩进 */
+}
+/* 公文二级标题（（一））：楷体、三号 */
+.article-content p span.gov-level-2 {
+    font-family: "楷体_GB2312", sans-serif;
+    font-weight: bold;
+}
+/* 无序列表适配 */
+.article-content ul {
+    margin: 10px 0 20px 30px;
+    list-style: disc;
+}
+.article-content ul li {
+    margin-bottom: 8px;
+    text-indent: 0;
+}
+
+/* 上下篇导航 */
+.article-nav {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.article-nav .nav-item { 
+    flex: 1; 
+}
+.article-nav a { 
+    color: #666; 
+    font-size: 14px; 
+    transition: color 0.3s; 
+}
+.article-nav a:hover { 
+    color: #1890ff; 
+}
+
+/* ======================================
+   4. 右侧悬浮客服组件（全站复用）
+   ====================================== */
+.floating-service {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+.service-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #e6f7ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border: 1px solid #91d5ff;
+}
+.service-item { 
+    position: relative; 
+    width: 100%; 
+}
+.service-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 15px;
+    background: white;
+    border: 1px solid #d6e7ff;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.service-button:hover {
+    background: #1890ff;
+    color: white;
+    border-color: #1890ff;
+    transform: translateY(-1px);
+}
+.emoji { 
+    font-size: 20px; 
+    transition: transform 0.3s ease; 
+}
+
+/* 悬浮提示气泡 */
+.service-tooltip {
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #e6f7ff;
+}
+.service-tooltip.active { 
+    opacity: 1; 
+    visibility: visible; 
+}
+.tooltip-content { 
+    text-align: center; 
+}
+.tooltip-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1890ff;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+.tooltip-phone {
+    font-size: 18px;
+    font-weight: 700;
+    color: #e63946;
+    letter-spacing: 1px;
+}
+.qr-code {
+    width: 140px;
+    height: 140px;
+    margin: 10px auto;
+    border-radius: 8px;
+    border: 2px solid #1890ff;
+    object-fit: contain;
+}
+.tooltip-arrow {
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-bottom: 1px solid #e6f7ff;
+    border-left: 1px solid #e6f7ff;
+    transform: rotate(-135deg);
+    z-index: -1;
+}
+
+/* PC端hover显示气泡 */
+@media (min-width: 992px) {
+    .phone-item:hover .service-tooltip,
+    .wechat-item:hover .service-tooltip,
+    .public-account-item:hover .service-tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* 回到顶部按钮特殊样式 */
+.top-item .service-button {
+    background: linear-gradient(135deg, #1890ff, #40a9ff);
+    color: white;
+    border: none;
+}
+.top-item .service-button:hover {
+    background: linear-gradient(135deg, #40a9ff, #1890ff);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+}
+
+/* ======================================
+   5. 页脚样式（全站复用）
+   ====================================== */
+#comm_layout_footer {
+    background: linear-gradient(135deg, #1890ff, #40a9ff);
+    color: white;
+    padding: 40px 0 30px;
+    position: relative;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin-top: 60px;
+}
+#comm_layout_footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></svg>');
+    background-size: 40px 40px;
+}
+.footer-wrapper { 
+    position: relative; 
+    z-index: 2; 
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.contact-section, .qrcode-section { 
+    flex: 1; 
+}
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd700, #ffa500);
+    border-radius: 2px;
+}
+.logo-container { 
+    display: flex; 
+    justify-content: center; 
+    margin: 25px 0; 
+}
+.footer-logo {
+    max-width: 200px;
+    height: auto;
+    filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.25));
+    transition: transform 0.3s ease;
+}
+.footer-logo:hover { 
+    transform: scale(1.03); 
+}
+.contact-info {
+    text-align: center;
+    font-size: 16px;
+    line-height: 2.2;
+    margin-top: 15px;
+}
+.contact-info p {
+    margin: 12px 0;
+    transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.95);
+    cursor: default;
+}
+.contact-info p:hover { 
+    color: #ffd700; 
+    transform: translateX(5px); 
+}
+.qrcode-grid { 
+    display: grid; 
+    gap: 25px; 
+    margin-top: 20px; 
+}
+.qrcode-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.qrcode-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+}
+.qrcode-image {
+    width: 100%;
+    height: 100px;
+    border-radius: 12px;
+    border: 2px solid white;
+    padding: 4px;
+    background: white;
+    object-fit: contain;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+.qrcode-image:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: #ffd700;
+}
+.qrcode-label {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.copyright-container {
+    max-width: 1200px;
+    margin: 35px auto 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 25px;
+}
+.copyright-item { 
+    flex: 1; 
+    text-align: center; 
+    min-width: 250px; 
+    padding: 0 15px; 
+}
+.copyright-text, .icp-text, .public-security-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+.copyright-text { 
+    font-weight: 500; 
+    color: white; 
+}
+.icp-text a, .public-security-text a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.icp-text a:hover, .public-security-text a:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+}
+
+/* ======================================
+   6. 响应式适配（全断点统一管理）
+   ====================================== */
+/* 桌面端中等屏幕 */
+@media (max-width: 1200px) {
+    .footer-content { 
+        gap: 30px; 
+    }
+    .qrcode-row { 
+        justify-content: center; 
+    }
+}
+
+/* 平板端 */
+@media (max-width: 992px) {
+    /* 头部适配 */
+    .header-main { 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 30px 20px; 
+    }
+    .header-text-group { 
+        text-align: center; 
+        margin-top: 20px; 
+    }
+    .header-text-main { 
+        font-size: 22px; 
+    }
+    .header-text-en { 
+        font-size: 16px; 
+    }
+    .nav-list { 
+        flex-direction: column; 
+    }
+    .nav-item > a { 
+        text-align: center; 
+        border-bottom: 1px solid #eee; 
+    }
+    .dropdown-menu { 
+        position: static; 
+        box-shadow: none; 
+        border-top: none; 
+        background: #f9f9f9; 
+    }
+
+    /* 主体适配 */
+    .fixed-category-sidebar { 
+        display: none; 
+    }
+    .detail-container { 
+        padding: 20px 15px; 
+    }
+    .article-title {
+        font-size: 20px; /* 平板端标题适配 */
+    }
+
+    /* 页脚适配 */
+    .footer-content { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .qrcode-grid { 
+        width: 100%; 
+    }
+    .copyright-container { 
+        flex-direction: column; 
+        gap: 12px; 
+        text-align: center; 
+    }
+    .copyright-item { 
+        min-width: auto; 
+        padding: 5px 0; 
+    }
+}
+
+/* 手机端 */
+@media (max-width: 768px) {
+    /* 基础适配 */
+    .banner { 
+        height: 200px; 
+    }
+    .article-title { 
+        font-size: 18px; 
+    }
+    .article-content { 
+        font-size: 15px; 
+    }
+
+    /* 悬浮客服适配 */
+    .floating-service { 
+        right: 15px; 
+    }
+    .service-container { 
+        gap: 8px; 
+        padding: 8px; 
+    }
+    .service-button { 
+        padding: 10px 12px; 
+        font-size: 13px; 
+    }
+    .emoji { 
+        font-size: 18px; 
+    }
+    .service-tooltip { 
+        width: 200px; 
+    }
+    .qr-code { 
+        width: 120px; 
+        height: 120px; 
+    }
+
+    /* 页脚适配 */
+    .qrcode-row { 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 20px; 
+    }
+    .qrcode-item { 
+        width: 110px; 
+        margin: 5px; 
+    }
+    .qrcode-image { 
+        height: 90px; 
+    }
+    .contact-info p { 
+        font-size: 15px; 
+        line-height: 2.0; 
+    }
+    .section-title { 
+        font-size: 20px; 
+    }
+}
+
+/* 小屏手机端 */
+@media (max-width: 480px) {
+    /* 文章适配 */
+    .article-title { 
+        font-size: 16px; 
+    }
+    .article-nav { 
+        flex-direction: column; 
+        gap: 10px; 
+    }
+    .article-meta span { 
+        display: block; /* 手机端版头换行 */
+        margin: 5px 0;
+        text-align: left;
+    }
+    .article-content p {
+        text-indent: 1em; /* 小屏缩进适配 */
+    }
+
+    /* 悬浮客服适配 */
+    .floating-service { 
+        right: 10px; 
+    }
+    .service-container { 
+        gap: 6px; 
+        padding: 6px; 
+        border-radius: 10px; 
+    }
+    .service-button { 
+        padding: 8px 10px; 
+        font-size: 12px; 
+    }
+    .emoji { 
+        font-size: 16px; 
+    }
+    .service-tooltip { 
+        width: 180px; 
+        font-size: 12px; 
+    }
+
+    /* 页脚适配 */
+    .qrcode-row { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .qrcode-item { 
+        width: 100px; 
+        margin: 8px 0; 
+    }
+    .qrcode-image { 
+        width: 90px; 
+        height: 90px; 
+    }
+    .contact-info p { 
+        font-size: 14px; 
+        margin: 8px 0; 
+    }
+    .copyright-text, .icp-text, .public-security-text { 
+        font-size: 13px; 
+    }
+    .copyright-container { 
+        padding: 0 10px; 
+    }
+}
+/* ======================================
+   1. 全局基础重置与通用规范（全站复用）
+   ====================================== */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+body { 
+    font-family: "仿宋_GB2312", "Microsoft YaHei", sans-serif; /* 公文首选仿宋_GB2312 */
+    background-color: #f5f5f5; 
+    line-height: 1.8; /* 公文标准行距（约28磅） */
+}
+img { 
+    max-width: 100%; 
+    height: auto; 
+    vertical-align: middle; 
+}
+a { 
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.3s ease;
+}
+ul { 
+    list-style: none; 
+}
+
+/* ======================================
+   2. 通用组件样式（全站复用）
+   ====================================== */
+/* 顶部通栏 */
+.header-top {
+    background-color: #0b1e3d;
+    color: #aebac6;
+    font-size: 12px;
+    padding: 5px 5%;
+    text-align: right;
+}
+
+/* 头部LOGO与标语区域 */
+.header-main {
+    background: linear-gradient(135deg, #051836 0%, #1a3c7a 100%);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.header-logo img { 
+    height: 80px; 
+    display: block; 
+}
+.header-text-group {
+    text-align: right;
+    color: #fff;
+    line-height: 1.4;
+}
+.header-text-main {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.header-text-en {
+    font-size: 18px;
+    color: #ff6600;
+    font-weight: 500;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 主导航栏 */
+.header-nav {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 100;
+}
+.nav-list { 
+    display: flex; 
+    justify-content: center; 
+}
+.nav-item { 
+    position: relative; 
+}
+.nav-item > a {
+    display: block;
+    padding: 15px 25px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-item > a:hover { 
+    color: #ff6600; 
+}
+
+/* 导航下拉菜单 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-top: 2px solid #ff6600;
+}
+.nav-item:hover .dropdown-menu { 
+    display: block; 
+}
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #666;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+.dropdown-menu li a:hover { 
+    background: #f9f9f9; 
+    color: #ff6600; 
+}
+
+/* 页面顶部Banner */
+.banner {
+    width: 100%;
+    height: 300px;
+    background: url("../img/bankground.jpg") center/cover no-repeat;
+    background-color: #0052CC; /* 回退背景色 */
+}
+
+/* ======================================
+   3. 行政公文核心样式（符合GB/T 9704-2012）
+   ====================================== */
+/* 左侧固定分类侧边栏 */
+.fixed-category-sidebar {
+    position: fixed;
+    left: 0;
+    top: 200px;
+    width: 200px;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    padding: 20px;
+    z-index: 99;
+}
+.sidebar-head {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1890ff;
+}
+.category-news-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.category-news-list a {
+    color: #666;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+.category-news-list a:hover { 
+    color: #1890ff; 
+}
+
+/* 文章详情容器 */
+.detail-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* 面包屑导航 */
+.breadcrumb {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+}
+.breadcrumb a { 
+    color: #1890ff; 
+}
+
+/* 公文标题（二号宋体、居中、加粗、段后间距） */
+.article-title {
+    font-family: "宋体", sans-serif;
+    font-size: 22px; /* 二号字体对应22px */
+    font-weight: bold;
+    color: #333;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+    text-align: center; /* 公文标题居中 */
+    letter-spacing: 1px; /* 公文标题字间距 */
+}
+
+/* 公文版头（发文机关、日期等） */
+.article-meta {
+    font-family: "仿宋_GB2312", sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    text-align: right; /* 公文版头右对齐 */
+}
+.article-meta span { 
+    margin-left: 20px; 
+}
+
+/* 公文摘要（提要） */
+.article-summary {
+    background: #f0f7ff;
+    padding: 20px;
+    border-left: 4px solid #1890ff;
+    margin-bottom: 30px;
+    color: #333;
+    line-height: 1.8;
+    text-indent: 2em; /* 首行缩进2字符 */
+    font-family: "仿宋_GB2312", sans-serif;
+    font-size: 16px; /* 三号字体 */
+}
+
+/* 公文正文核心样式 */
+.article-content {
+    font-family: "仿宋_GB2312", sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+}
+.article-content p { 
+    margin-bottom: 15px; 
+    text-align: justify; 
+    text-indent: 2em; 
+}
+.gov-level-1 {
+    font-family: "黑体", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin: 25px 0 15px;
+    text-indent: 0;
+}
+
+/* 上下篇导航 */
+.article-nav {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.article-nav .nav-item { 
+    flex: 1; 
+}
+.article-nav a { 
+    color: #666; 
+    font-size: 14px; 
+}
+.article-nav a:hover { 
+    color: #1890ff; 
+}
+
+/* ======================================
+   4. 右侧悬浮客服组件
+   ====================================== */
+.floating-service {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.service-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #e6f7ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border: 1px solid #91d5ff;
+}
+.service-item { 
+    position: relative; 
+    width: 100%; 
+}
+.service-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px;
+    background: white;
+    border: 1px solid #d6e7ff;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+.service-button:hover {
+    background: #1890ff;
+    color: white;
+}
+.emoji { 
+    font-size: 20px; 
+}
+
+/* 悬浮提示气泡 */
+.service-tooltip {
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.service-tooltip.active { 
+    opacity: 1; 
+    visibility: visible; 
+}
+.tooltip-content { 
+    text-align: center; 
+}
+.tooltip-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1890ff;
+    margin-bottom: 8px;
+}
+.tooltip-phone {
+    font-size: 18px;
+    font-weight: 700;
+    color: #e63946;
+}
+.qr-code {
+    width: 140px;
+    height: 140px;
+    margin: 10px auto;
+    border-radius: 8px;
+    border: 2px solid #1890ff;
+}
+.tooltip-arrow {
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: white;
+    transform: rotate(-135deg);
+    z-index: -1;
+}
+
+/* PC端hover显示气泡 */
+@media (min-width: 992px) {
+    .phone-item:hover .service-tooltip,
+    .wechat-item:hover .service-tooltip,
+    .public-account-item:hover .service-tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* 回到顶部按钮 */
+.top-item .service-button {
+    background: linear-gradient(135deg, #1890ff, #40a9ff);
+    color: white;
+    border: none;
+}
+
+/* ======================================
+   5. 全新页脚样式（适配你提供的代码）
+   ====================================== */
+#comm_layout_footer {
+    background: linear-gradient(135deg, #051836 0%, #1a3c7a 100%);
+    color: #fff;
+    padding: 50px 0 20px;
+    margin-top: 60px;
+    position: relative;
+}
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* 联系我们板块 */
+.contact-section {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+.logo-container {
+    margin: 20px 0;
+}
+.footer-logo {
+    width: 120px;
+    height: auto;
+}
+.contact-info p {
+    font-size: 15px;
+    line-height: 2.2;
+    margin: 8px 0;
+}
+.contact-info i {
+    margin-right: 8px;
+    color: #ff6600;
+    font-size: 16px;
+}
+
+/* 二维码板块 */
+.qrcode-section {
+    flex: 2;
+    min-width: 600px;
+}
+.qrcode-grid {
+    width: 100%;
+}
+.qrcode-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.qrcode-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+.qrcode-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background: #fff;
+    margin-bottom: 8px;
+}
+.qrcode-label {
+    font-size: 13px;
+    text-align: center;
+}
+
+/* 版权信息 */
+.copyright-container {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 30px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+.copyright-item {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+}
+.copyright-item a {
+    color: rgba(255,255,255,0.8);
+    transition: color 0.3s;
+}
+.copyright-item a:hover {
+    color: #ff6600;
+}
+
+/* ======================================
+   6. 响应式适配
+   ====================================== */
+@media (max-width: 992px) {
+    .fixed-category-sidebar { display: none; }
+    .footer-content { flex-direction: column; align-items: center; }
+    .qrcode-section { min-width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .banner { height: 200px; }
+    .article-title { font-size: 18px; }
+    .qrcode-row { gap: 15px; }
+    .qrcode-item { width: 80px; }
+    .qrcode-image { width: 70px; height: 70px; }
+    .copyright-container { flex-direction: column; gap: 10px; }
+}
+
+@media (max-width: 480px) {
+    .detail-container { padding: 20px 15px; }
+    .article-content p { text-indent: 1em; }
+    .contact-section { min-width: 100%; }
+}
