@@ -1,17 +1,28 @@
 {
   "metadata": {
     "success": true,
-    "total": 5,
+    "total": 13,
     "pageSize": 15,
     "totalPages": 1,
-    "generated": "2026/4/27 13:59:49",
+    "generated": "2026/4/29 10:24:55",
     "byType": {
-      "hy": 0,
-      "xx": 5
+      "hy": 4,
+      "xx": 9
     },
     "skippedFiles": 1
   },
   "articles": [
+    {
+      "filename": "news_xx_20260429.html",
+      "url": "news/news_xx_20260429.html",
+      "type": "xx",
+      "typeName": "学校新闻",
+      "date": "2026-04-29",
+      "timestamp": 1777420800000,
+      "sortDate": "20260429",
+      "title": "选择寄宿学校时，应该注意哪些？",
+      "summary": "选择寄宿学校时，应该注意哪些？..."
+    },
     {
       "filename": "news_xx_20260422.html",
       "url": "news/news_xx_20260422.html",
@@ -22,6 +33,83 @@
       "sortDate": "20260422",
       "title": "关于工作过程践行“幼吾幼”理念的倡议书",
       "summary": "关于工作过程践行“幼吾幼”理念的倡议书..."
+    },
+    {
+      "filename": "news_xx_20250610.html",
+      "url": "news/news_xx_20250610.html",
+      "type": "xx",
+      "typeName": "学校新闻",
+      "date": "2025-06-10",
+      "timestamp": 1749513600000,
+      "sortDate": "20250610",
+      "title": "长清暑假班该怎样选择？",
+      "summary": "长清暑假班该怎样选择？..."
+    },
+    {
+      "filename": "news_xx_20250606.html",
+      "url": "news/news_xx_20250606.html",
+      "type": "xx",
+      "typeName": "学校新闻",
+      "date": "2025-06-06",
+      "timestamp": 1749168000000,
+      "sortDate": "20250606",
+      "title": "精英武术夏令营开招啦！",
+      "summary": "精英武术夏令营开招啦！..."
+    },
+    {
+      "filename": "news_xx_20250522.html",
+      "url": "news/news_xx_20250522.html",
+      "type": "xx",
+      "typeName": "学校新闻",
+      "date": "2025-05-22",
+      "timestamp": 1747872000000,
+      "sortDate": "20250522",
+      "title": "花开夏日五月至 学子归来正当时",
+      "summary": "花开夏日五月至 学子归来正当时..."
+    },
+    {
+      "filename": "news_hy_20250513.html",
+      "url": "news/news_hy_20250513.html",
+      "type": "hy",
+      "typeName": "行业资讯",
+      "date": "2025-05-13",
+      "timestamp": 1747094400000,
+      "sortDate": "20250513",
+      "title": "教育部等十七部门关于印发《全面加强和 改进新时代学生心理健康工作专项行动 计划（2023—2025年）》的通知",
+      "summary": "教育部等十七部门关于印发《全面加强和 改进新时代学生心理健康工作专项行动 计划（2023—2025年）》的通知..."
+    },
+    {
+      "filename": "news_hy_20250509.html",
+      "url": "news/news_hy_20250509.html",
+      "type": "hy",
+      "typeName": "行业资讯",
+      "date": "2025-05-09",
+      "timestamp": 1746748800000,
+      "sortDate": "20250509",
+      "title": "预防未成年人犯罪法修订草案二审 拟加强专门学校建设",
+      "summary": "预防未成年人犯罪法修订草案二审 拟加强专门学校建设..."
+    },
+    {
+      "filename": "news_hy_20250508.html",
+      "url": "news/news_hy_20250508.html",
+      "type": "hy",
+      "typeName": "行业资讯",
+      "date": "2025-05-08",
+      "timestamp": 1746662400000,
+      "sortDate": "20250508",
+      "title": "预防未成年人犯罪法修订草案：拟加强专门学校建设完善入学程序",
+      "summary": "预防未成年人犯罪法修订草案：拟加强专门学校建设完善入学程序..."
+    },
+    {
+      "filename": "news_hy_20250504.html",
+      "url": "news/news_hy_20250504.html",
+      "type": "hy",
+      "typeName": "行业资讯",
+      "date": "2025-05-04",
+      "timestamp": 1746316800000,
+      "sortDate": "20250504",
+      "title": "国办发文：关于加强专门学校建设和专门教育工作的意见",
+      "summary": "国办发文：关于加强专门学校建设和专门教育工作的意见..."
     },
     {
       "filename": "news_xx_20250205.html",

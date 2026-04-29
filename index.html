@@ -19,48 +19,42 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-       <!-- ==========================
+  <!-- ==========================
      全平台 SEO 优化核心代码
-     1. 基础全网SEO配置
-     2. 各大搜索引擎验证/推送
-     3. 抖音/头条 新媒体SEO
-     4. 结构化数据（增强收录）
+     百度、Bing已填验证码 | 其他平台后续补充
     ========================== -->
 
-    <!-- 1. 基础全网SEO（已优化，保留原有核心信息） -->
-    <meta name="robots" content="index,follow"> <!-- 允许所有搜索引擎抓取/收录 -->
+    <!-- 1. 基础全网SEO抓取指令 -->
+    <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="baiduspider" content="index,follow">
     <meta name="360spider" content="index,follow">
     <meta name="sogouspider" content="index,follow">
     <meta name="bingbot" content="index,follow">
-    <!-- 禁止搜索引擎转码（移动端适配） -->
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
 
-    <!-- 2. 社交/新媒体分享SEO（微信、抖音、微博适配） -->
+    <!-- 2. 社交/新媒体分享适配（微信、抖音、微博） -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="立德精英素质教育基地践行新时代学生心理健康工作政策">
-    <meta property="og:description" content="济南立德精英青少年素质教育基地专注8-17周岁青春期少年不良行为矫正，全封闭军事化管理">
+    <meta property="og:description" content="济南立德精英青少年素质教育基地专注8-17周岁青春期少年叛逆矫正、厌学辅导、网瘾戒除的全封闭素质教育基地">
     <meta property="og:site_name" content="立德精英素质教育基地">
 
-    <!-- 3. 【必填】各大搜索引擎站长平台验证标签
-        请替换成你在各站长平台获取的专属验证码！
-    -->
-    <!-- 百度搜索资源平台验证 -->
-    <meta name="baidu-site-verification" content="这里填写你的百度验证码">
-    <!-- 360搜索站长平台验证 -->
+    <!-- 3. 各大搜索引擎站长验证（已填百度+Bing） -->
+    <!-- 百度搜索资源平台验证（已填） -->
+    <meta name="baidu-site-verification" content="codeva-XuuJ6ULysr" />
+    <!-- 360搜索站长平台验证（待补充） -->
     <meta name="360-site-verification" content="这里填写你的360验证码">
-    <!-- 搜狗搜索站长平台验证 -->
+    <!-- 搜狗搜索站长平台验证（待补充） -->
     <meta name="sogou-site-verification" content="这里填写你的搜狗验证码">
-    <!-- Bing(必应)站长平台验证 -->
-    <meta name="msvalidate.01" content="这里填写你的Bing验证码">
-    <!-- Google Search Console 验证 -->
+    <!-- Bing(必应)站长平台验证（已填） -->
+    <meta name="msvalidate.01" content="D73739E569510E56F17F6C3A54D23F9A" />
+    <!-- Google Search Console 验证（待补充） -->
     <meta name="google-site-verification" content="这里填写你的Google验证码">
-    <!-- 抖音/头条搜索 站长平台验证 -->
+    <!-- 抖音/头条搜索 站长平台验证（待补充） -->
     <meta name="bytedance-verification-code" content="这里填写你的抖音验证码">
 
-    <!-- 4. 百度自动推送代码（页面加载自动提交链接给百度） -->
+    <!-- 4. 百度自动推送（页面加载自动提交收录） -->
     <script>
     (function(){
         var bp = document.createElement('script');
@@ -76,22 +70,8 @@
     })();
     </script>
 
-    <!-- 5. 360搜索自动提交代码 -->
+    <!-- 5. 抖音/头条搜索 基础收录脚本 -->
     <script>
-    (function(){
-        var src = "https://jspassport.ssl.qhimg.com/1.0.0.js?id=";
-        var s = document.createElement('script');
-        s.src = src + "你的360自动提交ID";
-        document.head.appendChild(s);
-    })();
-    </script>
-
-    <!-- 6. 搜狗搜索自动提交代码 -->
-    <script src="https://fanyi.sogou.com/api/transapp/sogousite.js" defer></script>
-
-    <!-- 7. 抖音/头条搜索 收录提交代码 -->
-    <script>
-    // 字节跳动搜索收录
     window._bytedance = window._bytedance || [];
     _bytedance.push(['trackPageView']);
     (function() {
@@ -103,14 +83,14 @@
     })();
     </script>
 
-    <!-- 8. 网站结构化数据（JSON-LD）提升所有搜索引擎排名 -->
+    <!-- 6. 网站结构化数据（提升所有平台收录排名） -->
     <script type="application/ld+json">
     {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "立德精英素质教育基地",
     "description": "专注8-17周岁青春期少年叛逆矫正、厌学辅导、网瘾戒除的全封闭素质教育基地",
-    "url": "https://你的官网域名.com",
+    "url": "https://lide-edu.vercel.app",
     "telephone": "18605316398",
     "address": {
         "@type": "PostalAddress",
@@ -120,7 +100,7 @@
         "postalCode": "250001"
     }
     }
-    </script>
+    </script
     
     <!-- 图标 -->
     <link rel="shortcut icon" href="img/upimages/favicon.ico">
